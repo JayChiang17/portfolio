@@ -1,0 +1,42 @@
+/* ContactMe.css */
+.contact-container {
+  background-color: #000; /* 黑色背景 */
+  color: #fff; /* 白色文字 */
+  padding: 40px 20px; /* 內邊距 */
+  text-align: center; /* 文字置中 */
+}
+
+.contact-container h2 {
+  font-size: 4.3rem;
+}
+
+.email {
+  font-size: 1.5rem;
+}
+
+.contact-info {
+  border-top: 1px solid #fff; /* 上方有白色邊框 */
+  padding-top: 20px; /* 上方內邊距 */
+}
+
+.contact-links a {
+  display: block; /* 塊狀元素 */
+  margin: 10px 0; /* 上下外邊距 */
+  color: #fff; /* 白色文字 */
+  text-decoration: none; /* 去除下劃線 */
+  transition: all 0.3s ease; /* 過渡效果 */
+}
+
+.contact-links a:hover {
+  text-decoration: underline; /* 滑鼠懸停時下劃線 */
+}
+
+.contact-section {
+  /* 初始样式 */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.contact-section.contact-visible {
+  background-color: #000;
+  color: #fff;
+}

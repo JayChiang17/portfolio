@@ -1,0 +1,30 @@
+/* Header.css */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+header {
+  padding: 20px 0; /* Top and bottom padding */
+  text-align: center; /* Center the text */
+}
+
+header .top {
+  margin: 0 auto; /* Center the .top div */
+  width: 80%; /* Use 80% of the width */
+  padding: 20px; /* Padding around the content */
+  background-color: white; /* White background for the content */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle shadow */
+  border-radius: 8px; /* Rounded corners */
+}
+
+header h2 {
+  font-family: "Amatic SC", sans-serif;
+  margin-bottom: 10px; /* Space between h2 and h3 */
+  color: #000000; /* Dark text color */
+  font-size: 3rem; /* Larger font size */
+}
+
+header h3 {
+  font-family: "Amatic SC", sans-serif;
+  margin-top: 0; /* Remove top margin */
+  color: #666; /* Lighter text color */
+  font-size: 1.8rem; /* Smaller font size */
+}

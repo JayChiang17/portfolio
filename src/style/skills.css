@@ -1,0 +1,37 @@
+.skills-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(120px, 1fr)
+  ); /* 這將創建一個響應式的網格，每個單元至少 120px 寬 */
+  gap: 20px; /* 網格間隙 */
+  justify-items: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill-icon {
+  width: 60px; /* 設定圖標的寬度 */
+  margin-bottom: 10px; /* 圖標和文字之間的間隙 */
+}
+
+.skill-item p {
+  font-size: 1rem;
+  color: #333;
+}

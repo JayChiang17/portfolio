@@ -1,0 +1,57 @@
+/* MainNav.css */
+
+/* MainNav.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
+
+.main-header {
+  background-color: #fff; /* 或者您想要的任何顏色 */
+  position: relative;
+  z-index: 0;
+}
+
+.main-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: transparent;
+  border: 2px solid #000; /* 按鈕邊框顏色 */
+  border-radius: 100px;
+  padding: 10px 35px; /* 增加填充使按鈕更大 */
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1.3rem; /* 增加字體大小 */
+  text-align: center;
+  font-family: "Amatic SC", sans-serif;
+}
+
+.button:last-child {
+  margin-right: 0;
+}
+
+.button a {
+  text-decoration: none;
+  color: #000; /* 文字顏色 */
+  font-weight: bold;
+  display: block; /* 確保NavLink填滿整個按鈕 */
+}
+
+.active-link {
+  text-decoration: underline;
+}
+
+.button:hover {
+  background-color: #000; /* 懸停時按鈕背景顏色 */
+  color: #fff; /* 懸停時文字顏色 */
+}
+
+.button:hover a {
+  color: #fff; /* 確保鏈接在懸停時也是白色 */
+}

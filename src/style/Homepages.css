@@ -1,0 +1,90 @@
+/* Enhanced styling for the 'infro' section */
+.infro {
+  text-align: center;
+  padding: 20px;
+  color: #333; /* Darker text for better readability */
+  display: flex; /* 啟用flexbox佈局 */
+  gap: 20px; /* 元素之間的間距 */
+  font-family: "Kalam", cursive;
+}
+
+h1 {
+  text-align: center; /* Centers the heading text */
+  color: #000000; /* A dark grey color for the text */
+  margin-bottom: 0.5em; /* Adds some space below the heading */
+  font-weight: normal; /* Could be set to 300, 400, normal, or bold depending on the desired thickness */
+  text-transform: uppercase; /* Makes all the letters uppercase */
+  letter-spacing: 1.5px; /* Adds space between each letter for a more spaced-out effect */
+  line-height: 1.2; /* Adjusts the space between lines of text */
+  margin-top: 8rem; /* Adds space above the heading */
+  font-family: "Kalam", cursive;
+}
+
+.infro h1 {
+  font-size: 2rem; /* Larger font size for the title */
+  color: #000000; /* Example: Bright blue color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.image-container {
+  flex: 1; /* 圖片容器佔據可用空間的1份 */
+  max-width: 50%; /* 或者您希望的最大寬度 */
+}
+
+.image-container img {
+  width: 60%; /* Makes the image responsive */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: if you want rounded corners */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.infro-container {
+  flex: 2; /* 信息容器佔據可用空間的2份 */
+  max-width: 30%; /* 或者您希望的最大寬度 */
+  font-family: "Kalam", cursive;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .parent-container {
+    flex-direction: column; /* 改為垂直排列 */
+  }
+
+  .image-container,
+  .infro-container {
+    max-width: 100%; /* 在小螢幕上元素佔滿整個容器寬度 */
+  }
+}
+
+.contect {
+  font-family: "Kalam", cursive;
+  text-align: center;
+  padding: 20px;
+  color: #444;
+  font-size: 1.4em; /* Slightly larger font size */
+  line-height: 1.6; /* Increased line spacing for better readability */
+}
+
+.contect a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contect a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.contect u {
+  text-decoration: underline;
+  text-decoration-color: #0a0a0a;
+  text-decoration-thickness: 2px;
+}
+
+.contect strong {
+  font-weight: bold;
+  color: #d9534f;
+}
