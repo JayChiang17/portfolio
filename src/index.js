@@ -6,9 +6,9 @@ import App from "./App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       {/* 使用 BrowserRouter 包裹整个应用 */}
       <App />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
