@@ -76,31 +76,31 @@ const SkillsSection = () => {
 
     {
       name: "scikit-learn",
-      icon: "/logo/scikit-learn.svg",
+      icon: "../src/logo/scikit-learn.svg",
     },
     {
       name: "Jupyter",
-      icon: "/logo/Jupyter.svg",
+      icon: "../src/logo/Jupyter.svg",
     },
     {
       name: "OpenCV",
-      icon: "/logo/OpenCV.svg",
+      icon: "../src/logo/OpenCV.svg",
     },
     {
       name: "Stata",
-      icon: "/logo/Stata.svg",
+      icon: "../src/logo/Stata.svg",
     },
     {
       name: "TensorFlow",
-      icon: "/logo/TensorFlow.svg",
+      icon: "../src/logo/TensorFlow.svg",
     },
     {
       name: "Figma",
-      icon: "/logo/Figma.svg",
+      icon: "../src/logo/Figma.svg",
     },
     {
       name: "Matplotlib",
-      icon: "/logo/Matplotlib.svg",
+      icon: "../src/logo/Matplotlib.svg",
     },
   ];
 
