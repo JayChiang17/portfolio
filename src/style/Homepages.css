@@ -47,15 +47,20 @@ h1 {
   font-size: 1.5rem;
 }
 
-@media screen and (max-width: 600px) {
-  .container {
-    flex-direction: column; /* 改为纵向排列 */
+@media (max-width: 768px) {
+  .infro {
+    flex-direction: column;
   }
 
   .image-container,
-  .info-container {
-    width: 100%; /* 容器宽度为100% */
-    /* 可能需要的其他样式调整 */
+  .infro-container {
+    width: 100%; /* 让图片和文字各占满整个屏幕宽度 */
+  }
+
+  .image-container img {
+    /* 在小屏幕上保持图片大小适中 */
+    max-width: 300px; /* 或根据需要调整 */
+    margin: 0 auto; /* 居中显示 */
   }
 }
 
