@@ -71,36 +71,36 @@ const SkillsSection = () => {
     },
     {
       name: "Sass",
-      icon: "https://www.vectorlogo.zone/logos/sass-lang/sass-lang-ar21.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
     },
 
     {
-      name: "scikit-learn",
-      icon: process.env.PUBLIC_URL + "./logo/scikit-learn.svg",
+      name: "Pytorch",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
     },
     {
       name: "Jupyter",
-      icon: process.env.PUBLIC_URL + "./logo/Jupyter.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg",
     },
     {
       name: "OpenCV",
-      icon: "./src/logo/OpenCV.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg",
     },
     {
-      name: "Stata",
-      icon: "../src/logo/Stata.svg",
+      name: "NumPy",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg",
     },
     {
       name: "TensorFlow",
-      icon: "../src/logo/TensorFlow.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
     },
     {
       name: "Figma",
-      icon: "../src/logo/Figma.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
     },
     {
-      name: "Matplotlib",
-      icon: "../src/logo/Matplotlib.svg",
+      name: "Matlab",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg",
     },
   ];
 
