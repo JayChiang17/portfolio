@@ -80,7 +80,7 @@ const SkillsSection = () => {
     },
     {
       name: "Jupyter",
-      icon: <JupyterIcon />,
+      icon: process.env.PUBLIC_URL + "./logo/Jupyter.svg",
     },
     {
       name: "OpenCV",
