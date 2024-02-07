@@ -77,15 +77,15 @@ const SkillsSection = () => {
 
     {
       name: "scikit-learn",
-      icon: "../src/logo/scikit-learn.svg",
+      icon: "./portfolio/logo/scikit-learn.svg",
     },
     {
-      name: "Jupyter!",
+      name: "Jupyter",
       icon: <JupyterIcon />,
     },
     {
       name: "OpenCV",
-      icon: "../src/logo/OpenCV.svg",
+      icon: "./src/logo/OpenCV.svg",
     },
     {
       name: "Stata",
