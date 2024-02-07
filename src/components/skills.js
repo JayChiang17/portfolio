@@ -80,7 +80,7 @@ const SkillsSection = () => {
       icon: "../src/logo/scikit-learn.svg",
     },
     {
-      name: "Jupyter",
+      name: "Jupyter!",
       icon: <JupyterIcon />,
     },
     {
