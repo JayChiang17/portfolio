@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/skills.css";
-import Jupyter from "../logo/Jupyter.svg";
+import { ReactComponent as JupyterIcon } from "../logo/Jupyter.svg";
 
 const SkillsSection = () => {
   // 假設您有一個包含所有技能和對應圖標鏈接的數組
@@ -81,7 +81,7 @@ const SkillsSection = () => {
     },
     {
       name: "Jupyter",
-      icon: "Jupyter",
+      icon: <JupyterIcon />,
     },
     {
       name: "OpenCV",
