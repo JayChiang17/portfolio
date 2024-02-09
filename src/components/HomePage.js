@@ -116,12 +116,7 @@ const HomePage = () => {
           .
         </section>
       </section>
-
-      {/* 地图部分 */}
       <MapComponent />
-
-      <br />
-      <br />
       <section
         ref={thirdSectionRef}
         className={`fade-in ${isThirdSectionVisible ? "visible" : ""}`}

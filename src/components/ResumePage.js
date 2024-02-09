@@ -221,6 +221,16 @@ const ResumePage = () => {
                 </a>
                 , Coursera, Issued Oct 2023
               </li>
+              <li>
+                <a
+                  href="https://www.udemy.com/certificate/UC-c77f0912-0982-42d0-8c5d-f5ab06d5742d/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Full-Stack Web Development
+                </a>
+                , Udemy, Issued Feb 2024
+              </li>
             </ul>
           </section>
         </div>
