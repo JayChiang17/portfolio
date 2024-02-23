@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import { useState, useEffect } from "react";
+import Popup from "../components/Popup"; // 确保路径正确
 import MapComponent from "../components/Map"; // 确保路径正确
 import MainNav from "./MainNav";
 import "../style/SocialLinks.css";
@@ -10,6 +12,15 @@ import ResumePage from "../components/ResumePage";
 import ContactMe from "../components/ContactPage";
 
 const HomePage = () => {
+  const [showPopup, setShowPopup] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopup(true);
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
+
   // 第一个部分的ref和可见性状态
   const firstSectionRef = useRef(null);
   const isFirstSectionVisible = useIntersectionObserver(firstSectionRef, {
@@ -35,6 +46,7 @@ const HomePage = () => {
 
   return (
     <main>
+      {showPopup && <Popup onClose={() => setShowPopup(false)} />}
       <Header />
       <MainNav />
       {/* 介绍部分 */}
