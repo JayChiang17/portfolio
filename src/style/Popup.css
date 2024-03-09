@@ -37,6 +37,8 @@
 
   /* 添加几何图形效果 */
   overflow: hidden;
+  /* 添加边框样式 */
+  border: 2px solid #fff; /* 示例: 白色实线边框，宽度2px */
 }
 
 .popup-content::before {

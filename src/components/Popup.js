@@ -8,8 +8,8 @@ const Popup = ({ onClose }) => {
         <button className="close-button" onClick={onClose}>
           ×
         </button>
-        <p>My photo are still being produced...&#x1F60A;</p>
-        <p>It is younger me.</p>
+        <p>My photo is still being produced...&#x1F60A;</p>
+        <p>It show a younger me</p>
         <p>Please excuse its quality.</p>
       </div>
     </div>
