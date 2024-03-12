@@ -73,7 +73,7 @@ const ResumePage = () => {
               <a href="https://drive.google.com/file/d/14uyH3SL_pJ4tDxZSDPdZma15Vt2I2b3x/view?usp=sharing">
                 Value and Supply Chain Network Development for Honeywell
               </a>
-              &#8656
+              &#8678;
             </h3>
             <ul>
               <li>
@@ -113,7 +113,7 @@ const ResumePage = () => {
               <a href="https://drive.google.com/file/d/1ld7r1eWe3rcAGl8cJUJpkryBCF12Ttqj/view?usp=sharing">
                 NBA Player Salary Prediction
               </a>
-              &#8656
+              &#8678;
             </h3>
             <ul>
               <li>
@@ -146,7 +146,7 @@ const ResumePage = () => {
               <a href="https://drive.google.com/file/d/16zBV6qFjUpbf0-U90IVBdkcHLFSLKg2g/view?usp=sharing">
                 Haidilao Hot Pot NFC Review Enhancement
               </a>
-              &#8656
+              &#8678;
             </h3>
             <ul>
               <li>
