@@ -147,20 +147,25 @@ const ResumePage = () => {
             </h3>
             <ul>
               <li>
-                Engineered NFC-enabled signs for direct access to Haidilao's
-                Google Maps and Yelp pages, enhancing customer interaction.
+                Engineered NFC-enabled signage providing direct access to
+                Haidilao's Google Maps and Yelp pages, significantly enhancing
+                customer interaction and experience.
               </li>
               <li>
-                Achieved a surge of over 250 reviews in two weeks, significantly
-                increasing online engagement.
+                Within just two months, effectively increased the volume of
+                reviews from 1,500 to 3,300, greatly amplifying online user
+                engagement and interaction.
               </li>
               <li>
-                Successfully improved the restaurant's average rating from 4.5
-                to 4.6 stars on major review platforms.
+                Successfully elevated the restaurant’s average rating from 4.5
+                to 4.7 stars on Google review platforms, reflecting a
+                considerable improvement in customer satisfaction and service
+                quality.
               </li>
               <li>
-                The project led to a substantial enhancement of the brand's
-                digital presence and reputation.
+                This project led to a substantial enhancement of the brand's
+                digital presence and reputation, reinforcing its standing in a
+                competitive market.
               </li>
             </ul>
           </section>
