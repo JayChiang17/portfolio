@@ -30,10 +30,9 @@ h1 {
 /* 基础样式 */
 /* 基础样式 */
 .image-container {
-  display: flex; /* 使用flex布局使其子元素居中 */
-  justify-content: center; /* 水平居中 */
-  max-width: 60%; /* 增加最大宽度使图片更大 */
-  margin: auto; /* 上下左右自动，使容器在父元素中居中 */
+  position: relative;
+  display: inline-block;
+  width: max-content; /* 适应内容宽度 */
 }
 
 .image-container img {
@@ -41,15 +40,19 @@ h1 {
   max-width: 400px;
   height: auto;
   border-radius: 50%; /* 使图片变为圆形 */
+  border: 4px solid transparent; /* 设置透明边框作为占位 */
+}
 
-  /* 使用box-shadow来创建类似Instagram故事的彩色渐变边框效果 */
-  box-shadow: 0 0 0 2px white,
-    /* 第一层白色边框 */ 0 0 0 6px rgba(250, 217, 97, 0.8),
-    /* 第二层黄色边框 */ 0 0 0 10px rgba(245, 133, 41, 0.8),
-    /* 第三层橙色边框 */ 0 0 0 14px rgba(231, 48, 78, 0.8),
-    /* 第四层红色边框 */ 0 0 0 18px rgba(187, 42, 104, 0.8),
-    /* 第五层粉红色边框 */ 0 0 0 22px rgba(131, 58, 180, 0.8),
-    /* 第六层紫色边框 */ 0 0 0 26px rgba(84, 105, 212, 0.8); /* 第七层蓝色边框 */
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: -6px; /* 边框宽度和间距 */
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  border-radius: 50%; /* 保持圆形 */
+  background: linear-gradient(45deg, #ff385c, #f0f, #ff385c); /* 渐变颜色 */
+  z-index: -1; /* 确保在图片下方 */
 }
 
 .infro-container {
