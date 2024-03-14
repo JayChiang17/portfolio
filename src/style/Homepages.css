@@ -37,10 +37,14 @@ h1 {
 }
 
 .image-container img {
-  width: 100%; /* 设置为100%使图片响应式并适应容器大小 */
-  max-width: 400px; /* 限制图片的最大宽度 */
-  height: auto; /* 维持原有纵横比，避免变形 */
-  border-radius: 8px; /* 如果需要圆角 */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 50%; /* 使图片变为圆形 */
+  box-shadow: 0 0 0 4px #ff385c; /* 添加彩色边框，颜色和尺寸可以根据需要修改 */
+  /* 如果希望边框有更多颜色或渐变效果，可以使用多层阴影 */
+  box-shadow: 0 0 0 4px #ff385c, /* 内圈颜色 */ 0 0 0 8px #fff,
+    /* 中间白色圈 */ 0 0 0 12px #f0f; /* 外圈颜色 */
 }
 
 .infro-container {
