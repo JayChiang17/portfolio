@@ -32,20 +32,34 @@ h1 {
 .image-container {
   display: flex;
   justify-content: center;
+  align-items: center; /* 垂直居中 */
   max-width: 60%;
   margin: auto;
-  border-radius: 50%; /* 设置为50%使容器变为圆形 */
-  padding: 3px; /* 为了内圈彩色边框提供空间 */
-  background: linear-gradient(to right, red, purple); /* Instagram渐变效果 */
+  border-radius: 50%; /* 使容器圆形 */
+  position: relative; /* 为伪元素定位 */
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: -3px; /* 边框大小 */
+  bottom: -3px;
+  left: -3px;
+  right: -3px;
+  border-radius: 50%; /* 圆形边框 */
+  z-index: -1; /* 放置于图片下方 */
+  background: linear-gradient(to right, red, purple); /* 渐变效果 */
+  padding: 3px; /* 边框大小 */
 }
 
 .image-container img {
   width: 100%;
   max-width: 400px;
   height: auto;
-  border-radius: 50%; /* 设置为50%使图片变为圆形 */
+  border-radius: 50%; /* 圆形图片 */
   display: block; /* 避免底部出现额外的空间 */
   object-fit: cover; /* 确保图片覆盖整个容器 */
+  position: relative; /* 确保图片在渐变边框之上 */
 }
 
 .infro-container {
