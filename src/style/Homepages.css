@@ -27,7 +27,7 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-/* 基础样式 */
+/* 通用样式 */
 .image-container {
   display: flex;
   justify-content: center;
@@ -41,7 +41,7 @@ h1 {
 .image-container::before {
   content: "";
   position: absolute;
-  top: -6px; /* 边框的宽度 */
+  top: -6px;
   left: -6px;
   right: -6px;
   bottom: -6px;
@@ -53,56 +53,77 @@ h1 {
     rgba(88, 24, 195, 1)
   );
   border-radius: 50%;
-  z-index: 0;
-  padding: 2px; /* 这会创建边框效果 */
+  z-index: -1;
+  padding: 2px;
 }
 
 .image-container img {
   width: 100%;
-  max-width: 400px;
   height: auto;
   border-radius: 50%;
   position: relative;
-  z-index: 1;
-  border: 4px solid white; /* 添加白色边框作为间隔 */
+  border: 4px solid white;
 }
 
-.infro-container {
-  display: flex; /* 使用flex布局 */
-  flex-direction: column; /* 子元素垂直排列 */
-  justify-content: center; /* 子元素在容器中垂直居中 */
-  align-items: center; /* 子元素在容器中水平居中 */
-  max-width: 40%; /* 增加最大宽度以适应更大的文本容器 */
-  margin: 20px auto; /* 减少顶部边距使容器更靠近图片 */
-  font-family: "Kalam", cursive;
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 40%;
+  margin: 20px auto;
+  font-family: "Arial", sans-serif; /* 替换为您喜欢的字体 */
   font-size: 1.5rem;
-  text-align: center; /* 文本居中对齐 */
+  text-align: center;
 }
 
-/* 响应式样式 */
-@media (max-width: 768px) {
-  .infro {
-    display: flex; /* 使用flex布局 */
-    flex-direction: column; /* 子元素垂直排列 */
-    align-items: center; /* 子元素在容器中水平居中 */
+/* 手机屏幕尺寸的媒体查询 */
+@media (max-width: 600px) {
+  .image-container,
+  .intro-container {
+    max-width: 80%; /* 在小屏幕上占据更大比例的宽度 */
   }
 
-  .image-container,
-  .infro-container {
-    width: 100%; /* 让图片和文字各占满整个屏幕宽度 */
-    max-width: none; /* 取消最大宽度限制，由子元素的宽度决定容器大小 */
+  .image-container::before {
+    top: -4px; /* 在小屏幕上减少边框大小 */
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    padding: 1.5px; /* 减小渐变边框的厚度 */
   }
 
   .image-container img {
-    width: 100%; /* 图片占满整个容器宽度 */
-    max-width: 300px; /* 限制图片的最大宽度，确保不会过大 */
-    margin: 0 auto; /* 图片居中 */
-    transform: none; /* 取消放大效果 */
+    max-width: 200px; /* 在小屏幕上减小图片的最大尺寸 */
   }
 
-  .infro-container {
-    max-width: 100%; /* 文本容器占满屏幕宽度 */
-    margin-top: 20px; /* 在图片和文字之间增加一些空间 */
+  .intro-container {
+    margin: 10px auto; /* 减少边距 */
+    font-size: 1.2rem; /* 减小字体大小 */
+  }
+}
+
+/* 平板屏幕尺寸的媒体查询 */
+@media (min-width: 601px) and (max-width: 768px) {
+  .image-container,
+  .intro-container {
+    max-width: 70%; /* 在中等屏幕上调整宽度 */
+  }
+
+  .image-container::before {
+    top: -5px; /* 调整边框大小 */
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    padding: 2px; /* 调整渐变边框的厚度 */
+  }
+
+  .image-container img {
+    max-width: 250px; /* 在中等屏幕上调整图片最大尺寸 */
+  }
+
+  .intro-container {
+    margin: 15px auto; /* 调整边距 */
+    font-size: 1.4rem; /* 调整字体大小 */
   }
 }
 
