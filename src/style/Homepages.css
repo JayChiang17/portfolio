@@ -46,7 +46,13 @@ h1 {
   position: relative;
   z-index: 1; /* 确保图片在边框之上 */
   padding: 3px; /* 为边框留出空间 */
-  background: white; /* 为渐变边框的背景提供白色背景 */
+  background: linear-gradient(
+    45deg,
+    rgba(255, 94, 58, 1),
+    rgba(255, 42, 104, 1),
+    rgba(148, 33, 147, 1),
+    rgba(88, 24, 195, 1)
+  );
   box-shadow: 0 0 0 3px #ff385c; /* 临时边框，后面会被滤镜覆盖 */
   filter: drop-shadow(0 0 3px #ff385c) drop-shadow(0 0 3px #f0f)
     drop-shadow(0 0 3px #ff385c); /* 模拟渐变边框 */
