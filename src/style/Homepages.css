@@ -27,50 +27,29 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-/* 容器，用于包裹图片和生成渐变边框 */
+/* 基础样式 */
 .image-container {
-  display: flex; /* 使用弹性盒模型来居中图片 */
-  justify-content: center; /* 水平居中图片 */
-  align-items: center; /* 垂直居中图片 */
-  max-width: 60%; /* 容器的最大宽度 */
-  margin: auto; /* 自动边距以在页面上居中容器 */
+  display: flex; /* 使用flex布局使其子元素居中 */
+  justify-content: center; /* 水平居中 */
+  max-width: 50%; /* 或者您希望的最大宽度 */
+  margin: auto; /* 上下左右自动，使容器在父元素中居中 */
+  position: relative; /* 设置为相对定位，为伪元素定位提供基准 */
   border-radius: 50%; /* 圆形容器 */
-  position: relative; /* 设置相对定位，使伪元素可以绝对定位于容器内 */
-  width: 250px; /* 或者任何适合的固定宽度 */
-  height: 250px; /* 高度和宽度相同，确保圆形 */
 }
 
-/* 伪元素，用来在图片周围创建渐变边框 */
-.image-container::before {
-  content: ""; /* 伪元素需要content属性，即使没有内容 */
-  position: absolute; /* 绝对定位，相对于.image-container定位 */
-  top: -6px; /* 边框与图片边缘的距离，创建边框的宽度效果 */
-  left: -6px;
-  right: -6px;
-  bottom: -6px;
-  background: linear-gradient(
-    45deg,
-    rgba(255, 94, 58, 1),
-    rgba(255, 42, 104, 1),
-    rgba(148, 33, 147, 1),
-    rgba(88, 24, 195, 1)
-  ); /* 渐变背景，使用Instagram故事的颜色 */
-  border-radius: 50%; /* 圆形边框 */
-  z-index: 0; /* 确保伪元素在图片之下 */
-  padding: 2px; /* 这会影响渐变边框的厚度 */
-}
-
-/* 目标图片的样式 */
 .image-container img {
-  width: 100%; /* 响应式宽度 */
-  max-width: 400px; /* 图片的最大宽度 */
-  height: auto; /* 高度自动，保持图片原始宽高比 */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
   border-radius: 50%; /* 圆形图片 */
-  position: relative; /* 相对定位，确保图片在渐变边框上方 */
-  display: block; /* 避免底部出现额外的空间 */
-  object-fit: cover; /* 确保图片覆盖整个容器 */
-  z-index: 1; /* 使图片在渐变边框之上 */
-  border: 4px solid white; /* 添加白色边框来与渐变边框分隔，模仿Instagram故事效果 */
+  display: block;
+  position: relative;
+  z-index: 1; /* 确保图片在边框之上 */
+  padding: 3px; /* 为边框留出空间 */
+  background: white; /* 为渐变边框的背景提供白色背景 */
+  box-shadow: 0 0 0 3px #ff385c; /* 临时边框，后面会被滤镜覆盖 */
+  filter: drop-shadow(0 0 3px #ff385c) drop-shadow(0 0 3px #f0f)
+    drop-shadow(0 0 3px #ff385c); /* 模拟渐变边框 */
 }
 
 .infro-container {
@@ -78,8 +57,8 @@ h1 {
   flex-direction: column; /* 子元素垂直排列 */
   justify-content: center; /* 子元素在容器中垂直居中 */
   align-items: center; /* 子元素在容器中水平居中 */
-  max-width: 40%; /* 增加最大宽度以适应更大的文本容器 */
-  margin: 20px auto; /* 减少顶部边距使容器更靠近图片 */
+  max-width: 30%; /* 或者您希望的最大宽度 */
+  margin: 30px auto 0; /* 上下左右自动，使容器在父元素中居中 */
   font-family: "Kalam", cursive;
   font-size: 1.5rem;
   text-align: center; /* 文本居中对齐 */
