@@ -29,23 +29,22 @@ h1 {
 
 /* 基础样式 */
 .image-container {
-  display: flex; /* 使用flex布局使其子元素居中 */
-  justify-content: center; /* 水平居中 */
-  max-width: 50%; /* 或者您希望的最大宽度 */
-  margin: auto; /* 上下左右自动，使容器在父元素中居中 */
-  position: relative; /* 设置为相对定位，为伪元素定位提供基准 */
-  border-radius: 50%; /* 圆形容器 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 60%;
+  margin: auto;
+  border-radius: 50%;
+  position: relative;
 }
 
-.image-container img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border-radius: 50%; /* 圆形图片 */
-  display: block;
+.image-container::before {
+  content: "";
   position: relative;
-  z-index: 1; /* 确保图片在边框之上 */
-  padding: 3px; /* 为边框留出空间 */
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
   background: linear-gradient(
     45deg,
     rgba(255, 94, 58, 1),
@@ -53,10 +52,17 @@ h1 {
     rgba(148, 33, 147, 1),
     rgba(88, 24, 195, 1)
   );
-  box-shadow: 0 0 0 3px #ff385c; /* 临时边框，后面会被滤镜覆盖 */
-  filter: drop-shadow(0 0 3px #ff385c)
-    drop-shadow(0 0 3px rgba(148, 33, 147, 1))
-    drop-shadow(0 0 3px rgba(88, 24, 195, 1)); /* 模拟渐变边框 */
+  border-radius: 50%;
+  z-index: -1;
+  padding: 2px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  border: 4px solid white;
 }
 
 .infro-container {
