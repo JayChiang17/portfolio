@@ -8,9 +8,10 @@ const Popup = ({ onClose }) => {
         <button className="close-button" onClick={onClose}>
           ×
         </button>
-        <p>My photo is still being produced...&#x1F60A;</p>
-        <p>It show a younger me</p>
-        <p>Please excuse its quality.</p>
+        <p>
+          This photo of me was created using generative AI technology.&#x1F60A;
+        </p>
+        <p>I hpoe you like it</p>
       </div>
     </div>
   );
