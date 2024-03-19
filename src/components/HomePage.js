@@ -7,7 +7,7 @@ import "../style/SocialLinks.css";
 import useIntersectionObserver from "../useIntersectionObserver";
 import "../style/Homepages.css";
 import Header from "../components/Header";
-import profilePic from "../pic/n_me.jpg";
+import profilePic from "../pic/me2.png";
 import ResumePage from "../components/ResumePage";
 import ContactMe from "../components/ContactPage";
 
