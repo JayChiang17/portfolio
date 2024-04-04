@@ -1,11 +1,15 @@
-/* MainNav.css */
-
-/* MainNav.css */
-
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 
+:root {
+  /* 定义 CSS 变量 */
+  --button-border-color: #000; /* 按钮边框颜色 */
+  --button-text-color: #000; /* 文字颜色 */
+  --button-hover-bg-color: #000; /* 悬停时按钮背景颜色 */
+  --button-hover-text-color: #fff; /* 悬停时文字颜色 */
+}
+
 .main-header {
-  background-color: #fff; /* 或者您想要的任何顏色 */
+  background-color: #fff; /* 或者您想要的任何颜色 */
   position: relative;
   z-index: 0;
 }
@@ -19,39 +23,39 @@
   align-items: center;
 }
 
-.button {
+.nav-item {
   background-color: transparent;
-  border: 2px solid #000; /* 按鈕邊框顏色 */
+  border: 2px solid var(--button-border-color);
   border-radius: 100px;
-  padding: 10px 35px; /* 增加填充使按鈕更大 */
+  padding: 10px 35px;
   margin: 0 10px;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
-  font-size: 1.3rem; /* 增加字體大小 */
+  font-size: 1.3rem;
   text-align: center;
   font-family: "Amatic SC", sans-serif;
 }
 
-.button:last-child {
+.nav-item:last-child {
   margin-right: 0;
 }
 
-.button a {
+.nav-item a {
   text-decoration: none;
-  color: #000; /* 文字顏色 */
+  color: var(--button-text-color);
   font-weight: bold;
-  display: block; /* 確保NavLink填滿整個按鈕 */
+  display: block; /* 确保 NavLink 填满整个按钮 */
 }
 
 .active-link {
   text-decoration: underline;
 }
 
-.button:hover {
-  background-color: #000; /* 懸停時按鈕背景顏色 */
-  color: #fff; /* 懸停時文字顏色 */
+.nav-item:hover {
+  background-color: var(--button-hover-bg-color);
+  color: var(--button-hover-text-color);
 }
 
-.button:hover a {
-  color: #fff; /* 確保鏈接在懸停時也是白色 */
+.nav-item:hover a {
+  color: var(--button-hover-text-color); /* 确保链接在悬停时也是白色 */
 }
