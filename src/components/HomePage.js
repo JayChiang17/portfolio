@@ -1,15 +1,14 @@
-import React, { useRef } from "react";
-import { useState, useEffect } from "react";
-import Popup from "../components/Popup"; // 确保路径正确
-import MapComponent from "../components/Map"; // 确保路径正确
+import React, { useRef, useState, useEffect } from "react";
+import Popup from "../components/Popup";
+import MapComponent from "../components/Map";
 import MainNav from "./MainNav";
-import "../style/SocialLinks.css";
-import useIntersectionObserver from "../useIntersectionObserver";
-import "../style/Homepages.css";
 import Header from "../components/Header";
 import profilePic from "../pic/me2.png";
 import ResumePage from "../components/ResumePage";
 import ContactMe from "../components/ContactPage";
+import useIntersectionObserver from "../useIntersectionObserver";
+import "../style/SocialLinks.css";
+import "../style/Homepages.css";
 
 const HomePage = () => {
   const [showPopup, setShowPopup] = useState(false);
