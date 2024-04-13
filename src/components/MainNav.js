@@ -7,17 +7,17 @@ const MainNav = () => {
     <header className="main-header">
       <nav className="main-nav">
         <button className="button">
-          <NavLink smooth to="/aboutMe" activeClassName="active-link">
+          <NavLink smooth to="#aboutMe" activeClassName="active-link">
             ABOUTME
           </NavLink>
         </button>
         <button className="button">
-          <NavLink smooth to="/resume" activeClassName="active-link">
+          <NavLink smooth to="#resume" activeClassName="active-link">
             RESUME
           </NavLink>
         </button>
         <button className="button">
-          <NavLink smooth to="/contactme" activeClassName="active-link">
+          <NavLink smooth to="#contactme" activeClassName="active-link">
             CONTACT
           </NavLink>
         </button>
