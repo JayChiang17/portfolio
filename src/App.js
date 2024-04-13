@@ -6,9 +6,5 @@ import HomePage from "../src/components/HomePage";
 
 // 定义 App 组件
 export default function App() {
-  return (
-    <Router>
-      <HomePage />
-    </Router>
-  );
+  return <HomePage />;
 }
