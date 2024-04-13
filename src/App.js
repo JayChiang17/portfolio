@@ -1,9 +1,14 @@
-// 导入 React 库
+// 导入 React 库和 Router 相关组件
 import React from "react";
-import "../src/style/App.css"; // 或者是您创建的 CSS 文件的路径
+import { HashRouter as Router } from "react-router-dom";
+import "../src/style/App.css";
 import HomePage from "../src/components/HomePage";
 
 // 定义 App 组件
 export default function App() {
-  return <HomePage />;
+  return (
+    <Router>
+      <HomePage />
+    </Router>
+  );
 }
