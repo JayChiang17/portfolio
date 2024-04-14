@@ -11,7 +11,7 @@ const Popup = ({ onClose }) => {
         <p>
           This photo of me was created using generative AI technology.&#x1F60A;
         </p>
-        <p>I hpoe you like it</p>
+        <p>I hope you like it</p>
       </div>
     </div>
   );
