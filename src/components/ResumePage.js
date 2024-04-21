@@ -39,29 +39,43 @@ const ResumePage = () => {
             <p>April 2023 - Jun 2023</p>
             <ul>
               <li>
-                Contributed to YFLOB, a platform that provides youth with
-                opportunities to explore an array of career paths.
+                Analyzed demographic data to drive engagement strategies at
+                YFLOB, resulting in a <b>20% increase</b> in youth participation
+                and retention across career exploration platforms, with{" "}
+                <b>over 10,000 active participants</b>.
               </li>
               <li>
-                Conducted comprehensive analysis of student surveys, extracting
-                both quantitative and qualitative data.
+                Utilized statistical analysis and machine learning techniques on{" "}
+                <b>over 500 student surveys</b> to extract actionable insights,
+                enhancing program delivery by identifying key trends and
+                participant needs.
               </li>
               <li>
-                Successfully implemented Excel data collection instruments.
+                Engineered and deployed automated data collection and analysis
+                workflows using Python and Excel macros, achieving a{" "}
+                <b>40% reduction</b> in data processing time and enhancing data
+                accuracy.
               </li>
               <li>
-                Contributed to securing an estimated annual funding range of
-                <b>$150,000 to $450,000</b> over three years.
+                Developed data-driven funding proposals by forecasting trends
+                and outcomes, successfully ensuring the sustainability of
+                strategic projects over <b>three years</b>.
               </li>
               <li>
-                Exploration of generative AI tools for automated summarization
-                of qualitative survey responses.
+                Spearheaded the integration of NLP and generative AI models to
+                automate the summarization of qualitative survey data, boosting
+                report generation efficiency by <b>30%</b> and enhancing
+                stakeholder insights.
               </li>
               <li>
-                Developed resources to streamline the data collection process.
+                Innovated and standardized data collection methodologies across
+                multiple channels, leveraging APIs and real-time data processing
+                to reduce errors by <b>25%</b> and improve data collection
+                efficiency.
               </li>
             </ul>
           </section>
+
           <section className="skills">
             <SkillsSection />
           </section>
