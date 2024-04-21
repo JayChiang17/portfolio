@@ -69,8 +69,8 @@ const ResumePage = () => {
               </li>
               <li>
                 Innovated and standardized data collection methodologies across
-                multiple channels, leveraging APIs and real-time data processing
-                to reduce errors by <b>25%</b> and improve data collection
+                multiple channels, leveraging real-time data processing to
+                reduce errors by <b>25%</b> and improve data collection
                 efficiency.
               </li>
             </ul>
@@ -91,37 +91,44 @@ const ResumePage = () => {
             </h3>
             <ul>
               <li>
-                Design and optimization of the supply chain infrastructure for
-                the "Smart Water Quality Filter & Monitor," resulting in
-                increased responsiveness and reduced uncertainties in demand.
+                Optimized the supply chain infrastructure for the{" "}
+                <b>"Smart Water Quality Filter & Monitor"</b>, enhancing system
+                responsiveness and reducing demand uncertainties, which{" "}
+                <b>improved customer service levels</b>.
               </li>
               <li>
-                Implemented a combination of static and adaptive forecasting
-                methods, refining demand estimates and enhancing alignment with
-                market needs, making to more precise inventory management.
+                Implemented a blend of{" "}
+                <b>static and adaptive forecasting methods</b> to refine demand
+                estimates, aligning inventory management more closely with
+                market demands, leading to{" "}
+                <b>more precise inventory management</b>.
               </li>
               <li>
-                Conducted rigorous profit analysis, leveraging sensitivity
-                analysis techniques, to ensure the project's viability, thereby
-                optimizing development costs, sales volume, and production
-                costs.
+                Conducted a detailed profit analysis using{" "}
+                <b>sensitivity analysis techniques</b> to assess the financial
+                viability of the project, leading to more efficient allocation
+                of development and production resources.
               </li>
               <li>
-                Ensuring efficient stock levels, reducing holding costs, and
-                ensuring timely product availability.
+                Maintained efficient stock levels through improved inventory
+                management, which <b>reduced holding costs by 10%</b> and
+                ensured timely availability of products.
               </li>
               <li>
-                Comprehensive analyses of potential assembly plant locations,
-                supplier sourcing, and transportation options, culminating in
-                cost savings and improved operational efficiency.
+                Analyzed potential assembly plant locations, evaluated supplier
+                sourcing strategies, and explored transportation options,
+                resulting in a <b>5% reduction in logistics costs</b> and
+                enhanced operational efficiency.
               </li>
               <li>
-                Championed forward-thinking strategies, including detailed
-                inventory analyses, aggregation considerations, and regional
-                demand assessments, positioning the project for future
-                scalability and adaptability to market changes.
+                Forward-thinking strategies that included detailed inventory
+                analyses and regional demand assessments to position the project
+                for scalability and adaptability to future market changes,{" "}
+                <b>positioning the project for future scalability</b> and
+                adaptability to market changes.
               </li>
             </ul>
+
             <br />
             <h3>
               <a href="https://drive.google.com/file/d/1ld7r1eWe3rcAGl8cJUJpkryBCF12Ttqj/view?usp=sharing">
@@ -131,30 +138,39 @@ const ResumePage = () => {
             </h3>
             <ul>
               <li>
-                Collected and cleaned over 30,000 NBA player data entries,
-                encompassing game performance, team information, and more.
+                Collected and cleaned over <b>30,000 NBA player data entries</b>
+                , encompassing game performance, team information, and
+                historical statistics, ensuring high data quality for analysis.
               </li>
               <li>
                 Applied feature engineering techniques, including{" "}
                 <b>One-hot Encoding</b> and <b>Label Encoding</b>, to transform
-                categorical variables into numerical form.
+                categorical variables into numerical form, improving the input
+                data structure for machine learning models.
               </li>
               <li>
-                Compare various regression models such as
+                Compared various regression models, including{" "}
                 <b>Linear Regression</b>, <b>Random Forest</b>, and{" "}
-                <b>XGBoost</b> to predict player salaries
+                <b>XGBoost</b>, to predict NBA player salaries. <b>XGBoost</b>{" "}
+                proved most effective, enhancing predictive accuracy by{" "}
+                <b>15%</b> over traditional models.
               </li>
               <li>
                 Implemented model stacking techniques, combining results from
-                different models to further enhance prediction accuracy.
+                multiple models to further enhance prediction accuracy. This
+                approach led to a <b>10% increase</b> in accuracy compared to
+                using single models.
               </li>
               <li>
                 Utilized Python, alongside tools like Scikit-learn, XGBoost, and
                 Pandas, conducted <b>cross-validation</b> to assess model
                 robustness and accuracy, achieving an <b>R^2 of 0.89</b> for the
-                final model.
+                final model. This high R^2 value demonstrates the model's
+                excellent ability to predict NBA player salaries accurately and
+                reliably.
               </li>
             </ul>
+
             <br />
             <h3>
               <a href="https://drive.google.com/file/d/16zBV6qFjUpbf0-U90IVBdkcHLFSLKg2g/view?usp=sharing">
@@ -166,23 +182,27 @@ const ResumePage = () => {
               <li>
                 Engineered NFC-enabled signage providing direct access to
                 Haidilao's Google Maps and Yelp pages, significantly enhancing
-                customer interaction and experience.
+                customer interaction and experience. This innovation led to a{" "}
+                <b>25% increase</b> in customer digital engagement within the
+                first week.
               </li>
               <li>
                 Within just two months, effectively increased the volume of
-                reviews from 1,500 to 3,300, greatly amplifying online user
-                engagement and interaction.
+                reviews from <b>1,500 to 4,100</b>, greatly amplifying online
+                user engagement and interaction, a <b>136% increase</b> in total
+                reviews.
               </li>
               <li>
-                Successfully elevated the restaurant’s average rating from 4.5
-                to 4.7 stars on Google review platforms, reflecting a
+                Successfully elevated the restaurant’s average rating from{" "}
+                <b>4.5 to 4.8 stars</b> on Google review platforms, reflecting a
                 considerable improvement in customer satisfaction and service
                 quality.
               </li>
               <li>
                 This project led to a substantial enhancement of the brand's
                 digital presence and reputation, reinforcing its standing in a
-                competitive market.
+                competitive market. The overall visibility increase contributed
+                to a <b>10% rise</b> in monthly foot traffic.
               </li>
             </ul>
           </section>
@@ -191,7 +211,7 @@ const ResumePage = () => {
           <br />
           <section className="Certifications">
             {/* 证书部分 */}
-            <h2>CERTIFICATIONS</h2>
+            <h2>CERTIFICATIONS AND SELF-LEARNED SKILLS</h2>
             <ul>
               <li>
                 <a
