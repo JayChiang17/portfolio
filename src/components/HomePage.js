@@ -128,12 +128,7 @@ const HomePage = () => {
         </section>
       </section>
       <MapComponent />
-      <section
-        ref={thirdSectionRef}
-        className={`fade-in ${isThirdSectionVisible ? "visible" : ""}`}
-      >
-        <ResumePage />
-      </section>
+      <ResumePage />
       <br />
       <section
         ref={fourthSectionRef}
