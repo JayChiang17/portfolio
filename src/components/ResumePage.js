@@ -273,6 +273,16 @@ const ResumePage = () => {
                 </a>
                 , Udemy, Issued Feb 2024
               </li>
+              <li>
+                <a
+                  href="https://www.udemy.com/certificate/UC-5b6a6c55-64a1-495c-ba73-ef38150cbd89/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Deep Learning A-Z 2024: Neural Networks, AI & ChatGPT Prize
+                </a>
+                , Udemy, Issued Mar 2024
+              </li>
             </ul>
           </section>
         </div>
