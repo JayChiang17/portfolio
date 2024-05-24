@@ -279,7 +279,7 @@ const ResumePage = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Deep Learning A-Z 2024: Neural Networks, AI & ChatGPT Prize
+                  Deep Learning: Neural Networks, AI & ChatGPT
                 </a>
                 , Udemy, Issued Mar 2024
               </li>
