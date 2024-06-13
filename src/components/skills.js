@@ -62,12 +62,12 @@ const SkillsSection = () => {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     },
     {
-      name: "filezilla",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/filezilla/filezilla-plain.svg",
+      name: "Linux",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
     },
     {
       name: "Spark",
-      icon: "https://www.vectorlogo.zone/logos/apache_spark/apache_spark-ar21.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg",
     },
     {
       name: "Sass",
@@ -79,8 +79,8 @@ const SkillsSection = () => {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg",
     },
     {
-      name: "Jupyter",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original-wordmark.svg",
+      name: "Keras",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg",
     },
     {
       name: "OpenCV",
@@ -95,8 +95,8 @@ const SkillsSection = () => {
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
     },
     {
-      name: "Figma",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
+      name: "Scikit-learn",
+      icon: "ttps://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
     },
     {
       name: "Matlab",

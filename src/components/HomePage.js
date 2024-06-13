@@ -60,13 +60,21 @@ const HomePage = () => {
           </div>
           <div className="infro-container">
             <p>
-              In the expansive field of data analytics and machine learning,
-              I've proficiently harnessed the capabilities of libraries and
-              frameworks like <b>Pandas</b>, <b>Numpy</b>, <b>Scikit-Learn</b>,
-              <b>PySpark</b>, and <b>Matplotlib</b>. These tools, central to
-              data manipulation, visualization, and advanced computations, have
-              been instrumental in my journey to derive actionable insights from
-              raw data and construct efficient predictive models.
+              <strong>In data engineering and advanced analytics</strong>, I
+              expertly use{" "}
+              <strong>
+                Pandas, Numpy, Scikit-Learn, PySpark, and Matplotlib
+              </strong>{" "}
+              for{" "}
+              <strong>
+                data manipulation, visualization, and complex computations
+              </strong>
+              . Proficient in <strong>predictive modeling</strong> and{" "}
+              <strong>strategic decision-making</strong>, I derive insights and
+              develop robust models. My skills in{" "}
+              <strong>Python, JavaScript, MySQL</strong>, and{" "}
+              <strong>PostgreSQL</strong> enable comprehensive data solutions
+              and operational excellence.
             </p>
             <br />
           </div>
