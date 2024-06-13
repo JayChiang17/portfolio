@@ -96,7 +96,7 @@ const SkillsSection = () => {
     },
     {
       name: "Scikit-learn",
-      icon: "ttps://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg",
     },
     {
       name: "Matlab",
