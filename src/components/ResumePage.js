@@ -32,46 +32,32 @@ const ResumePage = () => {
           <section className="experience">
             {/* 工作经验部分 */}
             <h2>EXPERIENCE</h2>
-            <h3>
-              Data Analyst Intern/YFIOB landscape and stakeholder experience
-              analysis
-            </h3>
-            <p>April 2023 - Jun 2023</p>
+            <h3>Your Future Is Our Business</h3>
+            <p>DATA ANALYST INTERN</p>
             <ul>
               <li>
-                Analyzed demographic data to drive engagement strategies at
-                YFLOB, resulting in a <b>20% increase</b> in youth participation
-                and retention across career exploration platforms, with{" "}
-                <b>over 10,000 active participants</b>.
+                Led task prioritization among analysts, enhancing team workflow
+                and meeting deadlines effectively.
               </li>
               <li>
-                Utilized statistical analysis and machine learning techniques on{" "}
-                <b>over 500 student surveys</b> to extract actionable insights,
-                enhancing program delivery by identifying key trends and
-                participant needs.
+                Enhanced project efficiency by collaborating with various teams
+                to ETL datasets for predictive modeling.
               </li>
               <li>
-                Engineered and deployed automated data collection and analysis
-                workflows using Python and Excel macros, achieving a{" "}
-                <b>40% reduction</b> in data processing time and enhancing data
-                accuracy.
+                Helped secure a projected annual funding range of $150,000 to
+                $450,000 over 3 years.
               </li>
               <li>
-                Developed data-driven funding proposals by forecasting trends
-                and outcomes, successfully ensuring the sustainability of
-                strategic projects over <b>three years</b>.
+                Increased database accuracy by using PostgreSQL queries and data
+                validation techniques.
+              </li>
+              <li>Used Pyspark to build the data pipeline.</li>
+              <li>
+                Used NLP to analyze stakeholder comments for sentiment analysis.
               </li>
               <li>
-                Spearheaded the integration of NLP and generative AI models to
-                automate the summarization of qualitative survey data, boosting
-                report generation efficiency by <b>30%</b> and enhancing
-                stakeholder insights.
-              </li>
-              <li>
-                Innovated and standardized data collection methodologies across
-                multiple channels, leveraging real-time data processing to
-                reduce errors by <b>25%</b> and improve data collection
-                efficiency.
+                Built predictive models using Scikit-learn, achieving
+                cross-validation with 83% accuracy.
               </li>
             </ul>
           </section>
@@ -91,41 +77,32 @@ const ResumePage = () => {
             </h3>
             <ul>
               <li>
-                Optimized the supply chain infrastructure for the{" "}
-                <b>"Smart Water Quality Filter & Monitor"</b>, enhancing system
-                responsiveness and reducing demand uncertainties, which{" "}
-                <b>improved customer service levels</b>.
+                Used static and adaptive forecasting, enhancing product quality
+                and inventory management.
               </li>
               <li>
-                Implemented a blend of{" "}
-                <b>static and adaptive forecasting methods</b> to refine demand
-                estimates, aligning inventory management more closely with
-                market demands, leading to{" "}
-                <b>more precise inventory management</b>.
+                Used Matplotlib and Seaborn to analyze potential logistics
+                strategies for a 5% cost reduction and increased efficiency.
               </li>
               <li>
-                Conducted a detailed profit analysis using{" "}
-                <b>sensitivity analysis techniques</b> to assess the financial
-                viability of the project, leading to more efficient allocation
-                of development and production resources.
+                Used sensitivity analysis techniques, to optimize development
+                costs, sales volume, and production costs.
               </li>
               <li>
-                Maintained efficient stock levels through improved inventory
-                management, which <b>reduced holding costs by 10%</b> and
-                ensured timely availability of products.
+                Developed creative solutions and implemented quality controls to
+                boost efficiency and provide support.
               </li>
               <li>
-                Analyzed potential assembly plant locations, evaluated supplier
-                sourcing strategies, and explored transportation options,
-                resulting in a <b>5% reduction in logistics costs</b> and
-                enhanced operational efficiency.
+                Analyzed logistics for cost savings and used Slack for real-time
+                collaboration and data exchange.
               </li>
               <li>
-                Forward-thinking strategies that included detailed inventory
-                analyses and regional demand assessments to position the project
-                for scalability and adaptability to future market changes,{" "}
-                <b>positioning the project for future scalability</b> and
-                adaptability to market changes.
+                Utilized BPM to streamline operations and improve over 25% data
+                analysis accuracy.
+              </li>
+              <li>
+                Product demand forecasting using Linear Regression in
+                Scikit-learn.
               </li>
             </ul>
 
@@ -138,71 +115,51 @@ const ResumePage = () => {
             </h3>
             <ul>
               <li>
-                Collected and cleaned over <b>30,000 NBA player data entries</b>
-                , encompassing game performance, team information, and
-                historical statistics, ensuring high data quality for analysis.
+                Cleaning and mining raw data of more than 30,000 NBA players
               </li>
               <li>
-                Applied feature engineering techniques, including{" "}
-                <b>One-hot Encoding</b> and <b>Label Encoding</b>, to transform
-                categorical variables into numerical form, improving the input
-                data structure for machine learning models.
+                Applied feature engineering techniques by using One-hot and
+                Label Encoding
               </li>
               <li>
-                Compared various regression models, including{" "}
-                <b>Linear Regression</b>, <b>Random Forest</b>, and{" "}
-                <b>XGBoost</b>, to predict NBA player salaries. <b>XGBoost</b>{" "}
-                proved most effective, enhancing predictive accuracy by{" "}
-                <b>15%</b> over traditional models.
+                Compared various regression models with Linear Regression,
+                Random Forest, and XGBoost.
               </li>
               <li>
-                Implemented model stacking techniques, combining results from
-                multiple models to further enhance prediction accuracy. This
-                approach led to a <b>10% increase</b> in accuracy compared to
-                using single models.
+                Evaluated model accuracy and robustness using cross-validation.
               </li>
               <li>
-                Utilized Python, alongside tools like Scikit-learn, XGBoost, and
-                Pandas, conducted <b>cross-validation</b> to assess model
-                robustness and accuracy, achieving an <b>R^2 of 0.89</b> for the
-                final model. This high R^2 value demonstrates the model's
-                excellent ability to predict NBA player salaries accurately and
-                reliably.
+                Data scraping and processing using BeautifulSoup and Requests.
               </li>
             </ul>
 
             <br />
             <h3>
               <a href="https://drive.google.com/file/d/16zBV6qFjUpbf0-U90IVBdkcHLFSLKg2g/view?usp=sharing">
-                Haidilao Hot Pot NFC Review Enhancement
+                Haidilao Hot Pot NFC Review Table Signage
               </a>
               &#8678;
             </h3>
             <ul>
               <li>
                 Engineered NFC-enabled signage providing direct access to
-                Haidilao's Google Maps and Yelp pages, significantly enhancing
-                customer interaction and experience. This innovation led to a{" "}
-                <b>25% increase</b> in customer digital engagement within the
-                first week.
+                Haidilao's Google Maps Review and Yelp Review pages.
               </li>
               <li>
-                Within just two months, effectively increased the volume of
-                reviews from <b>1,500 to 4,100</b>, greatly amplifying online
-                user engagement and interaction, a <b>136% increase</b> in total
-                reviews.
+                This led to a 25% increase in customer digital engagement within
+                the first week.
               </li>
               <li>
-                Successfully elevated the restaurant’s average rating from{" "}
-                <b>4.5 to 4.8 stars</b> on Google review platforms, reflecting a
-                considerable improvement in customer satisfaction and service
-                quality.
+                Within 3 months, the volume of reviews increased from 1,500 to
+                4,100, a 280% increase in total reviews.
               </li>
               <li>
-                This project led to a substantial enhancement of the brand's
-                digital presence and reputation, reinforcing its standing in a
-                competitive market. The overall visibility increase contributed
-                to a <b>10% rise</b> in monthly foot traffic.
+                Successfully elevated the restaurant’s average rating from 4.5
+                to 4.8 stars on Google review platforms.
+              </li>
+              <li>
+                Increased customer traffic and achieved expected sales for 3
+                consecutive months.
               </li>
             </ul>
           </section>
