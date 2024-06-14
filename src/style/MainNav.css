@@ -28,6 +28,7 @@
   transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); /* 过渡效果，持续0.3秒，使用贝塞尔曲线 */
   overflow: hidden; /* 隐藏溢出内容 */
   margin-right: 10px; /* 右边距10px，使按钮之间有间隙 */
+  font-family: "Amatic SC", sans-serif;
 }
 
 .navButton:last-child {
