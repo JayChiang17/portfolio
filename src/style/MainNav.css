@@ -3,7 +3,10 @@
 .navHeader {
   background-color: #fff; /* 或者您想要的任何顏色 */
   position: relative;
+  display: flex;
   z-index: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 .nav {
