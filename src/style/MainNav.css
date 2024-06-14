@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 
-.main-header {
+.navHeader {
   background-color: #fff; /* 或者您想要的任何顏色 */
   position: relative;
   z-index: 0;
 }
 
-.main-nav {
+.nav {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -15,39 +15,58 @@
   align-items: center;
 }
 
-.button {
-  background-color: transparent;
-  border: 2px solid #000; /* 按鈕邊框顏色 */
-  border-radius: 100px;
-  padding: 10px 35px; /* 增加填充使按鈕更大 */
-  margin: 0 10px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s;
-  font-size: 1.3rem; /* 增加字體大小 */
-  text-align: center;
-  font-family: "Amatic SC", sans-serif;
+.navButton {
+  cursor: pointer; /* 设置光标为指针形状，表明可点击 */
+  position: relative; /* 设置位置相对定位，以便可以使用绝对定位的子元素 */
+  padding: 10px 24px; /* 内填充，上下10px，左右24px */
+  font-size: 18px; /* 字体大小为18px */
+  color: rgb(0, 0, 0); /* 字体颜色设置为黑色 */
+  border: 2px solid rgb(0, 0, 0); /* 边框为2px实线黑色 */
+  border-radius: 34px; /* 边框圆角为34px */
+  background-color: transparent; /* 背景颜色透明 */
+  font-weight: 600; /* 字体加粗，权重600 */
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1); /* 过渡效果，持续0.3秒，使用贝塞尔曲线 */
+  overflow: hidden; /* 隐藏溢出内容 */
+  margin-right: 10px; /* 右边距10px，使按钮之间有间隙 */
 }
 
-.button:last-child {
-  margin-right: 0;
+.navButton:last-child {
+  margin-right: 0; /* 最后一个按钮的右边距为0 */
 }
 
-.button a {
-  text-decoration: none;
-  color: #000; /* 文字顏色 */
-  font-weight: bold;
-  display: block; /* 確保NavLink填滿整個按鈕 */
+.navButton::before {
+  content: ""; /* 伪元素内容为空 */
+  position: absolute; /* 绝对定位，相对于.navButton */
+  inset: 0; /* 设置上下左右边距为0，覆盖整个按钮 */
+  margin: auto; /* 自动外边距，水平和垂直居中 */
+  width: 50px; /* 宽度50px */
+  height: 50px; /* 高度50px */
+  border-radius: inherit; /* 继承父元素的圆角 */
+  scale: 0; /* 初始缩放为0，不可见 */
+  z-index: -1; /* 层级为-1，位于按钮文本之下 */
+  background-color: rgb(0, 0, 0); /* 背景颜色黑色 */
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1); /* 过渡效果，持续0.6秒 */
 }
 
-.active-link {
-  text-decoration: underline;
+.navButton:hover::before {
+  scale: 3; /* 鼠标悬停时放大3倍 */
 }
 
-.button:hover {
-  background-color: #000; /* 懸停時按鈕背景顏色 */
-  color: #fff; /* 懸停時文字顏色 */
+.navButton:hover {
+  color: #212121; /* 鼠标悬停时文本颜色变为深灰 */
+  scale: 1.1; /* 按钮缩放至1.1倍 */
+  box-shadow: 0 0px 20px rgba(193, 163, 98, 0.4); /* 添加阴影，柔和的淡黄色 */
 }
 
-.button:hover a {
-  color: #fff; /* 確保鏈接在懸停時也是白色 */
+.navButton:active {
+  scale: 1; /* 鼠标点击时恢复原始尺寸 */
+}
+
+.navButton a {
+  text-decoration: none; /* 去除链接的下划线 */
+  color: inherit; /* 链接继承按钮的文本颜色 */
+}
+
+.navButton:hover a {
+  color: #fff; /* 鼠标悬停时链接文本颜色为白色 */
 }
