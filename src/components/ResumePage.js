@@ -283,6 +283,16 @@ const ResumePage = () => {
                 </a>
                 , Udemy, Issued Mar 2024
               </li>
+              <li>
+                <a
+                  href="https://www.udemy.com/certificate/UC-5e914800-51cd-41c3-a208-f9c9763c3c9d/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Master LangChain Build #16 AI Apps-OpenAI,LLAMA2,HuggingFace
+                </a>
+                , Udemy, Issued Jun 2024
+              </li>
             </ul>
           </section>
         </div>
