@@ -32,32 +32,54 @@ const ResumePage = () => {
           <section className="experience">
             {/* 工作经验部分 */}
             <h2>EXPERIENCE</h2>
+
+            <h3>
+              Haidilao Inc<span class="location">Cupertino, California</span>
+            </h3>
+            <p>PRODUCT SPECIALIST</p>
+            <ul>
+              <li>
+                Engineered NFC-enabled signage for direct access to Google Maps
+                and Yelp reviews.
+              </li>
+              <li>
+                Boosted customer digital engagement by 25% within the first
+                week.
+              </li>
+              <li>
+                Amplified reviews from 1,500 to 4,100 in 3 months, a 280%
+                increase.
+              </li>
+              <li>
+                Enhanced restaurant’s average rating from 4.5 to 4.8 stars on
+                Google.
+              </li>
+              <li>
+                Increased customer traffic and met sales targets for 3 months.
+              </li>
+            </ul>
+
             <h3>Your Future Is Our Business</h3>
             <p>DATA ANALYST INTERN</p>
             <ul>
               <li>
-                Led task prioritization among analysts, enhancing team workflow
-                and meeting deadlines effectively.
+                Assisted in task prioritization, improving team workflow by 20%.
               </li>
               <li>
-                Enhanced project efficiency by collaborating with various teams
-                to ETL datasets for predictive modeling.
+                Improved 10% efficiency by ETL datasets for predictive modeling.
               </li>
               <li>
-                Helped secure a projected annual funding range of $150,000 to
-                $450,000 over 3 years.
+                Contributed to securing $150K-$450K annual funding over 3 years.
               </li>
               <li>
-                Increased database accuracy by using PostgreSQL queries and data
-                validation techniques.
-              </li>
-              <li>Used Pyspark to build the data pipeline.</li>
-              <li>
-                Used NLP to analyze stakeholder comments for sentiment analysis.
+                Built data pipeline using Pyspark, enhancing processing speed.
               </li>
               <li>
-                Built predictive models using Scikit-learn, achieving
-                cross-validation with 83% accuracy.
+                Used NLP to analyze stakeholder comments for sentiment analysis
+              </li>
+              <li>
+                Analyzed stakeholder comments with NLP, achieving 90% sentiment
+                accuracy.
               </li>
             </ul>
           </section>

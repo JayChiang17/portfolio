@@ -13,6 +13,21 @@
   border-radius: 5px;
 }
 
+.experience h3 {
+  position: relative; /* 为<span>设置定位上下文 */
+  display: block; /* 确保h3是块级元素 */
+  width: 100%; /* 确保h3元素占满其容器的全部宽度 */
+  margin-bottom: 10px; /* 为标题下方留出空间 */
+}
+
+.experience .location {
+  position: absolute; /* 绝对定位<span> */
+  right: 0; /* 将<span>对齐到右侧 */
+  top: 0; /* 将<span>对齐到顶部 */
+  color: red; /* 设置颜色 */
+  font-size: 0.8em; /* 调整字体大小 */
+}
+
 .education h2,
 .experience h2 {
   color: #333;
