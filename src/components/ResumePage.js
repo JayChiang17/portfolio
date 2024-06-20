@@ -78,9 +78,6 @@ const ResumePage = () => {
                 Built data pipeline using Pyspark, enhancing processing speed.
               </li>
               <li>
-                Used NLP to analyze stakeholder comments for sentiment analysis
-              </li>
-              <li>
                 Analyzed stakeholder comments with NLP, achieving 90% sentiment
                 accuracy.
               </li>
