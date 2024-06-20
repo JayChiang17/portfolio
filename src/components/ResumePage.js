@@ -207,6 +207,16 @@ const ResumePage = () => {
               </li>
               <li>
                 <a
+                  href="https://coursera.org/share/5b7e042e621d0d7b4b575491c53102c5"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Advanced Data Science with IBM
+                </a>
+                , Coursera, Issued Jun 2024
+              </li>
+              <li>
+                <a
                   href="https://www.linkedin.com/learning/certificates/9cb5db6a57c90edeb08b36aed6b0e78cdac1b2f38241005ad540f4ea12f69f12"
                   target="_blank"
                   rel="noreferrer"
