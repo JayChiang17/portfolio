@@ -59,7 +59,10 @@ const ResumePage = () => {
               </li>
             </ul>
 
-            <h3>Your Future Is Our Business</h3>
+            <h3>
+              Your Future Is Our Business
+              <span class="location">Santa Curz, California</span>
+            </h3>
             <p>DATA ANALYST INTERN</p>
             <ul>
               <li>
