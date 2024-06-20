@@ -159,12 +159,6 @@ const ResumePage = () => {
             </ul>
 
             <br />
-            <h3>
-              <a href="https://drive.google.com/file/d/16zBV6qFjUpbf0-U90IVBdkcHLFSLKg2g/view?usp=sharing">
-                Haidilao Hot Pot NFC Review Table Signage
-              </a>
-              &#8678;
-            </h3>
             <ul>
               <li>
                 Engineered NFC-enabled signage providing direct access to
