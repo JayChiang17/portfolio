@@ -157,11 +157,7 @@ const ResumePage = () => {
                 Data scraping and processing using BeautifulSoup and Requests.
               </li>
             </ul>
-
-            <br />
           </section>
-          <br />
-          <br />
           <br />
           <section className="Certifications">
             {/* 证书部分 */}
