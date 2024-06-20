@@ -159,28 +159,6 @@ const ResumePage = () => {
             </ul>
 
             <br />
-            <ul>
-              <li>
-                Engineered NFC-enabled signage providing direct access to
-                Haidilao's Google Maps Review and Yelp Review pages.
-              </li>
-              <li>
-                This led to a 25% increase in customer digital engagement within
-                the first week.
-              </li>
-              <li>
-                Within 3 months, the volume of reviews increased from 1,500 to
-                4,100, a 280% increase in total reviews.
-              </li>
-              <li>
-                Successfully elevated the restaurant’s average rating from 4.5
-                to 4.8 stars on Google review platforms.
-              </li>
-              <li>
-                Increased customer traffic and achieved expected sales for 3
-                consecutive months.
-              </li>
-            </ul>
           </section>
           <br />
           <br />
