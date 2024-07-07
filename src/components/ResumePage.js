@@ -36,7 +36,7 @@ const ResumePage = () => {
             <h3>
               Haidilao Inc<span class="location">Cupertino, California</span>
             </h3>
-            <p>PRODUCT SPECIALIST</p>
+            <p>PRODUCT SPECIALIST/HOST/SERVER</p>
             <ul>
               <li>
                 Engineered NFC-enabled signage for direct access to Google Maps
@@ -131,7 +131,7 @@ const ResumePage = () => {
             <br />
             <h3>
               <a href="https://drive.google.com/file/d/1ld7r1eWe3rcAGl8cJUJpkryBCF12Ttqj/view?usp=sharing">
-                NBA Player Salary Prediction
+                NBA Player Salary Prediction By Machine Learning
               </a>
               &#8678;
             </h3>
@@ -152,6 +152,40 @@ const ResumePage = () => {
               </li>
               <li>
                 Data scraping and processing using BeautifulSoup and Requests.
+              </li>
+            </ul>
+
+            <br />
+            <h3>
+              <a href="https://drive.google.com/file/d/1_Ye92Sg9SeCVqgwhFUaLo2xQVA2QeVe1/view?usp=sharing">
+                LSTM Sales Forecasting For Retail Sales Management
+              </a>
+              &#8678;
+            </h3>
+            <ul>
+              <li>
+                Preprocessed and engineered features on over 100,000 sales
+                records to enhance model input quality
+              </li>
+              <li>
+                Developed an LSTM model, increasing accuracy from 3% to 74% by
+                optimizing network architecture
+              </li>
+              <li>
+                Applied bidirectional LSTMs and regularization techniques to
+                improve prediction accuracy
+              </li>
+              <li>
+                Facilitated data-driven decision-making by forecasting sales
+                trends for inventory management.
+              </li>
+              <li>
+                Visualized historical data and model forecasts to assist
+                stakeholder decisions and presentations.
+              </li>
+              <li>
+                Validated model performance through rolling validation, ensuring
+                robustness and reliability
               </li>
             </ul>
           </section>
