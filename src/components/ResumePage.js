@@ -20,7 +20,7 @@ const ResumePage = () => {
                 University of California Santa Cruz, Santa Cruz, CA
               </strong>
               <br />
-              B.S. Technology Information Management, Jun 2023
+              B.S. Technology Information, Jun 2023
             </p>
             <br />
             <p>
@@ -34,9 +34,53 @@ const ResumePage = () => {
             <h2>EXPERIENCE</h2>
 
             <h3>
+              Leadman Electronics
+              <span class="location">Santa Clara, California</span>
+            </h3>
+            <p>Manufacturing Process Engineer </p>
+            <ul>
+              <li>
+                Maintained battery system production lines(FranklinWH) with
+                robotics and vision systems for reliability.
+              </li>
+              <li>
+                Optimized battery system processes for cell integration, thermal
+                management, and BMS testing.
+              </li>
+              <li>
+                Developed data systems for battery line stability and
+                performance analysis.
+              </li>
+            </ul>
+
+            <h3>
+              Reliable Power, inc
+              <span class="location">Santa Clara, California</span>
+            </h3>
+            <p>Project Manager / Data Analyst</p>
+            <ul>
+              <li>
+                Reduced unit defect rate from 6.6% to 5%, significantly
+                improving product quality and operational efficiency.
+              </li>
+              <li>
+                Launched a new grid-tie inverter line for EV charging, expanding
+                into a growing market segment.
+              </li>
+              <li>
+                Increased inverter sales by 12% through data-driven performance
+                analytics and marketing
+              </li>
+              <li>
+                Adapted quickly to challenges, contributing to stability and
+                growth within three months.
+              </li>
+            </ul>
+
+            <h3>
               Haidilao Inc<span class="location">Cupertino, California</span>
             </h3>
-            <p>PRODUCT SPECIALIST/HOST/SERVER</p>
+            <p>Digital Marketing and Data Analyst</p>
             <ul>
               <li>
                 Engineered NFC-enabled signage for direct access to Google Maps
