@@ -1,0 +1,109 @@
+/* Card animations and styles for 2025 design */
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Base card style */
+.card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 40px;
+  margin: 30px 0;
+  box-shadow:
+    0 4px 20px rgba(92, 74, 58, 0.08),
+    0 1px 3px rgba(92, 74, 58, 0.04);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #B4846C 0%, #D4A574 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 12px 40px rgba(92, 74, 58, 0.15),
+    0 4px 12px rgba(92, 74, 58, 0.08);
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Card animations based on scroll */
+.card-animate-bottom {
+  animation: slideInFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.card-animate-left {
+  animation: slideInFromLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.card-animate-right {
+  animation: slideInFromRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.card-animate-scale {
+  animation: fadeInScale 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+/* Responsive card padding */
+@media (max-width: 768px) {
+  .card {
+    padding: 30px 24px;
+    margin: 20px 0;
+    border-radius: 12px;
+  }
+}

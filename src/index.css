@@ -12,16 +12,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #FAF8F3;
+  background: linear-gradient(135deg, #F5F1E8 0%, #E8DDD0 100%);
   min-height: 100vh;
   color: #3E3830;
   line-height: 1.7;
 }
 
 main {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 40px 24px;
 }
 
 code {

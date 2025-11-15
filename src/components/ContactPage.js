@@ -7,7 +7,7 @@ const ContactMe = () => {
     <div className="contact-container">
       <h2 id="contactme">I'M OPEN TO WORK.</h2>
       <div className="contact-info">
-        <p className="email">chiang.mengchieh@gmail.com  |  (+1) 408-688-6969</p>
+        <p className="email">chiang.mengchieh@gmail.com</p>
         {/* 社交链接部分 */}
         <div className="icon">
           <ul className="socials">
@@ -58,7 +58,7 @@ const ContactMe = () => {
 
         {/* 版权信息 */}
         <div className="copyright">
-          <p>&#169; 2024 Jay Chiang. All Rights Reserved.</p>
+          <p>&#169; 2024 ~ 2026 Jay Chiang. All Rights Reserved.</p>
         </div>
       </div>
     </div>
