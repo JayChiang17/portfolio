@@ -12,7 +12,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #F5F1E8 0%, #E8DDD0 100%);
+  background: linear-gradient(135deg, #E8DDD0 0%, #D4C4B0 50%, #C9B89A 100%);
   min-height: 100vh;
   color: #3E3830;
   line-height: 1.7;
