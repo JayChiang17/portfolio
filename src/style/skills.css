@@ -1,0 +1,81 @@
+.skills-section {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(120px, 1fr)
+  ); /* 這將創建一個響應式的網格，每個單元至少 120px 寬 */
+  gap: 20px; /* 網格間隙 */
+  justify-items: center; /* 水平居中 */
+  align-items: center; /* 垂直居中 */
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.skill-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover .skill-icon {
+  animation: float 2s ease-in-out infinite;
+}
+
+.skill-item p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* 深色模式 */
+body.dark-mode .skill-item {
+  background: rgba(22, 33, 62, 0.2);
+  border-color: rgba(0, 153, 255, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .skill-item:hover {
+  background: rgba(22, 33, 62, 0.3);
+  border-color: rgba(0, 212, 255, 0.4);
+}
+
+body.dark-mode .skill-item p {
+  color: #eee;
+}
+
+body.dark-mode .skills-section h2 {
+  color: #00d4ff;
+}

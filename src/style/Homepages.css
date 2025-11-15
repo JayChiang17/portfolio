@@ -1,0 +1,168 @@
+/* Enhanced styling for the 'infro' section */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.infro {
+  text-align: center;
+  padding: 20px;
+  color: #333; /* Darker text for better readability */
+  display: flex; /* 啟用flexbox佈局 */
+  gap: 20px; /* 元素之間的間距 */
+  font-family: "Kalam", cursive;
+}
+
+h1 {
+  text-align: center; /* Centers the heading text */
+  color: #000000; /* A dark grey color for the text */
+  margin-bottom: 0.5em; /* Adds some space below the heading */
+  font-weight: normal; /* Could be set to 300, 400, normal, or bold depending on the desired thickness */
+  text-transform: uppercase; /* Makes all the letters uppercase */
+  letter-spacing: 1.5px; /* Adds space between each letter for a more spaced-out effect */
+  line-height: 1.2; /* Adjusts the space between lines of text */
+  margin-top: 8rem; /* Adds space above the heading */
+  font-family: "Kalam", cursive;
+}
+
+.infro h1 {
+  font-size: 2rem; /* Larger font size for the title */
+  color: #000000; /* Example: Bright blue color */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* 基础样式 */
+.image-container {
+  display: flex; /* 使用flex布局使其子元素居中 */
+  justify-content: center; /* 水平居中 */
+  max-width: 50%; /* 或者您希望的最大宽度 */
+  margin: auto; /* 上下左右自动，使容器在父元素中居中 */
+  position: relative; /* 设置为相对定位，为伪元素定位提供基准 */
+  border-radius: 50%; /* 圆形容器 */
+  animation: fadeInScale 1s ease-out;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.image-container img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 50%; /* 圆形图片 */
+  display: block;
+  position: relative;
+  z-index: 1; /* 确保图片在边框之上 */
+  padding: 3px; /* 为边框留出空间 */
+  border: 4px solid white;
+  background: linear-gradient(
+    45deg,
+    rgba(255, 94, 58, 1),
+    rgba(255, 42, 104, 1),
+    rgba(148, 33, 147, 1),
+    rgba(88, 24, 195, 1)
+  );
+  box-shadow: 0 0 0 3px #ff385c; /* 临时边框，后面会被滤镜覆盖 */
+  filter: drop-shadow(0 0 3px #ff385c) drop-shadow(0 0 3px #f0f)
+    drop-shadow(0 0 3px #ff385c); /* 模拟渐变边框 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 5px #ff385c;
+  filter: drop-shadow(0 0 10px #ff385c) drop-shadow(0 0 10px #f0f)
+    drop-shadow(0 0 10px #ff385c);
+}
+
+.infro-container {
+  display: flex; /* 使用flex布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  justify-content: center; /* 子元素在容器中垂直居中 */
+  align-items: center; /* 子元素在容器中水平居中 */
+  max-width: 30%; /* 或者您希望的最大宽度 */
+  margin: 30px auto 0; /* 上下左右自动，使容器在父元素中居中 */
+  font-family: "Kalam", cursive;
+  font-size: 1.5rem;
+  text-align: center; /* 文本居中对齐 */
+}
+
+/* 响应式样式 */
+@media (max-width: 768px) {
+  .infro {
+    display: flex; /* 使用flex布局 */
+    flex-direction: column; /* 子元素垂直排列 */
+    align-items: center; /* 子元素在容器中水平居中 */
+  }
+
+  .image-container,
+  .infro-container {
+    width: 100%; /* 让图片和文字各占满整个屏幕宽度 */
+    max-width: none; /* 取消最大宽度限制，由子元素的宽度决定容器大小 */
+  }
+
+  .image-container img {
+    width: 100%; /* 图片占满整个容器宽度 */
+    max-width: 300px; /* 限制图片的最大宽度，确保不会过大 */
+    margin: 0 auto; /* 图片居中 */
+    transform: none; /* 取消放大效果 */
+  }
+
+  .infro-container {
+    max-width: 100%; /* 文本容器占满屏幕宽度 */
+    margin-top: 20px; /* 在图片和文字之间增加一些空间 */
+  }
+}
+
+.contect {
+  font-family: "Kalam", cursive;
+  text-align: center;
+  padding: 20px;
+  color: #444;
+  font-size: 1.4em; /* Slightly larger font size */
+  line-height: 1.6; /* Increased line spacing for better readability */
+}
+
+.contect a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.contect a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+.contect u {
+  text-decoration: underline;
+  text-decoration-color: #0a0a0a;
+  text-decoration-thickness: 2px;
+}
+
+.contect strong {
+  font-weight: bold;
+  color: #d9534f;
+}

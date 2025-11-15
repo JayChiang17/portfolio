@@ -1,0 +1,36 @@
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+  margin: 20px auto;
+}
+
+.download-button:hover {
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  transform: translateY(-2px);
+}
+
+.download-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* 深色模式 */
+body.dark-mode .download-button {
+  background: linear-gradient(135deg, #4f5bd5 0%, #962fbf 100%);
+  box-shadow: 0 4px 15px rgba(79, 91, 213, 0.4);
+}
+
+body.dark-mode .download-button:hover {
+  box-shadow: 0 6px 20px rgba(79, 91, 213, 0.6);
+}

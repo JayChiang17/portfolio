@@ -1,0 +1,101 @@
+/* SocialLinks.css */
+
+.icon {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.socials {
+  list-style-type: none;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socials-item {
+  margin: 0;
+}
+
+.socials-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: rgba(0, 212, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(0, 153, 255, 0.3);
+}
+
+.socials-item a:hover {
+  background: rgba(0, 212, 255, 0.2);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+  border-color: rgba(0, 212, 255, 0.8);
+}
+
+.socials-item svg {
+  width: 28px;
+  height: 28px;
+  fill: #0099ff;
+  transition: all 0.3s ease;
+}
+
+.socials-item a:hover svg {
+  fill: #00d4ff;
+  animation: bounce 0.6s ease;
+}
+
+body.dark-mode .socials-item a {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: rgba(0, 153, 255, 0.4);
+}
+
+body.dark-mode .socials-item svg {
+  fill: #00d4ff;
+}
+
+body.dark-mode .socials-item a:hover svg {
+  fill: white;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Copyright section styling */
+.copyright {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 40px;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  z-index: 1;
+  letter-spacing: 1px;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .socials {
+    gap: 15px;
+  }
+
+  .socials-item a {
+    width: 50px;
+    height: 50px;
+  }
+
+  .socials-item svg {
+    width: 24px;
+    height: 24px;
+  }
+}

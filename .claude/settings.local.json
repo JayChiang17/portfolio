@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm start)",
+      "Bash(git init:*)",
+      "Bash(git remote add:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\n✨ Major UI/UX Redesign: Glass Morphism & Water Drop Effects\n\n🎨 Design Changes:\n- Replaced purple color scheme with blue gradient (#00d4ff, #0099ff, #0066ff)\n- Implemented frosted glass (glassmorphism) effect across all components\n- Added water drop ripple animations for enhanced visual appeal\n- Removed all border-radius for modern flat design\n- Improved scroll progress bar (removed background container)\n\n📱 Responsive Improvements:\n- Optimized padding for all screen sizes (5% → 3% → 2% → 5px)\n- Full-width components with proper spacing\n- Enhanced mobile responsiveness\n\n🔧 Component Updates:\n- ResumePage: Glass cards with water ripple effects\n- Header: Glassmorphism with animated water drops\n- Skills: Frosted glass tiles with hover animations\n- ContactPage: Glass effect with gradient text\n- ThemeToggle: Glass button design\n- Navigation: Sticky glass navbar with backdrop blur\n\n✨ Removed Features:\n- Download Resume button (as requested)\n- Purple/violet color scheme\n- Rounded corners on cards\n\n🎭 Effects Added:\n- Water drop ripple animations on all major sections\n- Backdrop blur with saturation boost\n- Gradient text effects\n- Smooth hover transitions with glass effect enhancement\n\n🧩 Generated with Claude Code\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

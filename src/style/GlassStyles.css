@@ -1,0 +1,99 @@
+/* 霧面玻璃 & 水滴效果全局樣式 */
+
+/* 玻璃卡片基礎樣式 */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 12px 40px rgba(0, 153, 255, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+/* 水滴效果 */
+.water-drop {
+  position: relative;
+  overflow: hidden;
+}
+
+.water-drop::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 212, 255, 0.1) 0%,
+    rgba(0, 153, 255, 0.05) 20%,
+    transparent 40%
+  );
+  animation: waterRipple 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes waterRipple {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(10px, 10px) scale(1.1);
+    opacity: 0.6;
+  }
+}
+
+/* 水滴反光效果 */
+.water-reflection {
+  position: relative;
+}
+
+.water-reflection::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 20%,
+    transparent 80%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.water-reflection:hover::after {
+  opacity: 1;
+}
+
+/* 深色模式玻璃效果 */
+body.dark-mode .glass-card {
+  background: rgba(22, 33, 62, 0.3);
+  border-color: rgba(0, 153, 255, 0.2);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(0, 212, 255, 0.1);
+}
+
+body.dark-mode .glass-card:hover {
+  background: rgba(22, 33, 62, 0.4);
+  box-shadow:
+    0 12px 40px rgba(0, 212, 255, 0.3),
+    inset 0 1px 0 rgba(0, 212, 255, 0.2);
+}
