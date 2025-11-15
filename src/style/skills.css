@@ -1,43 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+
+/* Skills section */
 .skills-section {
   text-align: center;
-  padding: 40px 0;
+  padding: 60px 0;
+  border-top: 1px solid #E8DDD0;
+  margin-top: 40px;
 }
 
 .skills-section h2 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.8rem;
+  color: #5C4A3A;
+  margin-bottom: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
+/* Skills grid */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(120px, 1fr)
-  ); /* 這將創建一個響應式的網格，每個單元至少 120px 寬 */
-  gap: 20px; /* 網格間隙 */
-  justify-items: center; /* 水平居中 */
-  align-items: center; /* 垂直居中 */
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
+/* Individual skill item */
 .skill-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 0;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  justify-content: center;
+  padding: 30px 20px;
+  background: #F5F1E8;
+  border: 1px solid #E8DDD0;
   transition: all 0.3s ease;
   cursor: pointer;
+  min-height: 140px;
 }
 
+.skill-item:hover {
+  background: #FAF8F3;
+  border-color: #B4846C;
+  transform: translateY(-5px);
+}
+
+/* Skill icon */
 .skill-icon {
   width: 60px;
   height: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
 
@@ -45,12 +62,15 @@
   animation: float 2s ease-in-out infinite;
 }
 
+/* Skill name */
 .skill-item p {
-  font-size: 1rem;
-  color: #333;
+  font-size: 0.95rem;
+  color: #5C4A3A;
   font-weight: 500;
+  margin: 0;
 }
 
+/* Float animation */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
@@ -60,22 +80,34 @@
   }
 }
 
-/* 深色模式 */
-body.dark-mode .skill-item {
-  background: rgba(22, 33, 62, 0.2);
-  border-color: rgba(0, 153, 255, 0.2);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
+/* Responsive design */
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 40px 0;
+  }
 
-body.dark-mode .skill-item:hover {
-  background: rgba(22, 33, 62, 0.3);
-  border-color: rgba(0, 212, 255, 0.4);
-}
+  .skills-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 35px;
+    letter-spacing: 1.5px;
+  }
 
-body.dark-mode .skill-item p {
-  color: #eee;
-}
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 20px;
+  }
 
-body.dark-mode .skills-section h2 {
-  color: #00d4ff;
+  .skill-item {
+    padding: 20px 15px;
+  }
+
+  .skill-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+  }
+
+  .skill-item p {
+    font-size: 0.85rem;
+  }
 }

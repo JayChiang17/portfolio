@@ -1,21 +1,16 @@
 import React, { useRef, useState, useEffect } from "react";
 import Popup from "../components/Popup";
-import MapComponent from "../components/Map";
 import MainNav from "./MainNav";
 import Header from "../components/Header";
 import profilePic from "../pic/me2.png";
 import ResumePage from "../components/ResumePage";
 import ContactMe from "../components/ContactPage";
-import ScrollProgress from "../components/ScrollProgress";
-import ThemeToggle from "../components/ThemeToggle";
 import useIntersectionObserver from "../useIntersectionObserver";
 import "../style/SocialLinks.css";
 import "../style/Homepages.css";
-import "../style/GlassStyles.css";
 
 const HomePage = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -23,11 +18,6 @@ const HomePage = () => {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.body.classList.toggle("dark-mode");
-  };
 
   // 第一个部分的ref和可见性状态
   const firstSectionRef = useRef(null);
@@ -41,12 +31,6 @@ const HomePage = () => {
     threshold: 0.1,
   });
 
-  // 第三个部分的ref和可见性状态
-  const thirdSectionRef = useRef(null);
-  const isThirdSectionVisible = useIntersectionObserver(thirdSectionRef, {
-    threshold: 0.1,
-  });
-
   const fourthSectionRef = useRef(null);
   const isFourthSectionVisible = useIntersectionObserver(fourthSectionRef, {
     threshold: 0.1,
@@ -54,8 +38,6 @@ const HomePage = () => {
 
   return (
     <main>
-      <ScrollProgress />
-      <ThemeToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       {showPopup && <Popup onClose={() => setShowPopup(false)} />}
       <Header />
       <MainNav />
@@ -146,7 +128,6 @@ const HomePage = () => {
           .
         </section>
       </section>
-      <MapComponent />
       <ResumePage />
       <br />
       <section

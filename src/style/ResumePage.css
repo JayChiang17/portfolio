@@ -1,327 +1,208 @@
-/* 基础样式 */
-/* 教育、经验、项目、证书区块的共通样式 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+
+/* Base styles */
 .resumepage {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   max-width: 100%;
   margin: 0;
   padding: 20px 0;
 }
 
+/* Common section styles */
 .education,
-.experience {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  padding: 30px;
-  border-left: 3px solid rgba(0, 212, 255, 0.6);
-  margin: 30px 0;
-  border-radius: 0;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+.experience,
+.projects,
+.Certifications {
+  padding: 40px;
+  margin: 40px 0;
+  border-left: 3px solid #B4846C;
+  border-bottom: 1px solid #E8DDD0;
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.education::before,
-.experience::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 212, 255, 0.08) 0%,
-    rgba(0, 153, 255, 0.04) 20%,
-    transparent 40%
-  );
-  animation: waterRipple 8s ease-in-out infinite;
-  pointer-events: none;
 }
 
 .education:hover,
-.experience:hover {
-  transform: translateY(-3px);
-  background: rgba(255, 255, 255, 0.12);
-  box-shadow:
-    0 12px 40px rgba(0, 153, 255, 0.15),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+.experience:hover,
+.projects:hover,
+.Certifications:hover {
+  border-left-color: #5C4A3A;
 }
 
+/* Section headings */
+.education h2,
+.experience h2,
+.projects h2,
+.Certifications h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #5C4A3A;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.education h2::after,
+.experience h2::after,
+.projects h2::after,
+.Certifications h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: #B4846C;
+}
+
+/* Experience section specific styles */
 .experience h3 {
-  position: relative; /* 为<span>设置定位上下文 */
-  display: block; /* 确保h3是块级元素 */
-  width: 100%; /* 确保h3元素占满其容器的全部宽度 */
-  margin-bottom: 10px; /* 为标题下方留出空间 */
-  font-size: 1.4rem;
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  color: #5C4A3A;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
 }
 
 .experience .location {
-  position: absolute; /* 绝对定位<span> */
-  right: 0; /* 将<span>对齐到右侧 */
-  top: 0; /* 将<span>对齐到顶部 */
-  color: rgba(194, 75, 51, 0.919); /* 设置颜色 */
-  font-size: 0.8em; /* 调整字体大小 */
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #B4846C;
+  font-size: 0.85em;
+  font-weight: 500;
 }
 
-.education h2,
-.experience h2 {
-  color: #00d4ff;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  border-bottom: 2px solid rgba(0, 212, 255, 0.4);
-  padding-bottom: 10px;
-  position: relative;
-  z-index: 1;
-}
-
+/* Paragraph styles */
 .education p,
-.experience p {
-  color: #333;
-  line-height: 1.8;
-  margin: 10px 0;
-  position: relative;
-  z-index: 1;
+.experience p,
+.projects p {
+  color: #3E3830;
+  line-height: 1.9;
+  margin: 12px 0;
 }
 
 .education strong,
-.experience strong {
-  color: #0099ff;
+.experience strong,
+.projects strong {
+  color: #5C4A3A;
   font-weight: 600;
 }
 
-.experience ul {
-  margin-top: 15px;
-  padding-left: 20px;
-  position: relative;
-  z-index: 1;
-}
-
-.experience li {
-  margin: 10px 0;
-  line-height: 1.8;
-  position: relative;
-  padding-left: 10px;
-}
-
-.experience li::before {
-  content: "▹";
-  position: absolute;
-  left: -10px;
-  color: #00d4ff;
-  font-weight: bold;
-}
-
-/* 项目部分的样式 */
-.projects {
-  margin: 30px 0;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  padding: 30px;
-  border-radius: 0;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-left: 3px solid rgba(0, 153, 255, 0.6);
-  position: relative;
-  overflow: hidden;
-}
-
-.projects::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  right: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 153, 255, 0.08) 0%,
-    rgba(0, 102, 255, 0.04) 20%,
-    transparent 40%
-  );
-  animation: waterRipple 10s ease-in-out infinite;
-  pointer-events: none;
-}
-
-.projects h2 {
-  color: #0099ff;
-  margin-bottom: 25px;
-  font-size: 2rem;
-  border-bottom: 2px solid rgba(0, 153, 255, 0.4);
-  padding-bottom: 10px;
-  position: relative;
-  z-index: 1;
-}
-
-.projects h3 {
-  margin-top: 25px;
-  margin-bottom: 15px;
-  color: #333;
-  font-size: 1.4rem;
-  position: relative;
-  z-index: 1;
-}
-
+/* List styles */
+.experience ul,
 .projects ul {
-  list-style: none;
+  margin-top: 20px;
   padding-left: 20px;
-  position: relative;
-  z-index: 1;
+  list-style: none;
 }
 
+.experience li,
 .projects li {
-  margin: 10px 0;
-  line-height: 1.8;
+  margin: 12px 0;
+  line-height: 1.9;
   position: relative;
-  padding-left: 15px;
+  padding-left: 20px;
+  color: #3E3830;
 }
 
+.experience li::before,
 .projects li::before {
   content: "▹";
   position: absolute;
   left: 0;
-  color: #0099ff;
+  color: #B4846C;
   font-weight: bold;
+  font-size: 1.2em;
+}
+
+/* Projects section specific styles */
+.projects h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #5C4A3A;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
 }
 
 .projects a {
-  color: #00d4ff;
+  color: #B4846C;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s ease;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
 .projects a:hover {
-  color: #0099ff;
-  text-decoration: underline;
+  border-bottom-color: #B4846C;
 }
 
-/* 响应式设计 */
-@media (max-width: 768px) {
-  .section {
-    padding: 0 15px;
-  }
-}
-
-/* 证书部分 */
-.Certifications {
-  margin: 30px 0;
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  padding: 30px;
-  border-radius: 0;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-left: 3px solid rgba(0, 102, 255, 0.6);
-  position: relative;
-  overflow: hidden;
-}
-
-.Certifications::before {
-  content: "";
-  position: absolute;
-  bottom: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle at center,
-    rgba(0, 102, 255, 0.08) 0%,
-    rgba(0, 153, 255, 0.04) 20%,
-    transparent 40%
-  );
-  animation: waterRipple 12s ease-in-out infinite reverse;
-  pointer-events: none;
-}
-
-.Certifications h2 {
-  color: #0066ff;
-  margin-bottom: 25px;
-  font-size: 2rem;
-  border-bottom: 2px solid rgba(0, 102, 255, 0.4);
-  padding-bottom: 10px;
-  position: relative;
-  z-index: 1;
-}
-
+/* Certifications section */
 .Certifications ul {
   list-style: none;
   padding: 0;
-  position: relative;
-  z-index: 1;
 }
 
 .Certifications li {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0;
+  background: #F5F1E8;
+  border: 1px solid #E8DDD0;
   padding: 20px;
   margin-bottom: 15px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .Certifications li:hover {
   transform: translateX(8px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(0, 212, 255, 0.4);
-  box-shadow: 0 6px 25px rgba(0, 212, 255, 0.15);
+  border-color: #B4846C;
+  background: #FAF8F3;
 }
 
 .Certifications a {
-  color: #00d4ff;
+  color: #B4846C;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .Certifications a:hover {
-  color: #0099ff;
+  color: #5C4A3A;
 }
 
-/* 深色模式 */
-body.dark-mode .education,
-body.dark-mode .experience,
-body.dark-mode .projects,
-body.dark-mode .Certifications {
-  background: rgba(22, 33, 62, 0.3);
-  border-color: rgba(0, 153, 255, 0.2);
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(0, 212, 255, 0.1);
-}
+/* Responsive design */
+@media (max-width: 768px) {
+  .education,
+  .experience,
+  .projects,
+  .Certifications {
+    padding: 30px 20px;
+    margin: 30px 0;
+  }
 
-body.dark-mode .education h2,
-body.dark-mode .experience h2,
-body.dark-mode .projects h2,
-body.dark-mode .Certifications h2 {
-  color: #00d4ff;
-  border-bottom-color: rgba(0, 212, 255, 0.4);
-}
+  .education h2,
+  .experience h2,
+  .projects h2,
+  .Certifications h2 {
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+  }
 
-body.dark-mode .education p,
-body.dark-mode .experience p,
-body.dark-mode .projects h3 {
-  color: #ccc;
-}
+  .experience h3 {
+    font-size: 1.1rem;
+  }
 
-body.dark-mode .Certifications li {
-  background: rgba(15, 52, 96, 0.2);
-  border-color: rgba(0, 153, 255, 0.2);
-}
+  .experience .location {
+    position: static;
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+  }
 
-body.dark-mode .Certifications li:hover {
-  background: rgba(15, 52, 96, 0.3);
-  border-color: rgba(0, 212, 255, 0.4);
+  .projects h3 {
+    font-size: 1.05rem;
+  }
 }
