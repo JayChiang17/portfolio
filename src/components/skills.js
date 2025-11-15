@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import "../style/skills.css";
+import "../style/FloatingSkills.css";
 
 const SkillsSection = () => {
   // 假設您有一個包含所有技能和對應圖標鏈接的數組
@@ -105,25 +105,30 @@ const SkillsSection = () => {
     },
   ];
 
+  // Random size assignment for visual variety
+  const getRandomSize = (index) => {
+    const sizes = ['size-small', '', 'size-large'];
+    return sizes[index % 3];
+  };
+
   return (
-    <section className="skills-section">
-      <h2>Skills</h2>
-      <div className="skills-grid">
+    <section className="floating-skills-container">
+      <h2>Skills & Technologies</h2>
+      <div className="floating-tags">
         {skills.map((skill, index) => (
           <motion.div
             key={index}
-            className="skill-item"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.05 }}
-            whileHover={{
-              scale: 1.1,
-              y: -10,
-              boxShadow: "0 10px 30px rgba(0, 0, 0, 0.2)",
+            className={`floating-tag ${getRandomSize(index)}`}
+            initial={{ opacity: 0, y: 50, rotateX: -20 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+            transition={{
+              duration: 0.8,
+              delay: index * 0.05,
+              ease: [0.4, 0, 0.2, 1]
             }}
             viewport={{ once: true }}
           >
-            <img src={skill.icon} alt={skill.name} className="skill-icon" />
+            <img src={skill.icon} alt={skill.name} />
             <p>{skill.name}</p>
           </motion.div>
         ))}
