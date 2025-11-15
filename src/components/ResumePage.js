@@ -37,69 +37,51 @@ const ResumePage = () => {
               Leadman Electronics
               <span className="location">Santa Clara, California</span>
             </h3>
-            <p>Manufacturing Process Engineer </p>
+            <p>Software Engineer (Nov 2024 - Present)</p>
             <ul>
               <li>
-                Maintained battery system production lines(FranklinWH) with
-                robotics and vision systems for reliability.
+                Designed a retrieval augmented layer for MES SOPs with live telemetry using FastAPI microservices, LangChain, FAISS, OpenAI and Ollama. Enabled semantic SOP search and guided troubleshooting.
               </li>
               <li>
-                Optimized battery system processes for cell integration, thermal
-                management, and BMS testing.
+                Built a real time manufacturing dashboard with React and WebSocket, secured with JWT role based access and backed by SQLite WAL and ETL, which unified stations, yield, alarms and RMA in a single pane.
               </li>
               <li>
-                Developed data systems for battery line stability and
-                performance analysis.
+                Standardized data ingestion with versioned REST services, vendor webhooks and scanner feeds, and enforced Pydantic validation, retries, idempotent writes and audit trails, which increased reliability and reduced data defects.
+              </li>
+              <li>
+                Coordinated with vendors to integrate station data adapters and external APIs, launching a new production line that stabilized throughput and improved yield consistency.
+              </li>
+              <li>
+                Implemented anomaly detection and a weekly root cause loop, which reached customer rated maximum capacity and delivered 300% of planned output.
+              </li>
+              <li>
+                Consolidated ATE and EOL result streams and vendor APIs into the data platform and implemented deterministic retest handling with automated triage, which accelerated fault diagnosis.
+              </li>
+              <li>
+                Added production grade observability with structured logs, metrics endpoints and request tracing, which shortened time to root cause and improved uptime.
               </li>
             </ul>
 
             <h3>
-              Reliable Power, inc
+              Reliable Power, Inc
               <span className="location">Santa Clara, California</span>
             </h3>
-            <p>Project Manager / Data Analyst</p>
+            <p>Data Analyst/Project Manager (Jan 2024 - Present)</p>
             <ul>
               <li>
-                Reduced unit defect rate from 6.6% to 5%, significantly
-                improving product quality and operational efficiency.
+                Processed over 50,000 records of product shipments and returns to identify key failure models and seasonal trends, enabling better inventory planning and service preparation.
               </li>
               <li>
-                Launched a new grid-tie inverter line for EV charging, expanding
-                into a growing market segment.
+                Analyzed production and failure data using Pandas in Jupyter Notebook, and created visualizations with Matplotlib to identify inverter bottlenecks and performance anomalies.
               </li>
               <li>
-                Increased inverter sales by 12% through data-driven performance
-                analytics and marketing
+                Managed inside sales activities including client communication, quotation preparation, and order tracking to support business growth and customer satisfaction.
               </li>
               <li>
-                Adapted quickly to challenges, contributing to stability and
-                growth within three months.
-              </li>
-            </ul>
-
-            <h3>
-              Haidilao Inc<span className="location">Cupertino, California</span>
-            </h3>
-            <p>Digital Marketing and Data Analyst</p>
-            <ul>
-              <li>
-                Engineered NFC-enabled signage for direct access to Google Maps
-                and Yelp reviews.
+                Led operations and maintenance for inverter fleets by triaging RMAs and trending recurring issues, which shortened time to resolution and reduced repeat failures.
               </li>
               <li>
-                Boosted customer digital engagement by 25% within the first
-                week.
-              </li>
-              <li>
-                Amplified reviews from 1,500 to 4,100 in 3 months, a 280%
-                increase.
-              </li>
-              <li>
-                Enhanced restaurant’s average rating from 4.5 to 4.8 stars on
-                Google.
-              </li>
-              <li>
-                Increased customer traffic and met sales targets for 3 months.
+                Introduced a weekly root cause and preventive action loop across service and production, which cut the return and repair rate from 6.6% to 3%.
               </li>
             </ul>
 
@@ -107,23 +89,16 @@ const ResumePage = () => {
               Your Future Is Our Business
               <span className="location">Santa Cruz, California</span>
             </h3>
-            <p>DATA ANALYST INTERN</p>
+            <p>Data Analyst Intern (Apr 2023 - June 2023)</p>
             <ul>
               <li>
-                Assisted in task prioritization, improving team workflow by 20%.
+                Redesigned the ETL workflow by consolidating schedules, tuning queries, and adding data quality checks, which reduced model iteration time by 10%.
               </li>
               <li>
-                Improved 10% efficiency by ETL datasets for predictive modeling.
+                Built a sentiment analysis pipeline with defined labeling and validation, reaching 90% accuracy and improving program messaging.
               </li>
               <li>
-                Contributed to securing $150K-$450K annual funding over 3 years.
-              </li>
-              <li>
-                Built data pipeline using Pyspark, enhancing processing speed.
-              </li>
-              <li>
-                Analyzed stakeholder comments with NLP, achieving 90% sentiment
-                accuracy.
+                Introduced a scoring-based intake and weekly triage that clarified priorities and raised team workflow.
               </li>
             </ul>
           </section>
@@ -136,100 +111,44 @@ const ResumePage = () => {
             {/* 项目部分 */}
             <h2>PROJECTS</h2>
             <h3>
-              <a href="https://drive.google.com/file/d/14uyH3SL_pJ4tDxZSDPdZma15Vt2I2b3x/view?usp=sharing">
-                Value and Supply Chain Network Development for Honeywell
-              </a>
-              &#8678;
+              Intelligent House Water Filtration and Monitor System
             </h3>
+            <p>Santa Cruz, California (Feb 2023 - Apr 2023)</p>
             <ul>
               <li>
-                Used static and adaptive forecasting, enhancing product quality
-                and inventory management.
+                Used static and adaptive forecasting, enhancing product quality and inventory management.
               </li>
               <li>
-                Used Matplotlib and Seaborn to analyze potential logistics
-                strategies for a 5% cost reduction and increased efficiency.
+                Used sensitivity analysis techniques to optimize development costs, sales volume, and production costs.
               </li>
               <li>
-                Used sensitivity analysis techniques, to optimize development
-                costs, sales volume, and production costs.
+                Analyzed logistics for cost savings and used Slack for real-time collaboration and data exchange.
               </li>
               <li>
-                Developed creative solutions and implemented quality controls to
-                boost efficiency and provide support.
-              </li>
-              <li>
-                Analyzed logistics for cost savings and used Slack for real-time
-                collaboration and data exchange.
-              </li>
-              <li>
-                Utilized BPM to streamline operations and improve over 25% data
-                analysis accuracy.
-              </li>
-              <li>
-                Product demand forecasting using Linear Regression in
-                Scikit-learn.
-              </li>
-            </ul>
-
-            <br />
-            <h3>
-              <a href="https://drive.google.com/file/d/1ld7r1eWe3rcAGl8cJUJpkryBCF12Ttqj/view?usp=sharing">
-                NBA Player Salary Prediction By Machine Learning
-              </a>
-              &#8678;
-            </h3>
-            <ul>
-              <li>
-                Cleaning and mining raw data of more than 30,000 NBA players
-              </li>
-              <li>
-                Applied feature engineering techniques by using One-hot and
-                Label Encoding
-              </li>
-              <li>
-                Compared various regression models with Linear Regression,
-                Random Forest, and XGBoost.
-              </li>
-              <li>
-                Evaluated model accuracy and robustness using cross-validation.
-              </li>
-              <li>
-                Data scraping and processing using BeautifulSoup and Requests.
+                Product demand forecasting using Linear Regression in Scikit-learn.
               </li>
             </ul>
 
             <br />
             <h3>
               <a href="https://drive.google.com/file/d/1_Ye92Sg9SeCVqgwhFUaLo2xQVA2QeVe1/view?usp=sharing">
-                LSTM Sales Forecasting For Retail Sales Management
+                LSTM Deep Learning Sales Forecasting For Retail Sales Management
               </a>
               &#8678;
             </h3>
+            <p>San Jose, California (Jun 2024 - July 2024)</p>
             <ul>
               <li>
-                Preprocessed and engineered features on over 100,000 sales
-                records to enhance model input quality
+                Preprocessed and engineered features on 100,000+ sales records to enhance model input quality.
               </li>
               <li>
-                Developed an LSTM model, increasing accuracy from 3% to 74% by
-                optimizing network architecture
+                Developed and optimized an LSTM model, increasing accuracy from 3% to 74% by refining the architecture.
               </li>
               <li>
-                Applied bidirectional LSTMs and regularization techniques to
-                improve prediction accuracy
+                Implemented bidirectional LSTMs and regularization, improving prediction accuracy and performance.
               </li>
               <li>
-                Facilitated data-driven decision-making by forecasting sales
-                trends for inventory management.
-              </li>
-              <li>
-                Visualized historical data and model forecasts to assist
-                stakeholder decisions and presentations.
-              </li>
-              <li>
-                Validated model performance through rolling validation, ensuring
-                robustness and reliability
+                Created visualizations of historical data and forecasts, aiding stakeholder decisions and enhancing presentations.
               </li>
             </ul>
           </section>

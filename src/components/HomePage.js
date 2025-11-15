@@ -53,21 +53,16 @@ const HomePage = () => {
           </div>
           <div className="infro-container">
             <p>
-              <strong>In data engineering and advanced analytics</strong>, I
-              expertly use{" "}
-              <strong>
-                Pandas, Numpy, Scikit-Learn, PySpark, and Matplotlib
-              </strong>{" "}
-              for{" "}
-              <strong>
-                data manipulation, visualization, and complex computations
-              </strong>
-              . Proficient in <strong>predictive modeling</strong> and{" "}
-              <strong>strategic decision-making</strong>, I derive insights and
-              develop robust models. My skills in{" "}
-              <strong>Python, JavaScript, MySQL</strong>, and{" "}
-              <strong>PostgreSQL</strong> enable comprehensive data solutions
-              and operational excellence.
+              <strong>Applied software engineer with 1 year experience in manufacturing industry</strong>, building{" "}
+              <strong>real-time MES with LLM/RAG search, forecasting, and decision support</strong>{" "}
+              to boost quality and throughput. Proficient in{" "}
+              <strong>FastAPI, React, LangChain, FAISS, OpenAI, and Ollama</strong>{" "}
+              for developing{" "}
+              <strong>intelligent manufacturing systems</strong>.
+              Expert in <strong>Python, JavaScript, SQL databases</strong>, and{" "}
+              <strong>data analytics</strong> with{" "}
+              <strong>Pandas, PySpark, and machine learning frameworks</strong>,
+              enabling comprehensive data-driven solutions and operational excellence.
             </p>
             <br />
           </div>

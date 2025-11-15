@@ -10,13 +10,13 @@ function Header() {
         <h3 className="header-subtitle">
           <TypeAnimation
             sequence={[
+              "Software Engineer",
+              2000,
               "Data Analyst & Engineer",
               2000,
               "Machine Learning Enthusiast",
               2000,
-              "Problem Solver",
-              2000,
-              "Explore my professional journey...",
+              "Attention is all you need",
               3000,
             ]}
             wrapper="span"
