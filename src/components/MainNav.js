@@ -1,25 +1,25 @@
 import React from "react";
-import { HashLink as NavLink } from "react-router-hash-link";
-import "../style/MainNav.css"; // 确保 CSS 文件路径正确
+import "../style/MainNav.css";
 
 const MainNav = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
     <header className="navHeader">
       <nav className="nav">
-        <button className="navButton">
-          <NavLink smooth to="#aboutMe" activeClassName="activeLink">
-            ABOUTME
-          </NavLink>
+        <button className="navButton" onClick={() => scrollToSection('aboutMe')}>
+          ABOUTME
         </button>
-        <button className="navButton">
-          <NavLink smooth to="#resume" activeClassName="activeLink">
-            RESUME
-          </NavLink>
+        <button className="navButton" onClick={() => scrollToSection('resume')}>
+          RESUME
         </button>
-        <button className="navButton">
-          <NavLink smooth to="#contactme" activeClassName="activeLink">
-            CONTACT
-          </NavLink>
+        <button className="navButton" onClick={() => scrollToSection('contactme')}>
+          CONTACT
         </button>
       </nav>
     </header>
