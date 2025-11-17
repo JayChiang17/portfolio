@@ -51,25 +51,29 @@
   -webkit-overflow-scrolling: touch;
 }
 
-/* Custom scrollbar styling */
+/* Custom scrollbar styling - 優雅隱藏設計 */
 .floating-tags::-webkit-scrollbar {
-  height: 8px;
+  height: 6px;
 }
 
 .floating-tags::-webkit-scrollbar-track {
-  background: rgba(232, 221, 208, 0.3);
-  border-radius: 10px;
-  margin: 0 20px;
+  background: transparent;
+  margin: 0 10px;
 }
 
 .floating-tags::-webkit-scrollbar-thumb {
-  background: linear-gradient(90deg, #B4846C 0%, #D4A574 100%);
+  background: rgba(180, 132, 108, 0);
   border-radius: 10px;
-  transition: background 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover時顯示滾動條 */
+.floating-tags:hover::-webkit-scrollbar-thumb {
+  background: rgba(180, 132, 108, 0.3);
 }
 
 .floating-tags::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg, #D4A574 0%, #B4846C 100%);
+  background: rgba(180, 132, 108, 0.6);
 }
 
 /* Individual floating tag */
@@ -141,27 +145,41 @@
   opacity: 0.15;
 }
 
-/* Hover effect - 3D lift and rotate */
+/* Hover effect - 3D lift and rotate with enhanced interactivity */
 .floating-tag:hover {
-  transform: translateY(-12px) rotateX(10deg) rotateY(5deg) scale(1.1);
+  transform: translateY(-15px) scale(1.12);
   box-shadow:
-    0 20px 40px rgba(180, 132, 108, 0.25),
-    0 8px 16px rgba(180, 132, 108, 0.15);
+    0 25px 50px rgba(180, 132, 108, 0.35),
+    0 10px 20px rgba(180, 132, 108, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
   border-color: #B4846C;
-  background: linear-gradient(135deg, #FFFFFF 0%, #FFFAF5 100%);
+  background: linear-gradient(135deg, #FFFAF5 0%, #FFF5ED 100%);
 }
 
-/* Icon styling */
+/* Active/Click effect */
+.floating-tag:active {
+  transform: translateY(-10px) scale(1.08);
+  box-shadow:
+    0 15px 30px rgba(180, 132, 108, 0.25),
+    0 5px 10px rgba(180, 132, 108, 0.15);
+}
+
+/* Icon styling with enhanced animation */
 .floating-tag img {
   width: 32px;
   height: 32px;
   margin-right: 12px;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .floating-tag:hover img {
-  transform: rotateY(360deg) scale(1.15);
+  transform: rotateY(360deg) scale(1.2);
+  filter: drop-shadow(0 4px 8px rgba(180, 132, 108, 0.3));
+}
+
+.floating-tag:active img {
+  transform: scale(1.1);
 }
 
 /* Text styling */

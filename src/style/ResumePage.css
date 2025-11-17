@@ -46,10 +46,11 @@
 .experience:hover,
 .projects:hover,
 .Certifications:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
   box-shadow:
-    0 16px 50px rgba(92, 74, 58, 0.18),
-    0 4px 16px rgba(92, 74, 58, 0.1);
+    0 20px 60px rgba(92, 74, 58, 0.22),
+    0 8px 20px rgba(92, 74, 58, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .education:hover::before,
@@ -57,6 +58,16 @@
 .projects:hover::before,
 .Certifications:hover::before {
   transform: scaleX(1);
+}
+
+.education:active,
+.experience:active,
+.projects:active,
+.Certifications:active {
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 35px rgba(92, 74, 58, 0.15),
+    0 4px 12px rgba(92, 74, 58, 0.08);
 }
 
 /* Staggered animations */
