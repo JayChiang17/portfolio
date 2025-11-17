@@ -75,50 +75,61 @@ const HomePage = () => {
         className={`fade-in ${isSecondSectionVisible ? "visible" : ""}`}
       >
         <section className="contect">
-          Graduated from{" "}
+          Jay Chiang is a{" "}
+          <strong>software engineer specializing in AI-powered manufacturing systems</strong>{" "}
+          with a proven track record of bridging data analytics and full-stack development.
+          Graduating from{" "}
           <a
             href="https://admissions.ucsc.edu/programs/technology-and-information-management"
             target="_blank"
             rel="noopener noreferrer"
           >
-            The University of California, Santa Cruz in Technical Information
-            Management
-          </a>{" "}
-          and has practical experience as a data analyst intern. During my
-          tenure as a Data Analyst Intern at{" "}
+            UC Santa Cruz with a B.S. in Technology Information Management
+          </a>
+          , he has rapidly evolved from data analyst roles into software engineering,
+          now architecting{" "}
+          <u>intelligent MES platforms with LLM/RAG capabilities</u> at Leadman Electronics.
+          <br />
+          <br />
+          His engineering expertise encompasses{" "}
+          <strong>building production-grade AI applications</strong> using FastAPI microservices,
+          React dashboards, and advanced NLP frameworks including LangChain, FAISS, and Ollama.
+          At Leadman, he developed a{" "}
+          <u>retrieval-augmented generation system for real-time SOP guidance</u>,
+          integrated WebSocket-based monitoring dashboards, and implemented anomaly detection
+          that enabled the production line to{" "}
+          <strong>deliver 300% of planned output</strong> while reaching maximum capacity.
+          <br />
+          <br />
+          His analytical foundation was established through{" "}
+          <strong>data-intensive roles across manufacturing and nonprofit sectors</strong>.
+          At Reliable Power, he processed 50,000+ shipment records and{" "}
+          <u>reduced product return rates from 6.6% to 3%</u> through systematic root cause analysis.
+          His earlier work at{" "}
           <a
             href="https://yfiob.org/"
             target="_blank"
             rel="noopener noreferrer"
           >
             YFIOB
-          </a>
-          , I played a pivotal role in the{" "}
-          <u>comprehensive analysis of student surveys</u>, demonstrating my
-          ability to analyze and interpret complex data,
-          <br />
-          thereby substantially enhancing the organization's learning experience
-          and financial sustainability.
+          </a>{" "}
+          demonstrated his ability to transform raw survey data into actionable insights,
+          directly contributing to{" "}
+          <u>securing substantial organizational funding</u> through data-driven storytelling.
           <br />
           <br />
-          My efforts significantly contributed to{" "}
-          <u>securing substantial funding</u>.<br />
-          These accomplishments are complemented by my{" "}
-          <strong>certifications from Google, LinkedIn, and Coursera</strong>,
-          <br />
-          which underscore my dedication to the constantly advancing domain of
-          data science.
-          <br />
-          <br />
-          My technical proficiency spans a range of programming languages,
-          databases, and tools, and is fortified by both academic achievements
-          and <u>industry-recognized certifications</u>.<br />I excel in supply
-          chain optimization, exploration of AI tools, and predictive modeling.
-          <br />
-          With such a background, I aspire to{" "}
+          Complementing his practical experience,{" "}
           <strong>
-            leverage my skills in challenging environments, driving data-driven
-            solutions and innovation
+            Jay holds nine industry certifications spanning data science, machine learning,
+            and full-stack development
+          </strong>{" "}
+          from Google, IBM, LinkedIn, and Udemy. His technical portfolio includes
+          advanced coursework in deep learning, LangChain application development,
+          and big data processing with PySpark. This combination of{" "}
+          <u>hands-on AI/ML implementation</u>, full-stack engineering proficiency,
+          and data analytics expertise positions him uniquely to{" "}
+          <strong>
+            architect scalable, intelligent systems that drive measurable business impact
           </strong>
           .
         </section>
