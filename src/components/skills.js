@@ -1,8 +1,50 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import "../style/FloatingSkills.css";
 
 const SkillsSection = () => {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollRef.current;
+    if (!scrollContainer) return;
+
+    let scrollAmount = 0;
+    const scrollSpeed = 0.5; // 調整滾動速度
+
+    const autoScroll = () => {
+      scrollAmount += scrollSpeed;
+
+      // 當滾動到一半時重置（因為我們複製了一次技能列表）
+      if (scrollAmount >= scrollContainer.scrollWidth / 2) {
+        scrollAmount = 0;
+      }
+
+      scrollContainer.scrollLeft = scrollAmount;
+      requestAnimationFrame(autoScroll);
+    };
+
+    const animationId = requestAnimationFrame(autoScroll);
+
+    // 滑鼠懸停時暫停滾動
+    const handleMouseEnter = () => {
+      cancelAnimationFrame(animationId);
+    };
+
+    const handleMouseLeave = () => {
+      requestAnimationFrame(autoScroll);
+    };
+
+    scrollContainer.addEventListener('mouseenter', handleMouseEnter);
+    scrollContainer.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      cancelAnimationFrame(animationId);
+      scrollContainer.removeEventListener('mouseenter', handleMouseEnter);
+      scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
   // 假設您有一個包含所有技能和對應圖標鏈接的數組
   const skills = [
     {
@@ -114,8 +156,9 @@ const SkillsSection = () => {
   return (
     <section className="floating-skills-container">
       <h2>Skills & Technologies</h2>
-      <div className="floating-tags">
-        {skills.map((skill, index) => (
+      <div className="floating-tags" ref={scrollRef}>
+        {/* 複製兩次技能列表以實現無限循環效果 */}
+        {[...skills, ...skills].map((skill, index) => (
           <motion.div
             key={index}
             className={`floating-tag ${getRandomSize(index)}`}
@@ -123,7 +166,7 @@ const SkillsSection = () => {
             whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
             transition={{
               duration: 0.8,
-              delay: index * 0.05,
+              delay: (index % skills.length) * 0.05,
               ease: [0.4, 0, 0.2, 1]
             }}
             viewport={{ once: true }}

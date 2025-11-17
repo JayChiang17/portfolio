@@ -17,9 +17,9 @@ html {
 
 .infro {
   text-align: center;
-  padding: 50px 30px;
-  max-width: 900px;
-  margin: 30px 20px;
+  padding: 50px 25px;
+  max-width: 95%;
+  margin: 30px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -133,9 +133,9 @@ h1 {
 /* Content section */
 .contect {
   text-align: left;
-  padding: 50px 30px;
-  max-width: 900px;
-  margin: 30px 20px;
+  padding: 50px 25px;
+  max-width: 95%;
+  margin: 30px 10px;
   color: #3E3830;
   font-size: 1.05rem;
   line-height: 1.9;

@@ -2,10 +2,10 @@
 
 /* Contact container */
 .contact-container {
-  padding: 60px 30px;
+  padding: 60px 25px;
   text-align: center;
-  margin: 30px 20px;
-  max-width: 900px;
+  margin: 30px 10px;
+  max-width: 95%;
   background: #FFFFFF;
   border-radius: 20px;
   box-shadow:
