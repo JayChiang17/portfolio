@@ -1,10 +1,10 @@
 /* Floating Tag Cloud Design for Skills - 2025 Trend */
 
 .floating-skills-container {
-  padding: 80px 5px;
-  margin: 30px auto;
+  padding: 60px 0;
+  margin: 20px auto;
   max-width: 100%;
-  min-height: 600px;
+  min-height: 400px;
   position: relative;
   overflow: hidden;
   background: transparent;
@@ -14,66 +14,73 @@
   font-family: "Montserrat", sans-serif;
   font-size: 2.2rem;
   color: #5C4A3A;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
   position: relative;
   z-index: 10;
-  animation: fadeInDown 0.8s ease-out;
+  animation: titleFloat 3s ease-in-out infinite;
 }
 
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
+@keyframes titleFloat {
+  0%, 100% {
     transform: translateY(0);
   }
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
-/* Floating tags container - Horizontal Scrolling */
-.floating-tags {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 20px;
-  padding: 40px 5px;
-  perspective: 1000px;
+/* Marquee container */
+.marquee {
+  width: 100%;
+  overflow: hidden;
   position: relative;
-  overflow-x: auto;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+  padding: 20px 0;
 }
 
-/* Custom scrollbar styling - 優雅隱藏設計 */
-.floating-tags::-webkit-scrollbar {
-  height: 6px;
+.marquee::before,
+.marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
 }
 
-.floating-tags::-webkit-scrollbar-track {
-  background: transparent;
-  margin: 0 10px;
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(232, 221, 208, 1) 0%, rgba(232, 221, 208, 0) 100%);
 }
 
-.floating-tags::-webkit-scrollbar-thumb {
-  background: rgba(180, 132, 108, 0);
-  border-radius: 10px;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(232, 221, 208, 1) 0%, rgba(232, 221, 208, 0) 100%);
 }
 
-/* Hover時顯示滾動條 */
-.floating-tags:hover::-webkit-scrollbar-thumb {
-  background: rgba(180, 132, 108, 0.3);
+/* Marquee content with infinite scroll */
+.marquee-content {
+  display: flex;
+  gap: 20px;
+  animation: marquee 60s linear infinite;
+  width: fit-content;
 }
 
-.floating-tags::-webkit-scrollbar-thumb:hover {
-  background: rgba(180, 132, 108, 0.6);
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
 }
 
 /* Individual floating tag */
@@ -93,36 +100,25 @@
     0 1px 3px rgba(92, 74, 58, 0.05);
   position: relative;
   overflow: hidden;
-  animation: floatIn 0.8s ease-out backwards;
-  transform-style: preserve-3d;
+  animation: floatUp 3s ease-in-out infinite;
 }
 
-/* Staggered animation delays */
-.floating-tag:nth-child(1) { animation-delay: 0.1s; }
-.floating-tag:nth-child(2) { animation-delay: 0.15s; }
-.floating-tag:nth-child(3) { animation-delay: 0.2s; }
-.floating-tag:nth-child(4) { animation-delay: 0.25s; }
-.floating-tag:nth-child(5) { animation-delay: 0.3s; }
-.floating-tag:nth-child(6) { animation-delay: 0.35s; }
-.floating-tag:nth-child(7) { animation-delay: 0.4s; }
-.floating-tag:nth-child(8) { animation-delay: 0.45s; }
-.floating-tag:nth-child(9) { animation-delay: 0.5s; }
-.floating-tag:nth-child(10) { animation-delay: 0.55s; }
-.floating-tag:nth-child(11) { animation-delay: 0.6s; }
-.floating-tag:nth-child(12) { animation-delay: 0.65s; }
-.floating-tag:nth-child(13) { animation-delay: 0.7s; }
-.floating-tag:nth-child(14) { animation-delay: 0.75s; }
-.floating-tag:nth-child(15) { animation-delay: 0.8s; }
-.floating-tag:nth-child(n+16) { animation-delay: 0.85s; }
+.floating-tag:nth-child(odd) {
+  animation: floatUp 3s ease-in-out infinite;
+  animation-delay: 0s;
+}
 
-@keyframes floatIn {
-  from {
-    opacity: 0;
-    transform: translateY(50px) rotateX(-20deg);
+.floating-tag:nth-child(even) {
+  animation: floatUp 3.5s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0) rotateX(0deg);
+  50% {
+    transform: translateY(-15px);
   }
 }
 
@@ -154,6 +150,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   border-color: #B4846C;
   background: linear-gradient(135deg, #FFFAF5 0%, #FFF5ED 100%);
+  animation: none;
 }
 
 /* Active/Click effect */
@@ -171,11 +168,22 @@
   margin-right: 12px;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  animation: rotate360 10s linear infinite;
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .floating-tag:hover img {
-  transform: rotateY(360deg) scale(1.2);
+  transform: scale(1.2);
   filter: drop-shadow(0 4px 8px rgba(180, 132, 108, 0.3));
+  animation: none;
 }
 
 .floating-tag:active img {
@@ -196,40 +204,11 @@
   color: #B4846C;
 }
 
-/* Responsive sizes - different tag sizes */
-.floating-tag.size-small {
-  padding: 14px 22px;
-}
-
-.floating-tag.size-small img {
-  width: 26px;
-  height: 26px;
-  margin-right: 10px;
-}
-
-.floating-tag.size-small p {
-  font-size: 0.95rem;
-}
-
-.floating-tag.size-large {
-  padding: 22px 34px;
-}
-
-.floating-tag.size-large img {
-  width: 38px;
-  height: 38px;
-  margin-right: 14px;
-}
-
-.floating-tag.size-large p {
-  font-size: 1.15rem;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
   .floating-skills-container {
-    padding: 60px 10px;
-    min-height: 500px;
+    padding: 50px 0;
+    min-height: 350px;
   }
 
   .floating-skills-container h2 {
@@ -238,9 +217,9 @@
     letter-spacing: 2px;
   }
 
-  .floating-tags {
+  .marquee-content {
     gap: 15px;
-    padding: 30px 10px;
+    animation: marquee 40s linear infinite;
   }
 
   .floating-tag {
@@ -257,35 +236,7 @@
     font-size: 0.95rem;
   }
 
-  .floating-tag.size-small {
-    padding: 12px 18px;
-  }
-
-  .floating-tag.size-small img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .floating-tag.size-small p {
-    font-size: 0.85rem;
-  }
-
-  .floating-tag.size-large {
-    padding: 16px 26px;
-  }
-
-  .floating-tag.size-large img {
-    width: 32px;
-    height: 32px;
-  }
-
-  .floating-tag.size-large p {
-    font-size: 1.05rem;
-  }
-
   .floating-tag:hover {
     transform: translateY(-8px) scale(1.05);
   }
 }
-
-/* Removed subtle floating animation for horizontal scrolling */

@@ -13,9 +13,9 @@
 .experience,
 .projects,
 .Certifications {
-  padding: 50px 25px;
-  margin: 30px 10px;
-  max-width: 95%;
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 900px;
   background: #FFFFFF;
   border-radius: 20px;
   box-shadow:
@@ -72,19 +72,28 @@
 
 /* Staggered animations */
 .education {
-  animation: slideInFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 5s ease-in-out infinite 3s;
 }
 
 .experience {
-  animation: slideInFromBottom 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInFromBottom 0.9s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 5.5s ease-in-out infinite 3.5s;
 }
 
 .projects {
-  animation: slideInFromBottom 1s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInFromBottom 1s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 6s ease-in-out infinite 4s;
 }
 
 .Certifications {
-  animation: slideInFromBottom 1.1s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInFromBottom 1.1s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 6.5s ease-in-out infinite 4.5s;
+}
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 @keyframes slideInFromBottom {

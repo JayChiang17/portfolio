@@ -17,20 +17,29 @@ html {
 
 .infro {
   text-align: center;
-  padding: 50px 25px;
-  max-width: 95%;
-  margin: 30px 10px;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+  gap: 30px;
   background: #FFFFFF;
   border-radius: 20px;
   box-shadow:
     0 8px 30px rgba(92, 74, 58, 0.12),
     0 2px 8px rgba(92, 74, 58, 0.06);
-  animation: slideInFromLeft 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInFromLeft 0.9s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 6s ease-in-out infinite 2s;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 
 .infro:hover {
@@ -141,9 +150,9 @@ h1 {
 /* Content section */
 .contect {
   text-align: left;
-  padding: 50px 25px;
-  max-width: 95%;
-  margin: 30px 10px;
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 30px auto;
   color: #3E3830;
   font-size: 1.05rem;
   line-height: 1.9;
@@ -152,7 +161,7 @@ h1 {
   box-shadow:
     0 8px 30px rgba(92, 74, 58, 0.12),
     0 2px 8px rgba(92, 74, 58, 0.06);
-  animation: slideInFromRight 1s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: slideInFromRight 1s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 7s ease-in-out infinite 2.5s;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
