@@ -11,19 +11,11 @@
   box-shadow:
     0 8px 30px rgba(92, 74, 58, 0.12),
     0 2px 8px rgba(92, 74, 58, 0.06);
-  animation: fadeInScale 1.2s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 5.5s ease-in-out infinite 3s;
+  animation: fadeInScale 1.2s cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
-@keyframes cardFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
 
 .contact-container:hover {
   transform: translateY(-10px);

@@ -72,28 +72,19 @@
 
 /* Staggered animations */
 .education {
-  animation: slideInFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 5s ease-in-out infinite 3s;
+  animation: slideInFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .experience {
-  animation: slideInFromBottom 0.9s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 5.5s ease-in-out infinite 3.5s;
+  animation: slideInFromBottom 0.9s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects {
-  animation: slideInFromBottom 1s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 6s ease-in-out infinite 4s;
+  animation: slideInFromBottom 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .Certifications {
-  animation: slideInFromBottom 1.1s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 6.5s ease-in-out infinite 4.5s;
-}
-
-@keyframes cardFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  animation: slideInFromBottom 1.1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes slideInFromBottom {

@@ -21,16 +21,6 @@
   text-align: center;
   position: relative;
   z-index: 10;
-  animation: titleFloat 3s ease-in-out infinite;
-}
-
-@keyframes titleFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
 }
 
 /* Marquee container */
@@ -100,26 +90,6 @@
     0 1px 3px rgba(92, 74, 58, 0.05);
   position: relative;
   overflow: hidden;
-  animation: floatUp 3s ease-in-out infinite;
-}
-
-.floating-tag:nth-child(odd) {
-  animation: floatUp 3s ease-in-out infinite;
-  animation-delay: 0s;
-}
-
-.floating-tag:nth-child(even) {
-  animation: floatUp 3.5s ease-in-out infinite;
-  animation-delay: 0.5s;
-}
-
-@keyframes floatUp {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-15px);
-  }
 }
 
 /* Gradient overlay on hover */
@@ -150,7 +120,6 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   border-color: #B4846C;
   background: linear-gradient(135deg, #FFFAF5 0%, #FFF5ED 100%);
-  animation: none;
 }
 
 /* Active/Click effect */
@@ -168,22 +137,11 @@
   margin-right: 12px;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
-  animation: rotate360 10s linear infinite;
-}
-
-@keyframes rotate360 {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 .floating-tag:hover img {
   transform: scale(1.2);
   filter: drop-shadow(0 4px 8px rgba(180, 132, 108, 0.3));
-  animation: none;
 }
 
 .floating-tag:active img {

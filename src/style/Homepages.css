@@ -29,18 +29,10 @@ html {
   box-shadow:
     0 8px 30px rgba(92, 74, 58, 0.12),
     0 2px 8px rgba(92, 74, 58, 0.06);
-  animation: slideInFromLeft 0.9s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 6s ease-in-out infinite 2s;
+  animation: slideInFromLeft 0.9s cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes cardFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
 
 .infro:hover {
   transform: translateY(-10px);
@@ -161,7 +153,7 @@ h1 {
   box-shadow:
     0 8px 30px rgba(92, 74, 58, 0.12),
     0 2px 8px rgba(92, 74, 58, 0.06);
-  animation: slideInFromRight 1s cubic-bezier(0.4, 0, 0.2, 1), cardFloat 7s ease-in-out infinite 2.5s;
+  animation: slideInFromRight 1s cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 

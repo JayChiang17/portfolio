@@ -1,12 +1,13 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import "../style/Header.css";
+import "../style/HighlightEffects.css";
 
 function Header() {
   return (
     <header>
-      <div className="top">
-        <h2 className="header-name">Jay Chiang</h2>
+      <div className="top shimmer">
+        <h2 className="header-name gradient-text">Jay Chiang</h2>
         <h3 className="header-subtitle">
           <TypeAnimation
             sequence={[

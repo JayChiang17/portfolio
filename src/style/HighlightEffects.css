@@ -1,0 +1,304 @@
+/* Premium Highlight Effects - Focus Animations */
+
+/* Gradient Text Animation for Key Headlines */
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    #5C4A3A 0%,
+    #B4846C 25%,
+    #D4A574 50%,
+    #B4846C 75%,
+    #5C4A3A 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 4s ease-in-out infinite;
+}
+
+@keyframes gradientFlow {
+  0%, 100% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 200% center;
+  }
+}
+
+/* Spotlight Effect for Key Numbers/Stats */
+.spotlight-number {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  color: #B4846C;
+}
+
+.spotlight-number::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -8px;
+  right: -8px;
+  bottom: -4px;
+  background: linear-gradient(135deg, rgba(180, 132, 108, 0.15) 0%, rgba(212, 165, 116, 0.08) 100%);
+  border-radius: 8px;
+  z-index: -1;
+  animation: softPulse 3s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+/* Underline Reveal Animation */
+.reveal-underline {
+  position: relative;
+  display: inline;
+}
+
+.reveal-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #B4846C, #D4A574);
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-underline:hover::after,
+.fade-in.visible .reveal-underline::after {
+  width: 100%;
+}
+
+/* Glow Effect for Important Text */
+.text-glow {
+  text-shadow: 0 0 20px rgba(180, 132, 108, 0.3);
+  transition: text-shadow 0.4s ease;
+}
+
+.text-glow:hover {
+  text-shadow: 0 0 30px rgba(180, 132, 108, 0.5), 0 0 60px rgba(180, 132, 108, 0.2);
+}
+
+/* Stagger Fade Animation for List Items */
+.stagger-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: staggerFadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.stagger-item:nth-child(1) { animation-delay: 0.1s; }
+.stagger-item:nth-child(2) { animation-delay: 0.2s; }
+.stagger-item:nth-child(3) { animation-delay: 0.3s; }
+.stagger-item:nth-child(4) { animation-delay: 0.4s; }
+.stagger-item:nth-child(5) { animation-delay: 0.5s; }
+.stagger-item:nth-child(6) { animation-delay: 0.6s; }
+.stagger-item:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes staggerFadeIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Focus Border Animation */
+.focus-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.focus-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #B4846C, transparent);
+  animation: borderSlide 3s ease-in-out infinite;
+}
+
+@keyframes borderSlide {
+  0%, 100% {
+    left: -100%;
+  }
+  50% {
+    left: 100%;
+  }
+}
+
+/* Typewriter Cursor for Header */
+.typewriter-cursor::after {
+  content: '|';
+  animation: blink 1s step-end infinite;
+  color: #B4846C;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Card Accent Line */
+.accent-line {
+  position: relative;
+}
+
+.accent-line::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(180deg, #B4846C 0%, #D4A574 100%);
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 2px;
+}
+
+.accent-line:hover::before,
+.fade-in.visible .accent-line::before {
+  height: 100%;
+}
+
+/* Shimmer Effect for Key Sections */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    left: -150%;
+  }
+  50% {
+    left: 150%;
+  }
+}
+
+/* Magnetic Hover for Interactive Elements */
+.magnetic-hover {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.magnetic-hover:hover {
+  transform: scale(1.05) translateY(-3px);
+}
+
+/* Number Counter Highlight */
+.stat-highlight {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #B4846C;
+  padding: 2px 8px;
+  background: rgba(180, 132, 108, 0.1);
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.stat-highlight:hover {
+  background: rgba(180, 132, 108, 0.2);
+  transform: scale(1.05);
+}
+
+/* Section Title Animation */
+.section-title-animated {
+  position: relative;
+  display: inline-block;
+}
+
+.section-title-animated::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #B4846C, #D4A574);
+  border-radius: 2px;
+  animation: expandLine 1s ease-out forwards;
+  animation-delay: 0.5s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+@keyframes expandLine {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Company Name Highlight */
+.company-highlight {
+  position: relative;
+  font-weight: 600;
+  color: #5C4A3A;
+}
+
+.company-highlight::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(180deg, transparent, rgba(180, 132, 108, 0.2));
+  z-index: -1;
+  transition: height 0.3s ease;
+}
+
+.company-highlight:hover::before {
+  height: 100%;
+}
+
+/* Tech Stack Badge */
+.tech-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  background: linear-gradient(135deg, #F5F1E8 0%, #FAF8F3 100%);
+  border: 1px solid #E8DDD0;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #5C4A3A;
+  margin: 2px;
+  transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: linear-gradient(135deg, #B4846C 0%, #D4A574 100%);
+  color: white;
+  border-color: #B4846C;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(180, 132, 108, 0.3);
+}

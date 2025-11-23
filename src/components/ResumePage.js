@@ -1,6 +1,6 @@
 import React from "react";
-import "../style/ResumePage.css"; // 确保CSS文件路径正确
-import "react-bootstrap";
+import "../style/ResumePage.css";
+import "../style/HighlightEffects.css";
 import SkillsSection from "../components/skills";
 
 const ResumePage = () => {
@@ -29,47 +29,46 @@ const ResumePage = () => {
               Associate Degree for Transfer, Computer Science, Jun 2020
             </p>
           </section>
-          <section className="experience">
-            {/* 工作经验部分 */}
-            <h2>EXPERIENCE</h2>
+          <section className="experience accent-line">
+            <h2 className="section-title-animated">EXPERIENCE</h2>
 
             <h3>
-              Leadman Electronics
+              <span className="company-highlight">Leadman Electronics</span>
               <span className="location">Santa Clara, California</span>
             </h3>
             <p>Software Engineer (Nov 2024 - Present)</p>
             <ul>
-              <li>
-                Designed a retrieval augmented layer for MES SOPs with live telemetry using FastAPI microservices, LangChain, FAISS, OpenAI and Ollama. Enabled semantic SOP search and guided troubleshooting.
+              <li className="stagger-item">
+                Designed a <strong>retrieval augmented layer</strong> for MES SOPs with live telemetry using FastAPI microservices, LangChain, FAISS, OpenAI and Ollama. Enabled semantic SOP search and guided troubleshooting.
               </li>
-              <li>
-                Built a real time manufacturing dashboard with React and WebSocket, secured with JWT role based access and backed by SQLite WAL and ETL, which unified stations, yield, alarms and RMA in a single pane.
+              <li className="stagger-item">
+                Built a <strong>real time manufacturing dashboard</strong> with React and WebSocket, secured with JWT role based access and backed by SQLite WAL and ETL, which unified stations, yield, alarms and RMA in a single pane.
               </li>
-              <li>
-                Standardized data ingestion with versioned REST services, vendor webhooks and scanner feeds, and enforced Pydantic validation, retries, idempotent writes and audit trails, which increased reliability and reduced data defects.
+              <li className="stagger-item">
+                Standardized data ingestion with versioned REST services, vendor webhooks and scanner feeds, and enforced Pydantic validation, retries, idempotent writes and audit trails, which <strong>increased reliability</strong> and reduced data defects.
               </li>
-              <li>
-                Coordinated with vendors to integrate station data adapters and external APIs, launching a new production line that stabilized throughput and improved yield consistency.
+              <li className="stagger-item">
+                Coordinated with vendors to integrate station data adapters and external APIs, launching a new production line that <strong>stabilized throughput</strong> and improved yield consistency.
               </li>
-              <li>
-                Implemented anomaly detection and a weekly root cause loop, which reached customer rated maximum capacity and delivered 300% of planned output.
+              <li className="stagger-item">
+                Implemented anomaly detection and a weekly root cause loop, which reached customer rated maximum capacity and <span className="stat-highlight">delivered 300% of planned output</span>.
               </li>
-              <li>
-                Consolidated ATE and EOL result streams and vendor APIs into the data platform and implemented deterministic retest handling with automated triage, which accelerated fault diagnosis.
+              <li className="stagger-item">
+                Consolidated ATE and EOL result streams and vendor APIs into the data platform and implemented deterministic retest handling with automated triage, which <strong>accelerated fault diagnosis</strong>.
               </li>
-              <li>
-                Added production grade observability with structured logs, metrics endpoints and request tracing, which shortened time to root cause and improved uptime.
+              <li className="stagger-item">
+                Added production grade observability with structured logs, metrics endpoints and request tracing, which <strong>shortened time to root cause</strong> and improved uptime.
               </li>
             </ul>
 
             <h3>
-              Reliable Power, Inc
+              <span className="company-highlight">Reliable Power, Inc</span>
               <span className="location">Santa Clara, California</span>
             </h3>
             <p>Data Analyst/Project Manager (Jan 2024 - Present)</p>
             <ul>
               <li>
-                Processed over 50,000 records of product shipments and returns to identify key failure models and seasonal trends, enabling better inventory planning and service preparation.
+                Processed over <span className="stat-highlight">50,000 records</span> of product shipments and returns to identify key failure models and seasonal trends, enabling better inventory planning and service preparation.
               </li>
               <li>
                 Analyzed production and failure data using Pandas in Jupyter Notebook, and created visualizations with Matplotlib to identify inverter bottlenecks and performance anomalies.
@@ -78,24 +77,24 @@ const ResumePage = () => {
                 Managed inside sales activities including client communication, quotation preparation, and order tracking to support business growth and customer satisfaction.
               </li>
               <li>
-                Led operations and maintenance for inverter fleets by triaging RMAs and trending recurring issues, which shortened time to resolution and reduced repeat failures.
+                Led operations and maintenance for inverter fleets by triaging RMAs and trending recurring issues, which <strong>shortened time to resolution</strong> and reduced repeat failures.
               </li>
               <li>
-                Introduced a weekly root cause and preventive action loop across service and production, which cut the return and repair rate from 6.6% to 3%.
+                Introduced a weekly root cause and preventive action loop across service and production, which <span className="stat-highlight">cut the return rate from 6.6% to 3%</span>.
               </li>
             </ul>
 
             <h3>
-              Your Future Is Our Business
+              <span className="company-highlight">Your Future Is Our Business</span>
               <span className="location">Santa Cruz, California</span>
             </h3>
             <p>Data Analyst Intern (Apr 2023 - June 2023)</p>
             <ul>
               <li>
-                Redesigned the ETL workflow by consolidating schedules, tuning queries, and adding data quality checks, which reduced model iteration time by 10%.
+                Redesigned the ETL workflow by consolidating schedules, tuning queries, and adding data quality checks, which <span className="stat-highlight">reduced model iteration time by 10%</span>.
               </li>
               <li>
-                Built a sentiment analysis pipeline with defined labeling and validation, reaching 90% accuracy and improving program messaging.
+                Built a sentiment analysis pipeline with defined labeling and validation, reaching <span className="stat-highlight">90% accuracy</span> and improving program messaging.
               </li>
               <li>
                 Introduced a scoring-based intake and weekly triage that clarified priorities and raised team workflow.
