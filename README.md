@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# Jay Chiang - Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive portfolio website showcasing my experience as a Software Engineer specializing in AI-powered manufacturing systems.
 
-## Available Scripts
+**Live Demo:** [https://jaychiang17.github.io/portfolio/](https://jaychiang17.github.io/portfolio/)
 
-In the project directory, you can run:
+## About Me
 
-### `npm start`
+Software Engineer with expertise in building production-grade AI applications using FastAPI microservices, React dashboards, and advanced NLP frameworks. Currently architecting intelligent MES platforms with LLM/RAG capabilities at Leadman Electronics.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
+- React 18
+- React Router
+- Framer Motion
+- React Type Animation
+- Bootstrap 5
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Styling
+- Custom CSS3 with animations
+- Glassmorphism effects
+- Responsive design
+- Premium highlight animations
 
 ### Deployment
+- GitHub Pages
+- gh-pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Features
 
-### `npm run build` fails to minify
+- Responsive single-page application
+- Smooth scroll navigation
+- Interactive skills marquee carousel
+- Premium animations:
+  - Gradient text flow
+  - Stat highlight badges
+  - Shimmer effects
+  - Staggered list animations
+  - Reveal underlines
+- TypeAnimation for dynamic role display
+- Error boundary handling
+- Lazy loading with Suspense
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── HomePage.js        # Main container
+│   ├── Header.js          # Hero section with TypeAnimation
+│   ├── MainNav.js         # Sticky navigation
+│   ├── ResumePage.js      # Resume/CV section
+│   ├── skills.js          # Skills marquee carousel
+│   ├── ContactPage.js     # Contact section
+│   ├── ErrorBoundary.js   # Error handling
+│   ├── Loading.js         # Loading spinner
+│   └── Popup.js           # Notification popup
+├── style/
+│   ├── Homepages.css
+│   ├── ResumePage.css
+│   ├── Header.css
+│   ├── FloatingSkills.css
+│   ├── ContactPage.css
+│   ├── HighlightEffects.css  # Premium animations
+│   └── ...
+└── pic/                   # Profile images
+```
+
+## Getting Started
+
+### Prerequisites
+- Node.js (v14+)
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/JayChiang17/portfolio.git
+
+# Navigate to project directory
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view in browser.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Deploy to GitHub Pages
+
+```bash
+npm run deploy
+```
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm start` | Start development server |
+| `npm run build` | Build for production |
+| `npm run deploy` | Deploy to GitHub Pages |
+| `npm test` | Run tests |
+
+## Contact
+
+- **Email:** chiang.mengchieh@gmail.com
+- **LinkedIn:** [linkedin.com/in/jay-chiang-9054001a7](https://www.linkedin.com/in/jay-chiang-9054001a7/)
+- **GitHub:** [github.com/JayChiang17](https://github.com/JayChiang17)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with React | Deployed on GitHub Pages
