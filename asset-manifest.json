@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "./static/css/main.9e5a4107.css",
-    "main.js": "./static/js/main.dea976bf.js",
-    "static/media/umich_logo.png": "./static/media/umich_logo.e2d326fd5fdf41c7bbdc.png",
+    "main.js": "./static/js/main.41a3e023.js",
     "static/media/me2.png": "./static/media/me2.bfc56658c7993ab710fb.png",
     "static/media/The_University_of_California_UCSC.png": "./static/media/The_University_of_California_UCSC.9fc0881d51d3f6109633.png",
+    "static/media/umich_logo.png": "./static/media/umich_logo.f2f882f1eed260c88757.png",
     "index.html": "./index.html",
     "main.9e5a4107.css.map": "./static/css/main.9e5a4107.css.map",
-    "main.dea976bf.js.map": "./static/js/main.dea976bf.js.map"
+    "main.41a3e023.js.map": "./static/js/main.41a3e023.js.map"
   },
   "entrypoints": [
     "static/css/main.9e5a4107.css",
-    "static/js/main.dea976bf.js"
+    "static/js/main.41a3e023.js"
   ]
 }
