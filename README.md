@@ -1,36 +1,49 @@
 # Jay Chiang - Portfolio
 
-A modern, responsive portfolio website showcasing my experience as a Software Engineer specializing in AI-powered manufacturing systems.
+A modern, responsive portfolio website showcasing my experience as a Data Engineer and Full-Stack Developer specializing in manufacturing data systems and applied data science.
 
 **Live Demo:** [https://jaychiang17.github.io/portfolio/](https://jaychiang17.github.io/portfolio/)
 
 ## About Me
 
-Software Engineer with expertise in building production-grade AI applications using FastAPI microservices, React dashboards, and advanced NLP frameworks. Currently architecting intelligent MES platforms with LLM/RAG capabilities at Leadman Electronics.
+Data Engineer and Full-Stack Developer with 2+ years of experience building real-time MES dashboards, analytics pipelines, and AI-powered retrieval systems in the manufacturing industry. Currently pursuing M.S. in Applied Data Science at the University of Michigan - Ann Arbor, focusing on ML pipelines, deep learning, NLP, and causal inference.
+
+## Professional Experience
+
+- **Data Engineer** | Leadman Electronics | Jan 2024 - Present
+- **Software Engineer, Manufacturing Data Systems** | Meritronics Inc | Sep 2025 - Dec 2025
+- **Data Analyst** | Reliable Power, Inc. | Jan 2024 - Sep 2025
+
+## Education
+
+- **M.S. Applied Data Science** | University of Michigan - Ann Arbor | Jan 2026 - Present
+- **B.S. Technology Information Management** | UC Santa Cruz | Sep 2020 - Jun 2023
 
 ## Tech Stack
 
 ### Frontend
 - React 18
-- React Router
 - Framer Motion
 - React Type Animation
-- Bootstrap 5
+
+### Backend & Data
+- Python, FastAPI, PostgreSQL, Azure SQL
+- Pandas, NumPy, Airflow
+- FAISS, Ollama, HyDE
+
+### DevOps
+- Docker, Kubernetes
+- GitHub Pages, gh-pages
 
 ### Styling
 - Custom CSS3 with animations
-- Glassmorphism effects
 - Responsive design
 - Premium highlight animations
-
-### Deployment
-- GitHub Pages
-- gh-pages
 
 ## Features
 
 - Responsive single-page application
-- Smooth scroll navigation
+- Smooth scroll navigation with 7 sections (Home, About, Experience, Skills, Projects, Resume, Contact)
 - Interactive skills marquee carousel
 - Premium animations:
   - Gradient text flow
@@ -49,7 +62,7 @@ src/
 ├── components/
 │   ├── HomePage.js        # Main container
 │   ├── Header.js          # Hero section with TypeAnimation
-│   ├── MainNav.js         # Sticky navigation
+│   ├── MainNav.js         # Sticky navigation (7 options)
 │   ├── ResumePage.js      # Resume/CV section
 │   ├── skills.js          # Skills marquee carousel
 │   ├── ContactPage.js     # Contact section
@@ -60,9 +73,10 @@ src/
 │   ├── Homepages.css
 │   ├── ResumePage.css
 │   ├── Header.css
+│   ├── MainNav.css
 │   ├── FloatingSkills.css
 │   ├── ContactPage.css
-│   ├── HighlightEffects.css  # Premium animations
+│   ├── HighlightEffects.css
 │   └── ...
 └── pic/                   # Profile images
 ```
@@ -115,6 +129,7 @@ npm run deploy
 ## Contact
 
 - **Email:** chiang.mengchieh@gmail.com
+- **Phone:** (+1) 408-688-6969
 - **LinkedIn:** [linkedin.com/in/jay-chiang-9054001a7](https://www.linkedin.com/in/jay-chiang-9054001a7/)
 - **GitHub:** [github.com/JayChiang17](https://github.com/JayChiang17)
 
