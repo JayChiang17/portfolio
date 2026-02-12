@@ -2,6 +2,8 @@ import React from "react";
 import "../style/ResumePage.css";
 import "../style/HighlightEffects.css";
 import SkillsSection from "../components/skills";
+import umichLogo from "../pic/umich_logo.png";
+import ucscLogo from "../pic/The_University_of_California_UCSC.png";
 
 const ResumePage = () => {
   return (
@@ -12,26 +14,26 @@ const ResumePage = () => {
           {/* 简历内容 */}
           <section className="education">
             <h2>EDUCATION</h2>
-            <p>
-              <br />
-              <strong>
-                University of Michigan - Ann Arbor
-              </strong>
-              <br />
-              M.S. Applied Data Science, Jan 2026 - Present
-              <br />
-              Focus: ML pipelines, deep learning, NLP, causal inference, scalable data processing
-            </p>
-            <br />
-            <p>
-              <strong>
-                University of California, Santa Cruz
-              </strong>
-              <br />
-              B.S. Technology Information Management, Sep 2020 - Jun 2023
-              <br />
-              Focus: data systems and databases, software project work, and applied analytics
-            </p>
+            <div className="education-item">
+              <img src={umichLogo} alt="University of Michigan" className="school-logo" />
+              <div className="education-info">
+                <strong>University of Michigan - Ann Arbor</strong>
+                <br />
+                M.S. Applied Data Science, Jan 2026 - Present
+                <br />
+                Focus: ML pipelines, deep learning, NLP, causal inference, scalable data processing
+              </div>
+            </div>
+            <div className="education-item">
+              <img src={ucscLogo} alt="UC Santa Cruz" className="school-logo" />
+              <div className="education-info">
+                <strong>University of California, Santa Cruz</strong>
+                <br />
+                B.S. Technology Information Management, Sep 2020 - Jun 2023
+                <br />
+                Focus: data systems and databases, software project work, and applied analytics
+              </div>
+            </div>
           </section>
           <section id="experience" className="experience">
             <h2 className="section-title-animated">EXPERIENCE</h2>
