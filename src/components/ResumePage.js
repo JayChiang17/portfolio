@@ -5,108 +5,118 @@ import SkillsSection from "../components/skills";
 
 const ResumePage = () => {
   return (
-    <main>
-      {/* ... 其他内容 ... */}
+    <div>
       <div className="resumepage">
         <h1 id="resume">Resume</h1>
         <div className="resume_content">
           {/* 简历内容 */}
           <section className="education">
-            {/* 教育背景部分 */}
             <h2>EDUCATION</h2>
             <p>
               <br />
               <strong>
-                University of California Santa Cruz, Santa Cruz, CA
+                University of Michigan - Ann Arbor
               </strong>
               <br />
-              B.S. Technology Information, Jun 2023
+              M.S. Applied Data Science, Jan 2026 - Present
+              <br />
+              Focus: ML pipelines, deep learning, NLP, causal inference, scalable data processing
             </p>
             <br />
             <p>
-              <strong>De Anza College, Cupertino, CA</strong>
+              <strong>
+                University of California, Santa Cruz
+              </strong>
               <br />
-              Associate Degree for Transfer, Computer Science, Jun 2020
+              B.S. Technology Information Management, Sep 2020 - Jun 2023
+              <br />
+              Focus: data systems and databases, software project work, and applied analytics
             </p>
           </section>
-          <section className="experience accent-line">
+          <section id="experience" className="experience">
             <h2 className="section-title-animated">EXPERIENCE</h2>
 
             <h3>
               <span className="company-highlight">Leadman Electronics</span>
               <span className="location">Santa Clara, California</span>
             </h3>
-            <p>Software Engineer (Nov 2024 - Present)</p>
+            <p>Data Engineer (Jan 2024 - Present)</p>
             <ul>
               <li className="stagger-item">
-                Designed a <strong>retrieval augmented layer</strong> for MES SOPs with live telemetry using FastAPI microservices, LangChain, FAISS, OpenAI and Ollama. Enabled semantic SOP search and guided troubleshooting.
+                Built <strong>real-time production dashboards</strong> using React, WebSocket, and FastAPI, <span className="stat-highlight">increasing line throughput by 30%</span> through live WIP, throughput, cycle time, and NG visibility.
               </li>
               <li className="stagger-item">
-                Built a <strong>real time manufacturing dashboard</strong> with React and WebSocket, secured with JWT role based access and backed by SQLite WAL and ETL, which unified stations, yield, alarms and RMA in a single pane.
+                Redesigned PostgreSQL data model and migrated workloads from local PostgreSQL to Azure SQL, <span className="stat-highlight">improving API query response performance by 20%</span> and stabilizing reporting under higher concurrency.
               </li>
               <li className="stagger-item">
-                Standardized data ingestion with versioned REST services, vendor webhooks and scanner feeds, and enforced Pydantic validation, retries, idempotent writes and audit trails, which <strong>increased reliability</strong> and reduced data defects.
+                Customized MES execution system and automated information workflows using Python, FastAPI, and SQL, <span className="stat-highlight">reducing manual man-hours by 30%</span> while supporting standardized operations across 3 factories.
               </li>
               <li className="stagger-item">
-                Coordinated with vendors to integrate station data adapters and external APIs, launching a new production line that <strong>stabilized throughput</strong> and improved yield consistency.
+                Enforced routing gates and station validation at API boundaries to block invalid transitions, <span className="stat-highlight">reducing rework by 10%</span> and stabilizing execution flow during NPI ramps.
               </li>
               <li className="stagger-item">
-                Implemented anomaly detection and a weekly root cause loop, which reached customer rated maximum capacity and <span className="stat-highlight">delivered 300% of planned output</span>.
+                Delivered operator-facing full-stack execution tools using React, REST APIs, and PostgreSQL, <span className="stat-highlight">improving ETL completion rate by 43%</span> through guided input validation and automated data capture.
               </li>
               <li className="stagger-item">
-                Consolidated ATE and EOL result streams and vendor APIs into the data platform and implemented deterministic retest handling with automated triage, which <strong>accelerated fault diagnosis</strong>.
+                Built analytics pipelines using Python, Pandas, NumPy, and SQL, <span className="stat-highlight">improving query efficiency by 60%</span> and reducing recurring manual data preparation by 40% across daily operational reports.
               </li>
               <li className="stagger-item">
-                Added production grade observability with structured logs, metrics endpoints and request tracing, which <strong>shortened time to root cause</strong> and improved uptime.
+                Implemented production AI retrieval for SOP and data using FAISS, FTS5, HyDE, and Ollama GPT OSS 120B, <span className="stat-highlight">reducing troubleshooting lookup time by 31%</span> and improving cross-shift consistency by 20%.
+              </li>
+              <li className="stagger-item">
+                Built multi-service containerized dev environment using Docker Compose, <span className="stat-highlight">reducing environment setup time by 20%</span> and reducing image size by 50% through shared base layers and dependency pruning.
+              </li>
+              <li className="stagger-item">
+                Deployed containerized services to Kubernetes using Deployments, Services, and Ingress with health checks, <span className="stat-highlight">improving release reliability by 30%</span> and reducing rollback rate by 10%.
+              </li>
+              <li className="stagger-item">
+                Designed Airflow DAGs orchestrating 12 daily ETL tasks with dependency management and SLA monitoring, <span className="stat-highlight">improving pipeline success rate from 85% to 98%</span>.
               </li>
             </ul>
 
             <h3>
-              <span className="company-highlight">Reliable Power, Inc</span>
+              <span className="company-highlight">Meritronics Inc</span>
+              <span className="location">Milpitas, California</span>
+            </h3>
+            <p>Software Engineer, Manufacturing Data Systems (Sep 2025 - Dec 2025)</p>
+            <ul>
+              <li className="stagger-item">
+                Built SN-level traceability and routing enforcement system for SMT, ICT, and FCT lines using Python, FastAPI, and PostgreSQL, <span className="stat-highlight">preventing misrouting incidents by 90%</span> and improving FPY by 8%.
+              </li>
+              <li className="stagger-item">
+                Aggregated SPI, AOI, ICT, and FCT test logs using Python, Pandas, and SQL, generating fail-code ranking dashboards that <span className="stat-highlight">reduced repeat repair rate by 20%</span>.
+              </li>
+              <li className="stagger-item">
+                Developed real-time WIP, cycle time, and station utilization dashboards using React, WebSocket, and REST APIs, <span className="stat-highlight">reducing bottleneck identification time by 40%</span> across 5+ production lines.
+              </li>
+              <li className="stagger-item">
+                Standardized test result schema across SPI, AOI, ICT, and FCT stations in PostgreSQL, <span className="stat-highlight">improving audit traceability coverage to 100%</span> and reducing manual data reconciliation by 60%.
+              </li>
+              <li className="stagger-item">
+                Deployed containerized MES and analytics services using Docker and Kubernetes with readiness probes and rolling updates, <span className="stat-highlight">improving deployment stability by 30%</span> and reducing production incident recurrence by 20%.
+              </li>
+            </ul>
+
+            <h3>
+              <span className="company-highlight">Reliable Power, Inc.</span>
               <span className="location">Santa Clara, California</span>
             </h3>
-            <p>Data Analyst/Project Manager (Jan 2024 - Present)</p>
+            <p>Data Analyst (Jan 2024 - Sep 2025)</p>
             <ul>
               <li>
-                Processed over <span className="stat-highlight">50,000 records</span> of product shipments and returns to identify key failure models and seasonal trends, enabling better inventory planning and service preparation.
+                Built SQL and Python reporting datasets for inverter sales, repair, and warranty operations, <span className="stat-highlight">reducing weekly reporting turnaround time by 60%</span> and improving SKU-level visibility by 50%.
               </li>
               <li>
-                Analyzed production and failure data using Pandas in Jupyter Notebook, and created visualizations with Matplotlib to identify inverter bottlenecks and performance anomalies.
-              </li>
-              <li>
-                Managed inside sales activities including client communication, quotation preparation, and order tracking to support business growth and customer satisfaction.
-              </li>
-              <li>
-                Led operations and maintenance for inverter fleets by triaging RMAs and trending recurring issues, which <strong>shortened time to resolution</strong> and reduced repeat failures.
-              </li>
-              <li>
-                Introduced a weekly root cause and preventive action loop across service and production, which <span className="stat-highlight">cut the return rate from 6.6% to 3%</span>.
-              </li>
-            </ul>
-
-            <h3>
-              <span className="company-highlight">Your Future Is Our Business</span>
-              <span className="location">Santa Cruz, California</span>
-            </h3>
-            <p>Data Analyst Intern (Apr 2023 - June 2023)</p>
-            <ul>
-              <li>
-                Redesigned the ETL workflow by consolidating schedules, tuning queries, and adding data quality checks, which <span className="stat-highlight">reduced model iteration time by 10%</span>.
-              </li>
-              <li>
-                Built a sentiment analysis pipeline with defined labeling and validation, reaching <span className="stat-highlight">90% accuracy</span> and improving program messaging.
-              </li>
-              <li>
-                Introduced a scoring-based intake and weekly triage that clarified priorities and raised team workflow.
+                Reduced unit defect rate from <span className="stat-highlight">6.6% to 5%</span> by analyzing failure patterns and surfacing actionable drivers, improving corrective action effectiveness by 20%.
               </li>
             </ul>
           </section>
 
-          <section className="skills">
+          <section id="skills" className="skills">
             <SkillsSection />
           </section>
           <br />
-          <section className="projects">
+          <section id="projects" className="projects">
             {/* 项目部分 */}
             <h2>PROJECTS</h2>
             <h3>
@@ -250,7 +260,7 @@ const ResumePage = () => {
           </section>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

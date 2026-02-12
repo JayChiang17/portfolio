@@ -8,6 +8,7 @@ const ContactMe = () => {
       <h2 id="contactme">I'M OPEN TO WORK.</h2>
       <div className="contact-info">
         <p className="email">chiang.mengchieh@gmail.com</p>
+        <p className="phone">(+1) 408-688-6969</p>
         {/* 社交链接部分 */}
         <div className="icon">
           <ul className="socials">

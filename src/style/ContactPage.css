@@ -54,7 +54,7 @@
 
 .email {
   font-size: 1.5rem;
-  margin: 30px 0;
+  margin: 30px 0 10px;
   font-weight: 500;
   letter-spacing: 0.5px;
   color: #B4846C;
@@ -62,6 +62,14 @@
   cursor: pointer;
   text-decoration: none;
   position: relative;
+}
+
+.phone {
+  font-size: 1.2rem;
+  margin: 10px 0 30px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: #6B6157;
 }
 
 .email::after {

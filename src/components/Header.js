@@ -11,11 +11,13 @@ function Header() {
         <h3 className="header-subtitle">
           <TypeAnimation
             sequence={[
-              "Software Engineer",
+              "Data Engineer",
               2000,
-              "Data Analyst & Engineer",
+              "Full-Stack Developer",
               2000,
-              "Machine Learning Enthusiast",
+              "Applied Data Science @ UMich",
+              2000,
+              "ML Pipelines & NLP",
               2000,
               "Attention is all you need",
               3000,

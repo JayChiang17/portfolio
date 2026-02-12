@@ -54,26 +54,28 @@ const HomePage = () => {
           </div>
           <div className="infro-container">
             <p>
-              <strong className="text-glow">Applied software engineer with 1 year experience in manufacturing industry</strong>, building{" "}
-              <strong className="reveal-underline">real-time MES with LLM/RAG search, forecasting, and decision support</strong>{" "}
-              to boost quality and throughput. Proficient in{" "}
+              <strong className="text-glow">Data engineer and full-stack developer with 2+ years of experience in manufacturing</strong>, building{" "}
+              <strong className="reveal-underline">real-time MES dashboards, analytics pipelines, and AI-powered retrieval systems</strong>{" "}
+              that drive throughput, quality, and operational efficiency. Proficient in{" "}
+              <span className="tech-badge">Python</span>{" "}
               <span className="tech-badge">FastAPI</span>{" "}
               <span className="tech-badge">React</span>{" "}
-              <span className="tech-badge">LangChain</span>{" "}
-              <span className="tech-badge">FAISS</span>{" "}
-              <span className="tech-badge">OpenAI</span>{" "}
-              <span className="tech-badge">Ollama</span>{" "}
+              <span className="tech-badge">PostgreSQL</span>{" "}
+              <span className="tech-badge">Docker</span>{" "}
+              <span className="tech-badge">Kubernetes</span>{" "}
               for developing{" "}
-              <strong>intelligent manufacturing systems</strong>.
+              <strong>production-grade data systems</strong>.
               Expert in{" "}
-              <span className="tech-badge">Python</span>{" "}
-              <span className="tech-badge">JavaScript</span>{" "}
-              <span className="tech-badge">SQL</span>{" "}
-              and <strong>data analytics</strong> with{" "}
               <span className="tech-badge">Pandas</span>{" "}
-              <span className="tech-badge">PySpark</span>{" "}
-              <span className="tech-badge">ML frameworks</span>,
-              enabling comprehensive data-driven solutions and operational excellence.
+              <span className="tech-badge">SQL</span>{" "}
+              <span className="tech-badge">Airflow</span>{" "}
+              <span className="tech-badge">FAISS</span>{" "}
+              <span className="tech-badge">Ollama</span>{" "}
+              and <strong>applied data science</strong> with{" "}
+              <span className="tech-badge">ML pipelines</span>{" "}
+              <span className="tech-badge">NLP</span>{" "}
+              <span className="tech-badge">Deep Learning</span>,
+              currently pursuing M.S. Applied Data Science at the University of Michigan.
             </p>
           </div>
         </section>
@@ -84,66 +86,59 @@ const HomePage = () => {
         ref={secondSectionRef}
         className={`fade-in ${isSecondSectionVisible ? "visible" : ""}`}
       >
-        <section className="contect shimmer">
+        <section className="content shimmer">
           Jay Chiang is a{" "}
-          <strong className="gradient-text">software engineer specializing in AI-powered manufacturing systems</strong>{" "}
-          with a proven track record of bridging data analytics and full-stack development.
-          Graduating from{" "}
+          <strong className="gradient-text">data engineer and full-stack developer specializing in manufacturing data systems</strong>{" "}
+          with a proven track record of building real-time dashboards, analytics pipelines, and AI-powered retrieval tools.
+          He earned his B.S. in Technology Information Management from{" "}
           <a
             href="https://admissions.ucsc.edu/programs/technology-and-information-management"
             target="_blank"
             rel="noopener noreferrer"
             className="magnetic-hover"
           >
-            UC Santa Cruz with a B.S. in Technology Information Management
+            UC Santa Cruz
           </a>
-          , he has rapidly evolved from data analyst roles into software engineering,
-          now architecting{" "}
-          <span className="reveal-underline">intelligent MES platforms with LLM/RAG capabilities</span> at <span className="company-highlight">Leadman Electronics</span>.
-          <br />
-          <br />
-          His engineering expertise encompasses{" "}
-          <strong className="text-glow">building production-grade AI applications</strong> using FastAPI microservices,
-          React dashboards, and advanced NLP frameworks including LangChain, FAISS, and Ollama.
-          At Leadman, he developed a{" "}
-          <span className="reveal-underline">retrieval-augmented generation system for real-time SOP guidance</span>,
-          integrated WebSocket-based monitoring dashboards, and implemented anomaly detection
-          that enabled the production line to{" "}
-          <span className="stat-highlight">deliver 300% of planned output</span> while reaching maximum capacity.
-          <br />
-          <br />
-          His analytical foundation was established through{" "}
-          <strong>data-intensive roles across manufacturing and nonprofit sectors</strong>.
-          At <span className="company-highlight">Reliable Power</span>, he processed <span className="stat-highlight">50,000+</span> shipment records and{" "}
-          <span className="reveal-underline">reduced product return rates from <span className="stat-highlight">6.6% to 3%</span></span> through systematic root cause analysis.
-          His earlier work at{" "}
+          {" "}and is currently pursuing an{" "}
+          <strong className="text-glow">M.S. in Applied Data Science</strong> at the{" "}
           <a
-            href="https://yfiob.org/"
+            href="https://www.si.umich.edu/programs/master-applied-data-science"
             target="_blank"
             rel="noopener noreferrer"
             className="magnetic-hover"
           >
-            YFIOB
-          </a>{" "}
-          demonstrated his ability to transform raw survey data into actionable insights,
-          directly contributing to{" "}
-          <span className="reveal-underline">securing substantial organizational funding</span> through data-driven storytelling.
+            University of Michigan - Ann Arbor
+          </a>, focusing on ML pipelines, deep learning, NLP, and causal inference.
           <br />
           <br />
-          Complementing his practical experience,{" "}
-          <strong className="text-glow">
-            Jay holds nine industry certifications spanning data science, machine learning,
-            and full-stack development
-          </strong>{" "}
-          from Google, IBM, LinkedIn, and Udemy. His technical portfolio includes
-          advanced coursework in deep learning, LangChain application development,
-          and big data processing with PySpark. This combination of{" "}
-          <span className="reveal-underline">hands-on AI/ML implementation</span>, full-stack engineering proficiency,
-          and data analytics expertise positions him uniquely to{" "}
+          At <span className="company-highlight">Leadman Electronics</span>, he built{" "}
+          <span className="reveal-underline">real-time production dashboards using React, WebSocket, and FastAPI</span>,{" "}
+          <span className="stat-highlight">increasing line throughput by 30%</span>.
+          He redesigned the PostgreSQL data model and migrated workloads to Azure SQL,{" "}
+          <span className="stat-highlight">improving API query performance by 20%</span>.
+          He also implemented an{" "}
+          <strong className="text-glow">AI retrieval system for SOP and production data</strong> using FAISS, HyDE, and Ollama,{" "}
+          <span className="reveal-underline">reducing troubleshooting lookup time by <span className="stat-highlight">31%</span></span>.
+          His infrastructure work included Docker Compose and Kubernetes deployments that{" "}
+          <span className="stat-highlight">improved release reliability by 30%</span>, and Airflow DAGs that raised{" "}
+          <span className="reveal-underline">pipeline success rate from <span className="stat-highlight">85% to 98%</span></span>.
+          <br />
+          <br />
+          At <span className="company-highlight">Meritronics Inc</span>, he built{" "}
+          <span className="reveal-underline">SN-level traceability and routing enforcement for SMT, ICT, and FCT lines</span>,{" "}
+          <span className="stat-highlight">preventing 90% of misrouting incidents</span> and improving first-pass yield by 8%.
+          He developed real-time WIP dashboards and standardized test result schemas across stations,{" "}
+          achieving <span className="stat-highlight">100% audit traceability</span>.
+          <br />
+          <br />
+          At <span className="company-highlight">Reliable Power</span>, he built SQL and Python reporting datasets that{" "}
+          <span className="stat-highlight">reduced weekly reporting turnaround by 60%</span>, and analyzed failure patterns to{" "}
+          <span className="reveal-underline">reduce the unit defect rate from <span className="stat-highlight">6.6% to 5%</span></span>.
+          This combination of{" "}
+          <span className="reveal-underline">hands-on data engineering</span>, full-stack development, and applied data science positions him to{" "}
           <strong className="gradient-text">
             architect scalable, intelligent systems that drive measurable business impact
-          </strong>
-          .
+          </strong>.
         </section>
       </section>
       <ResumePage />

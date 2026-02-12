@@ -1,20 +1,3 @@
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Fade-in animation */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .infro {
   text-align: center;
   padding: 40px 20px;
@@ -140,7 +123,7 @@ h1 {
 }
 
 /* Content section */
-.contect {
+.content {
   text-align: left;
   padding: 40px 20px;
   max-width: 900px;
@@ -157,7 +140,7 @@ h1 {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contect:hover {
+.content:hover {
   transform: translateY(-10px);
   box-shadow:
     0 20px 60px rgba(92, 74, 58, 0.22),
@@ -165,7 +148,7 @@ h1 {
     inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-.contect:active {
+.content:active {
   transform: translateY(-5px);
   box-shadow:
     0 12px 35px rgba(92, 74, 58, 0.15),
@@ -183,7 +166,7 @@ h1 {
   }
 }
 
-.contect a {
+.content a {
   color: #B4846C;
   text-decoration: none;
   font-weight: 600;
@@ -191,18 +174,18 @@ h1 {
   transition: border-color 0.3s ease;
 }
 
-.contect a:hover {
+.content a:hover {
   border-bottom-color: #B4846C;
 }
 
-.contect u {
+.content u {
   text-decoration: underline;
   text-decoration-color: #B4846C;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
 }
 
-.contect strong {
+.content strong {
   font-weight: 600;
   color: #5C4A3A;
 }
@@ -236,7 +219,7 @@ h1 {
     text-align: left;
   }
 
-  .contect {
+  .content {
     padding: 30px 24px;
     font-size: 1rem;
     margin: 20px auto;
