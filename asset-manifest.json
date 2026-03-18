@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.024c67b1.css",
+    "main.css": "./static/css/main.758e12e7.css",
     "main.js": "./static/js/main.f48999c7.js",
     "static/css/856.a4c7bff2.chunk.css": "./static/css/856.a4c7bff2.chunk.css",
     "static/js/856.8b388ad2.chunk.js": "./static/js/856.8b388ad2.chunk.js",
@@ -9,14 +9,14 @@
     "static/media/The_University_of_California_UCSC.png": "./static/media/The_University_of_California_UCSC.9fc0881d51d3f6109633.png",
     "static/media/umich_logo.png": "./static/media/umich_logo.f2f882f1eed260c88757.png",
     "index.html": "./index.html",
-    "main.024c67b1.css.map": "./static/css/main.024c67b1.css.map",
+    "main.758e12e7.css.map": "./static/css/main.758e12e7.css.map",
     "main.f48999c7.js.map": "./static/js/main.f48999c7.js.map",
     "856.a4c7bff2.chunk.css.map": "./static/css/856.a4c7bff2.chunk.css.map",
     "856.8b388ad2.chunk.js.map": "./static/js/856.8b388ad2.chunk.js.map",
     "599.d4d0c04e.chunk.js.map": "./static/js/599.d4d0c04e.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.024c67b1.css",
+    "static/css/main.758e12e7.css",
     "static/js/main.f48999c7.js"
   ]
 }
