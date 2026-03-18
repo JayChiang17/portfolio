@@ -2,69 +2,86 @@ import React, { useRef, useEffect, Suspense } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import "../style/ThreeHero.css";
 
-function WireframeIco({ mouse }) {
-  const meshRef = useRef();
-
-  useFrame(() => {
-    if (!meshRef.current) return;
-    meshRef.current.rotation.x += 0.003;
-    meshRef.current.rotation.y += 0.004;
-    // subtle mouse influence
-    meshRef.current.rotation.y += mouse.current.x * 0.00018;
-    meshRef.current.rotation.x += mouse.current.y * 0.00012;
+/* ── Outer orbit ring ── */
+function OuterRing({ mouse }) {
+  const ref = useRef();
+  useFrame(({ clock }) => {
+    if (!ref.current) return;
+    ref.current.rotation.y = clock.elapsedTime * 0.12;
+    ref.current.rotation.x = 0.55 + mouse.current.y * 0.00008;
+    ref.current.rotation.z = mouse.current.x * 0.00006;
   });
-
   return (
-    <mesh ref={meshRef}>
-      <icosahedronGeometry args={[1.6, 1]} />
-      <meshBasicMaterial color="#C49A7A" wireframe />
+    <mesh ref={ref}>
+      <torusGeometry args={[2.4, 0.008, 6, 120]} />
+      <meshBasicMaterial color="#C49A7A" opacity={0.5} transparent />
     </mesh>
   );
 }
 
-function FloatingRing({ mouse }) {
-  const meshRef = useRef();
-
+/* ── Mid orbit ring (opposite direction, different tilt) ── */
+function MidRing({ mouse }) {
+  const ref = useRef();
   useFrame(({ clock }) => {
-    if (!meshRef.current) return;
-    meshRef.current.rotation.x = Math.sin(clock.elapsedTime * 0.3) * 0.4;
-    meshRef.current.rotation.z += 0.006;
-    meshRef.current.position.x = mouse.current.x * 0.0008;
-    meshRef.current.position.y = -mouse.current.y * 0.0008;
+    if (!ref.current) return;
+    ref.current.rotation.y = -clock.elapsedTime * 0.08;
+    ref.current.rotation.x = 1.1 + mouse.current.y * 0.00006;
+    ref.current.rotation.z = 0.4 - mouse.current.x * 0.00005;
   });
-
   return (
-    <mesh ref={meshRef} position={[2.8, 0.8, -1]}>
-      <torusGeometry args={[0.7, 0.012, 8, 48]} />
-      <meshBasicMaterial color="#D4A574" wireframe={false} opacity={0.45} transparent />
+    <mesh ref={ref}>
+      <torusGeometry args={[1.75, 0.006, 6, 100]} />
+      <meshBasicMaterial color="#D4A574" opacity={0.38} transparent />
     </mesh>
   );
 }
 
-function SmallOcta({ mouse }) {
-  const meshRef = useRef();
-
+/* ── Inner ring (fastest but still slow, vertical tilt) ── */
+function InnerRing({ mouse }) {
+  const ref = useRef();
   useFrame(({ clock }) => {
-    if (!meshRef.current) return;
-    meshRef.current.rotation.x += 0.007;
-    meshRef.current.rotation.z += 0.005;
-    meshRef.current.position.y = Math.sin(clock.elapsedTime * 0.6) * 0.3 - 1.2;
-    meshRef.current.position.x = -2.4 + mouse.current.x * 0.0005;
+    if (!ref.current) return;
+    ref.current.rotation.z = clock.elapsedTime * 0.18;
+    ref.current.rotation.x = 0.2 + mouse.current.y * 0.00005;
+    ref.current.rotation.y = mouse.current.x * 0.00004;
   });
-
   return (
-    <mesh ref={meshRef}>
-      <octahedronGeometry args={[0.4, 0]} />
-      <meshBasicMaterial color="#B4846C" wireframe />
+    <mesh ref={ref}>
+      <torusGeometry args={[1.15, 0.005, 6, 80]} />
+      <meshBasicMaterial color="#B4846C" opacity={0.3} transparent />
+    </mesh>
+  );
+}
+
+/* ── Floating dot particles on the outer ring ── */
+function OrbitDot({ angle, radius, speed, mouse }) {
+  const ref = useRef();
+  const baseAngle = useRef(angle);
+  useFrame(({ clock }) => {
+    if (!ref.current) return;
+    const t = clock.elapsedTime * speed + baseAngle.current;
+    ref.current.position.x = Math.cos(t) * radius;
+    ref.current.position.y = Math.sin(t) * radius * 0.35;
+    ref.current.position.z = Math.sin(t) * radius * 0.6;
+  });
+  return (
+    <mesh ref={ref}>
+      <sphereGeometry args={[0.045, 8, 8]} />
+      <meshBasicMaterial color="#B4846C" opacity={0.7} transparent />
     </mesh>
   );
 }
 
 const ThreeScene = ({ mouse }) => (
   <>
-    <WireframeIco mouse={mouse} />
-    <FloatingRing mouse={mouse} />
-    <SmallOcta mouse={mouse} />
+    <OuterRing mouse={mouse} />
+    <MidRing mouse={mouse} />
+    <InnerRing mouse={mouse} />
+    {/* 4 dots orbiting on outer path */}
+    <OrbitDot angle={0}              radius={2.4} speed={0.14} mouse={mouse} />
+    <OrbitDot angle={Math.PI / 2}   radius={2.4} speed={0.14} mouse={mouse} />
+    <OrbitDot angle={Math.PI}       radius={2.4} speed={0.14} mouse={mouse} />
+    <OrbitDot angle={Math.PI * 1.5} radius={2.4} speed={0.14} mouse={mouse} />
   </>
 );
 

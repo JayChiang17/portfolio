@@ -252,7 +252,6 @@
 .hero-float--tl { top: 60px; left: 0; animation-delay: 0s; }
 .hero-float--br { bottom: 60px; right: 0; animation-delay: 2s; }
 
-.hero-float-icon { font-size: 1rem; }
 
 @keyframes floatCard {
   0%, 100% { transform: translateY(0px); }

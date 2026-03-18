@@ -97,11 +97,9 @@ function Header() {
 
         {/* Floating label cards */}
         <div className="hero-float hero-float--tl">
-          <span className="hero-float-icon">⚡</span>
           <span>Real-time Systems</span>
         </div>
         <div className="hero-float hero-float--br">
-          <span className="hero-float-icon">🤖</span>
           <span>AI / ML Pipelines</span>
         </div>
       </div>
