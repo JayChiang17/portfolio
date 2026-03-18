@@ -1,71 +1,144 @@
-/* Popup overlay */
-.popup {
+/* ── Overlay ── */
+.popup-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(92, 74, 58, 0.5);
+  inset: 0;
+  background: rgba(30, 22, 18, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 1000;
-  backdrop-filter: blur(4px);
+  justify-content: center;
+  z-index: 5000;
+  padding: 24px;
+
+  opacity: 0;
+  transition: opacity 0.28s ease;
 }
 
-/* Popup content */
-.popup-content {
+.popup-overlay--in {
+  opacity: 1;
+}
+
+/* ── Card ── */
+.popup-card {
   position: relative;
-  padding: 40px 50px;
-  background: #FAF8F3;
-  color: #3E3830;
-  text-align: center;
-  max-width: 500px;
-  border: 2px solid #E8DDD0;
-  box-shadow: 0 10px 40px rgba(92, 74, 58, 0.2);
+  background: var(--c-surface, #fff);
+  border: 1px solid var(--c-border, #E2D8CD);
+  border-radius: 20px;
+  padding: 36px 40px 28px;
+  max-width: 400px;
+  width: 100%;
+  box-shadow:
+    0 24px 60px rgba(30, 22, 18, 0.18),
+    0 4px 16px rgba(30, 22, 18, 0.08);
+
+  transform: translateY(20px) scale(0.97);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.3, 0.64, 1), opacity 0.28s ease;
 }
 
-.popup-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin: 15px 0;
-  color: #5C4A3A;
+.popup-card--in {
+  transform: translateY(0) scale(1);
+  opacity: 1;
 }
 
-/* Close button */
-.close-button {
+/* ── Badge ── */
+.popup-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--c-surface-warm, #FAF8F3);
+  border: 1px solid var(--c-border, #E2D8CD);
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  font-family: var(--font-heading, 'Montserrat', sans-serif);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c-accent, #B4846C);
+  margin-bottom: 20px;
+}
+
+.popup-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--c-accent, #B4846C);
+  flex-shrink: 0;
+}
+
+/* ── Close button ── */
+.popup-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  border: none;
-  background: none;
-  cursor: pointer;
-  font-size: 28px;
-  color: #B4846C;
-  transition: color 0.3s ease, transform 0.3s ease;
-  font-weight: 300;
-  line-height: 1;
-  padding: 0;
-  width: 30px;
-  height: 30px;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--c-surface-warm, #FAF8F3);
+  border: 1px solid var(--c-border, #E2D8CD);
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: none;
+  color: var(--c-text-muted, #9E8A7A);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.close-button:hover {
-  color: #5C4A3A;
+.popup-close svg {
+  width: 14px;
+  height: 14px;
+}
+
+.popup-close:hover {
+  background: var(--c-accent-dark, #5C4A3A);
+  color: #fff;
+  border-color: var(--c-accent-dark, #5C4A3A);
   transform: rotate(90deg);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .popup-content {
-    padding: 30px 35px;
-    margin: 0 20px;
-  }
+/* ── Body ── */
+.popup-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
 
-  .popup-content p {
-    font-size: 1rem;
+.popup-main {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--c-accent-dark, #5C4A3A);
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.popup-sub {
+  font-size: 0.88rem;
+  color: var(--c-text-muted, #9E8A7A);
+  font-weight: 400;
+  font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+/* ── Footer hint ── */
+.popup-hint {
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--c-border, #E2D8CD);
+  font-family: var(--font-heading, 'Montserrat', sans-serif);
+  font-weight: 600;
+  text-align: center;
+  border-top: 1px solid var(--c-border, #E2D8CD);
+  padding-top: 16px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .popup-card {
+    padding: 28px 24px 22px;
+    border-radius: 16px;
   }
 }
