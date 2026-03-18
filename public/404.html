@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>404 - Jay Chiang</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Inter:wght@400;500&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #EDE6DA;
+      font-family: 'Inter', sans-serif;
+      color: #3E3830;
+    }
+
+    .wrap {
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .code {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(6rem, 20vw, 12rem);
+      font-weight: 900;
+      line-height: 1;
+      color: #B4846C;
+      opacity: 0.18;
+      user-select: none;
+    }
+
+    .initials {
+      display: inline-flex;
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: #5C4A3A;
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 800;
+      color: #5C4A3A;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #9E8A7A;
+      line-height: 1.7;
+      max-width: 380px;
+      margin: 0 auto 32px;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      background: #5C4A3A;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    a:hover {
+      background: #B4846C;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404</div>
+    <div class="initials">JC</div>
+    <h1>Page Not Found</h1>
+    <p>The page you are looking for does not exist or has been moved.</p>
+    <a href="/portfolio/">Back to Portfolio</a>
+  </div>
+</body>
+</html>

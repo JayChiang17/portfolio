@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Loading from "./components/Loading";
 import CustomCursor from "./components/CustomCursor";
+import ScrollProgress from "./components/ScrollProgress";
 
 export default function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -27,6 +28,7 @@ export default function App() {
   return (
     <ErrorBoundary>
       <CustomCursor />
+      <ScrollProgress />
       <Suspense fallback={<Loading />}>
         <HomePage isDark={isDark} toggleTheme={toggleTheme} />
       </Suspense>

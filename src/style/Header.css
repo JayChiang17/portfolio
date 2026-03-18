@@ -148,6 +148,22 @@
   transform: translateY(-2px);
 }
 
+.hero-btn--download {
+  background: transparent;
+  color: var(--c-text-muted);
+  border-color: var(--c-border);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  text-decoration: none;
+}
+
+.hero-btn--download:hover {
+  border-color: var(--c-accent);
+  color: var(--c-accent-dark);
+  transform: translateY(-2px);
+}
+
 /* Stats row */
 .hero-stats {
   display: flex;

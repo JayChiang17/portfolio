@@ -1,5 +1,101 @@
-/* Floating Tag Cloud Design for Skills - 2025 Trend */
+/* ── Skills section wrapper ── */
+.skills-wrap {
+  width: 100%;
+}
 
+.skills-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  color: var(--c-accent-dark);
+  letter-spacing: -0.5px;
+  margin-bottom: 32px;
+  line-height: 1.1;
+}
+
+/* ── Category tabs ── */
+.skills-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.skills-tab {
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--c-border);
+  background: transparent;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--c-text-muted);
+  cursor: none;
+  transition: all 0.2s ease;
+}
+
+.skills-tab:hover {
+  border-color: var(--c-accent);
+  color: var(--c-accent-dark);
+  background: var(--c-surface-warm);
+}
+
+.skills-tab--active {
+  background: var(--c-accent-dark);
+  border-color: var(--c-accent-dark);
+  color: #fff;
+}
+
+/* ── Skill icon grid ── */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 16px;
+  margin-bottom: 52px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 12px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 14px;
+  cursor: none;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  border-color: var(--c-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(92, 74, 58, 0.1);
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.12);
+}
+
+.skill-name {
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  color: var(--c-text-sec);
+  letter-spacing: 0.3px;
+  text-align: center;
+}
+
+/* ── Marquee ── */
 .floating-skills-container {
   padding: 60px 0;
   margin: 20px auto;
@@ -11,9 +107,9 @@
 }
 
 .floating-skills-container h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: 2.2rem;
-  color: #5C4A3A;
+  color: var(--c-accent-dark);
   margin-bottom: 50px;
   font-weight: 600;
   text-transform: uppercase;
@@ -81,7 +177,7 @@
   justify-content: center;
   padding: 18px 28px;
   background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F3 100%);
-  border: 2px solid #E8DDD0;
+  border: 2px solid var(--c-border);
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -100,7 +196,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, #B4846C 0%, #D4A574 100%);
+  background: linear-gradient(135deg, var(--c-accent) 0%, #D4A574 100%);
   opacity: 0;
   transition: opacity 0.4s ease;
   border-radius: 50px;
@@ -118,7 +214,7 @@
     0 25px 50px rgba(180, 132, 108, 0.35),
     0 10px 20px rgba(180, 132, 108, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
-  border-color: #B4846C;
+  border-color: var(--c-accent);
   background: linear-gradient(135deg, #FFFAF5 0%, #FFF5ED 100%);
 }
 
@@ -153,13 +249,13 @@
   margin: 0;
   font-size: 1.05rem;
   font-weight: 600;
-  color: #5C4A3A;
+  color: var(--c-accent-dark);
   letter-spacing: 0.5px;
   transition: color 0.3s ease;
 }
 
 .floating-tag:hover p {
-  color: #B4846C;
+  color: var(--c-accent);
 }
 
 /* Responsive design */
