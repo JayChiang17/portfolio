@@ -1,55 +1,134 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500&display=swap');
+
+/* ── Design Tokens ── */
+:root {
+  --c-accent:       #B4846C;
+  --c-accent-dark:  #5C4A3A;
+  --c-accent-light: #D4A574;
+  --c-text:         #1E1612;
+  --c-text-sec:     #5C4A3A;
+  --c-text-muted:   #9E8A7A;
+  --c-bg:           #EDE6DA;
+  --c-surface:      #FFFFFF;
+  --c-surface-warm: #FAF8F3;
+  --c-border:       #E2D8CD;
+
+  --sidebar-w: 230px;
+
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body:    'Inter', system-ui, -apple-system, sans-serif;
+
+  --section-pad-x: 72px;
+  --section-pad-y: 110px;
 }
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font-body);
+  background: var(--c-bg);
+  color: var(--c-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(135deg, #E8DDD0 0%, #D4C4B0 50%, #C9B89A 100%);
-  min-height: 100vh;
-  color: #3E3830;
   line-height: 1.7;
+  min-height: 100vh;
 }
 
-main {
-  max-width: 100%;
-  margin: 0 auto;
-  padding: 40px 5px;
+/* ── Page layout: sidebar + content ── */
+.page-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content-area {
+  flex: 1;
+  min-width: 0;
   position: relative;
-  z-index: 1;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* remove old "main" centering */
+main {
+  width: 100%;
 }
 
-/* 全局平滑滾動 */
-html {
-  scroll-behavior: smooth;
+code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
+
+::selection          { background: var(--c-accent); color: #fff; }
+::-moz-selection     { background: var(--c-accent); color: #fff; }
+
+/* ── Section system ── */
+.page-section {
+  padding: var(--section-pad-y) var(--section-pad-x);
+  position: relative;
+  overflow: hidden;
 }
 
-/* 選擇文字的顏色 */
-::selection {
-  background-color: #B4846C;
-  color: white;
+.page-section--alt { background: var(--c-surface-warm); }
+
+/* Large decorative background number */
+.sec-num {
+  position: absolute;
+  top: 32px;
+  right: 48px;
+  font-size: clamp(5rem, 14vw, 11rem);
+  font-weight: 900;
+  font-family: var(--font-heading);
+  color: var(--c-accent-dark);
+  opacity: 0.045;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  letter-spacing: -4px;
 }
 
-::-moz-selection {
-  background-color: #B4846C;
-  color: white;
+/* Eyebrow label above section headings */
+.sec-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.sec-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1.5px;
+  background: var(--c-accent);
+  flex-shrink: 0;
+}
+.sec-eyebrow span {
+  font-size: 0.68rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--c-accent);
+  font-weight: 700;
+  font-family: var(--font-heading);
 }
 
-/* RWD - 響應式左右留白 */
+/* Section heading */
+.sec-heading {
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--c-accent-dark);
+  line-height: 1.1;
+  margin-bottom: 52px;
+  letter-spacing: -0.5px;
+}
+
+/* ── Global links ── */
+a { color: var(--c-accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  :root { --section-pad-x: 48px; --section-pad-y: 80px; }
+}
 @media (max-width: 768px) {
-  main {
-    padding: 0 5px;
-  }
+  :root { --section-pad-x: 24px; --section-pad-y: 60px; }
+  .page-layout { flex-direction: column; }
+  .sec-num { font-size: 4.5rem; right: 20px; top: 20px; }
 }

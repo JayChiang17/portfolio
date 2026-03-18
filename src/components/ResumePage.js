@@ -95,8 +95,8 @@ const ExperienceCard = ({ company, location, role, dates, current, techTags, bul
   );
 };
 
-/* ── Section title with GSAP reveal ── */
-const SectionTitle = ({ children, id }) => {
+/* ── Section title with eyebrow + GSAP reveal ── */
+const SectionTitle = ({ children, id, eyebrow, secNum }) => {
   const ref = useRef(null);
   useEffect(() => {
     gsap.fromTo(
@@ -108,7 +108,25 @@ const SectionTitle = ({ children, id }) => {
       }
     );
   }, []);
-  return <h2 ref={ref} id={id} className="section-title-animated">{children}</h2>;
+  return (
+    <div ref={ref} id={id}>
+      {secNum && <span className="sec-num" aria-hidden="true">{secNum}</span>}
+      {eyebrow && (
+        <div className="sec-eyebrow" style={{ marginBottom: "14px" }}>
+          <span>{eyebrow}</span>
+        </div>
+      )}
+      <h2 style={{
+        fontFamily: "var(--font-heading)",
+        fontSize: "clamp(1.9rem, 3.5vw, 2.8rem)",
+        fontWeight: 800,
+        color: "var(--c-accent-dark)",
+        letterSpacing: "-0.5px",
+        marginBottom: "48px",
+        lineHeight: 1.1,
+      }}>{children}</h2>
+    </div>
+  );
 };
 
 /* ══════════════════════════════════════════ */
@@ -122,7 +140,7 @@ const ResumePage = () => {
 
           {/* ── EDUCATION ── */}
           <section className="education">
-            <SectionTitle>EDUCATION</SectionTitle>
+            <SectionTitle eyebrow="Academic Background" secNum="00">Education</SectionTitle>
             <div className="education-item">
               <img src={umichLogo} alt="University of Michigan" className="school-logo" />
               <div className="education-info">
@@ -147,7 +165,7 @@ const ResumePage = () => {
 
           {/* ── EXPERIENCE ── */}
           <section id="experience" className="experience-section">
-            <SectionTitle id="experience-title">EXPERIENCE</SectionTitle>
+            <SectionTitle eyebrow="Work History" secNum="02" id="experience-title">Work Experience</SectionTitle>
 
             {/* Timeline wrapper */}
             <div className="exp-timeline">
@@ -208,7 +226,9 @@ const ResumePage = () => {
           </section>
 
           {/* ── SKILLS ── */}
-          <section id="skills" className="skills">
+          <section id="skills" className="skills page-section page-section--alt">
+            <span className="sec-num" aria-hidden="true">03</span>
+            <div className="sec-eyebrow" style={{ marginBottom: "14px" }}><span>Technical Proficiency</span></div>
             <SkillsSection />
           </section>
 
@@ -216,7 +236,7 @@ const ResumePage = () => {
 
           {/* ── PROJECTS ── */}
           <section id="projects" className="projects">
-            <SectionTitle>PROJECTS</SectionTitle>
+            <SectionTitle eyebrow="Selected Work" secNum="04">Projects</SectionTitle>
             <h3>Intelligent House Water Filtration and Monitor System</h3>
             <p>Santa Cruz, California (Feb 2023 - Apr 2023)</p>
             <ul>
@@ -246,7 +266,7 @@ const ResumePage = () => {
 
           {/* ── CERTIFICATIONS ── */}
           <section className="Certifications">
-            <SectionTitle>CERTIFICATIONS AND SELF-LEARNED SKILLS</SectionTitle>
+            <SectionTitle eyebrow="Continuous Learning" secNum="05">Certifications</SectionTitle>
             <ul>
               <li><a href="https://www.coursera.org/account/accomplishments/professional-cert/FE5YJM52STTV?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=prof" target="_blank" rel="noreferrer">Google Data Analytics Certificate</a>, Google Career Certificates, Issued Jul 2023</li>
               <li><a href="https://coursera.org/share/5b7e042e621d0d7b4b575491c53102c5" target="_blank" rel="noreferrer">Advanced Data Science with IBM</a>, Coursera, Issued Jun 2024</li>

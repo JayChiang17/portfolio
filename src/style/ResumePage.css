@@ -1,69 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 
-/* Base styles */
-.resumepage {
-  font-size: 1.05rem;
-  max-width: 100%;
-  margin: 0;
-  padding: 20px 0;
-}
+/* Base — full-width page sections */
+.resumepage { width: 100%; }
+.resume_content { width: 100%; }
 
-/* Common section styles */
+/* Each section is a full-width page-section */
 .education,
 .projects,
 .Certifications {
-  padding: 40px 20px;
-  margin: 30px auto;
-  max-width: 900px;
-  background: #FFFFFF;
-  border-radius: 20px;
-  box-shadow:
-    0 8px 30px rgba(92, 74, 58, 0.12),
-    0 2px 8px rgba(92, 74, 58, 0.06);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: var(--section-pad-y) var(--section-pad-x);
+  width: 100%;
   position: relative;
   overflow: hidden;
 }
 
-.education::before,
-.projects::before,
-.Certifications::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #B4846C 0%, #D4A574 100%);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.education:hover,
-.projects:hover,
-.Certifications:hover {
-  transform: translateY(-10px);
-  box-shadow:
-    0 20px 60px rgba(92, 74, 58, 0.22),
-    0 8px 20px rgba(92, 74, 58, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.5);
-}
-
-.education:hover::before,
-.projects:hover::before,
-.Certifications:hover::before {
-  transform: scaleX(1);
-}
-
-.education:active,
-.projects:active,
-.Certifications:active {
-  transform: translateY(-5px);
-  box-shadow:
-    0 12px 35px rgba(92, 74, 58, 0.15),
-    0 4px 12px rgba(92, 74, 58, 0.08);
-}
+.education { background: var(--c-surface-warm); }
+.projects  { background: var(--c-surface); }
+.Certifications { background: var(--c-surface-warm); }
 
 /* Education with logo */
 .education-item {
@@ -111,18 +64,7 @@
   color: #5C4A3A;
 }
 
-/* Staggered animations */
-.education {
-  animation: slideInFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.projects {
-  animation: slideInFromBottom 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.Certifications {
-  animation: slideInFromBottom 1.1s cubic-bezier(0.4, 0, 0.2, 1);
-}
+/* Sections animate in via GSAP ScrollTrigger */
 
 @keyframes slideInFromBottom {
   from {
@@ -135,62 +77,30 @@
   }
 }
 
-/* Section headings */
+/* Section headings — use sec-heading from index.css */
 .education h2,
 .experience-section h2,
 .projects h2,
 .Certifications h2 {
-  font-family: "Montserrat", sans-serif;
-  color: #5C4A3A;
-  margin-bottom: 30px;
-  font-size: 1.8rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-family: var(--font-heading);
+  color: var(--c-accent-dark);
+  margin-bottom: 48px;
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.5px;
   position: relative;
-  padding-bottom: 12px;
-}
-
-.education h2::after,
-.experience-section h2::after,
-.projects h2::after,
-.Certifications h2::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 60px;
-  height: 2px;
-  background: #B4846C;
 }
 
 /* ═══════════════════════════════════════
    EXPERIENCE — per-company card layout
 ════════════════════════════════════════ */
 .experience-section {
-  padding: 40px 20px;
-  margin: 30px auto;
-  max-width: 900px;
-  background: #FFFFFF;
-  border-radius: 20px;
-  box-shadow:
-    0 8px 30px rgba(92, 74, 58, 0.12),
-    0 2px 8px rgba(92, 74, 58, 0.06);
+  padding: var(--section-pad-y) var(--section-pad-x);
+  width: 100%;
+  background: var(--c-surface);
   position: relative;
   overflow: hidden;
 }
-
-.experience-section::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #B4846C 0%, #D4A574 100%);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.experience-section:hover::before { transform: scaleX(1); }
 
 /* Timeline container */
 .exp-timeline {
