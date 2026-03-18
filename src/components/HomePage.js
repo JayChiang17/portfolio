@@ -10,7 +10,7 @@ import "../style/SocialLinks.css";
 import "../style/Homepages.css";
 import "../style/HighlightEffects.css";
 
-const HomePage = () => {
+const HomePage = ({ isDark, toggleTheme }) => {
   const [showPopup, setShowPopup] = useState(false);
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const HomePage = () => {
   return (
     <div className="page-layout">
       {/* ── Left sidebar (sticky scroll-spy nav) ── */}
-      <MainNav />
+      <MainNav isDark={isDark} toggleTheme={toggleTheme} />
 
       {/* ── Right: all content ── */}
       <div className="content-area">

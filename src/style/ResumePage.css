@@ -24,7 +24,7 @@
   align-items: center;
   gap: 24px;
   padding: 20px 0;
-  border-bottom: 1px solid #E8DDD0;
+  border-bottom: 1px solid var(--c-border);
 }
 
 .education-item:last-child {
@@ -43,8 +43,8 @@
   flex-shrink: 0;
   border-radius: 12px;
   padding: 8px;
-  background: #FAF8F3;
-  border: 1px solid #E8DDD0;
+  background: var(--c-surface-warm);
+  border: 1px solid var(--c-border);
   transition: all 0.3s ease;
 }
 
@@ -56,12 +56,12 @@
 .education-info {
   flex: 1;
   line-height: 1.8;
-  color: #3E3830;
+  color: var(--c-text);
 }
 
 .education-info strong {
   font-size: 1.15rem;
-  color: #5C4A3A;
+  color: var(--c-accent-dark);
 }
 
 /* Sections animate in via GSAP ScrollTrigger */
@@ -119,7 +119,7 @@
   top: 20px;
   bottom: 20px;
   width: 2px;
-  background: linear-gradient(to bottom, #B4846C, #E8DDD0);
+  background: linear-gradient(to bottom, var(--c-accent), var(--c-border));
 }
 
 /* Tilt wrapper for each card */
@@ -130,8 +130,8 @@
 
 /* Individual experience card */
 .experience-card {
-  background: #FAF8F3;
-  border: 1px solid #E8DDD0;
+  background: var(--c-surface-warm);
+  border: 1px solid var(--c-border);
   border-radius: 16px;
   padding: 24px 24px 20px 44px;
   position: relative;
@@ -148,13 +148,13 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #B4846C;
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 2px #B4846C;
+  background: var(--c-accent);
+  border: 2px solid var(--c-surface);
+  box-shadow: 0 0 0 2px var(--c-accent);
 }
 
 .experience-card:hover {
-  border-color: #B4846C;
+  border-color: var(--c-accent);
   box-shadow: 0 8px 24px rgba(92, 74, 58, 0.14);
 }
 
@@ -177,21 +177,21 @@
   font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #5C4A3A;
+  color: var(--c-accent-dark);
   margin: 0;
 }
 
 .exp-location {
   font-size: 0.8rem;
-  color: #B4846C;
+  color: var(--c-accent);
   font-weight: 500;
   letter-spacing: 0.4px;
 }
 
 /* Current badge */
 .exp-badge-current {
-  background: #5C4A3A;
-  color: #FAF8F3;
+  background: var(--c-accent-dark);
+  color: var(--c-surface-warm);
   font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -215,13 +215,13 @@
 
 .exp-role {
   font-size: 0.95rem;
-  color: #3E3830;
+  color: var(--c-text);
   font-weight: 500;
 }
 
 .exp-dates {
   font-size: 0.82rem;
-  color: #9E8A7A;
+  color: var(--c-text-muted);
   font-style: italic;
 }
 
@@ -234,21 +234,21 @@
 }
 
 .exp-tag {
-  background: #EDE6DA;
-  color: #5C4A3A;
+  background: var(--c-bg);
+  color: var(--c-accent-dark);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.3px;
   padding: 3px 10px;
   border-radius: 6px;
-  border: 1px solid #D4C8B8;
+  border: 1px solid var(--c-border);
   transition: background 0.2s ease, border-color 0.2s ease;
 }
 
 .exp-tag:hover {
-  background: #B4846C;
+  background: var(--c-accent);
   color: #fff;
-  border-color: #B4846C;
+  border-color: var(--c-accent);
 }
 
 /* Bullets */
@@ -264,14 +264,14 @@
   margin: 10px 0;
   font-size: 0.92rem;
   line-height: 1.85;
-  color: #3E3830;
+  color: var(--c-text);
 }
 
 .exp-bullets li::before {
   content: "▹";
   position: absolute;
   left: 0;
-  color: #B4846C;
+  color: var(--c-accent);
   font-size: 1.1em;
 }
 
@@ -279,11 +279,11 @@
 .exp-toggle {
   margin-top: 14px;
   background: none;
-  border: 1px solid #D4C8B8;
+  border: 1px solid var(--c-border);
   border-radius: 8px;
   padding: 7px 18px;
   font-size: 0.8rem;
-  color: #B4846C;
+  color: var(--c-accent);
   font-weight: 600;
   cursor: none;
   transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
@@ -291,9 +291,9 @@
 }
 
 .exp-toggle:hover {
-  background: #B4846C;
+  background: var(--c-accent);
   color: #fff;
-  border-color: #B4846C;
+  border-color: var(--c-accent);
 }
 
 /* Responsive */
@@ -311,7 +311,7 @@
 .education p,
 .experience p,
 .projects p {
-  color: #3E3830;
+  color: var(--c-text);
   line-height: 1.9;
   margin: 12px 0;
 }
@@ -319,7 +319,7 @@
 .education strong,
 .experience strong,
 .projects strong {
-  color: #5C4A3A;
+  color: var(--c-accent-dark);
   font-weight: 600;
 }
 
@@ -337,7 +337,7 @@
   line-height: 1.9;
   position: relative;
   padding-left: 20px;
-  color: #3E3830;
+  color: var(--c-text);
 }
 
 .experience li::before,
@@ -345,7 +345,7 @@
   content: "▹";
   position: absolute;
   left: 0;
-  color: #B4846C;
+  color: var(--c-accent);
   font-weight: bold;
   font-size: 1.2em;
 }
@@ -354,14 +354,14 @@
 .projects h3 {
   margin-top: 30px;
   margin-bottom: 15px;
-  color: #5C4A3A;
+  color: var(--c-accent-dark);
   font-size: 1.2rem;
   font-weight: 600;
   font-family: "Montserrat", sans-serif;
 }
 
 .projects a {
-  color: #B4846C;
+  color: var(--c-accent);
   text-decoration: none;
   font-weight: 600;
   border-bottom: 1px solid transparent;
@@ -369,7 +369,7 @@
 }
 
 .projects a:hover {
-  border-bottom-color: #B4846C;
+  border-bottom-color: var(--c-accent);
 }
 
 /* Certifications section */
@@ -380,7 +380,7 @@
 
 .Certifications li {
   background: #F5F1E8;
-  border: 1px solid #E8DDD0;
+  border: 1px solid var(--c-border);
   padding: 20px;
   margin-bottom: 15px;
   transition: all 0.3s ease;
@@ -388,19 +388,19 @@
 
 .Certifications li:hover {
   transform: translateX(8px);
-  border-color: #B4846C;
-  background: #FAF8F3;
+  border-color: var(--c-accent);
+  background: var(--c-surface-warm);
 }
 
 .Certifications a {
-  color: #B4846C;
+  color: var(--c-accent);
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .Certifications a:hover {
-  color: #5C4A3A;
+  color: var(--c-accent-dark);
 }
 
 /* Responsive design */

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500&display=swap');
 
-/* ── Design Tokens ── */
+/* ── Light Mode (default) ── */
 :root {
   --c-accent:       #B4846C;
   --c-accent-dark:  #5C4A3A;
@@ -20,6 +20,20 @@
 
   --section-pad-x: 72px;
   --section-pad-y: 110px;
+}
+
+/* ── Dark Mode ── */
+[data-theme="dark"] {
+  --c-accent:       #C49A7A;
+  --c-accent-dark:  #E0B98A;
+  --c-accent-light: #D4A574;
+  --c-text:         #F0E8DF;
+  --c-text-sec:     #D0BEA8;
+  --c-text-muted:   #7A6A5A;
+  --c-bg:           #141010;
+  --c-surface:      #1C1714;
+  --c-surface-warm: #231D19;
+  --c-border:       #332B24;
 }
 
 /* ── Reset ── */

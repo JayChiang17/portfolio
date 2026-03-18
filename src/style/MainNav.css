@@ -292,6 +292,59 @@
   background: rgba(180, 132, 108, 0.08);
 }
 
+/* ── Theme toggle button (sidebar) ── */
+.sidenav-theme-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  padding: 9px 14px;
+  cursor: none;
+  width: 100%;
+  color: var(--c-text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 12px;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.sidenav-theme-btn svg {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.sidenav-theme-btn:hover {
+  background: var(--c-surface-warm);
+  border-color: var(--c-accent);
+  color: var(--c-accent-dark);
+}
+
+/* ── Mobile theme button ── */
+.mobile-theme-btn {
+  background: none;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: none;
+  color: var(--c-text-muted);
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-theme-btn:hover {
+  background: var(--c-surface-warm);
+  color: var(--c-accent-dark);
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .sidenav { display: none; }
