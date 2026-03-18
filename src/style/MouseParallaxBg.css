@@ -1,0 +1,137 @@
+.parallax-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+  transition: transform 0.08s linear;
+}
+
+/* ── Circles ── */
+.geo-circle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(180, 132, 108, 0.07);
+  border: 1px solid rgba(180, 132, 108, 0.12);
+}
+
+.geo-c1 {
+  width: 480px;
+  height: 480px;
+  top: -100px;
+  right: -60px;
+  animation: float1 14s ease-in-out infinite;
+}
+
+.geo-c2 {
+  width: 260px;
+  height: 260px;
+  bottom: 10%;
+  left: -80px;
+  animation: float2 18s ease-in-out infinite;
+}
+
+/* ── Rings (hollow circles) ── */
+.geo-ring {
+  position: absolute;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(92, 74, 58, 0.1);
+}
+
+.geo-r1 {
+  width: 320px;
+  height: 320px;
+  top: 30%;
+  left: 5%;
+  animation: float3 20s ease-in-out infinite;
+}
+
+.geo-r2 {
+  width: 180px;
+  height: 180px;
+  bottom: 15%;
+  right: 8%;
+  animation: float1 16s ease-in-out infinite reverse;
+}
+
+/* ── Diamond ── */
+.geo-diamond {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(180, 132, 108, 0.15);
+  transform: rotate(45deg);
+  animation: rotateSlow 30s linear infinite;
+}
+
+.geo-d1 {
+  top: 20%;
+  right: 12%;
+}
+
+/* ── Dot grid ── */
+.geo-dot-grid {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  left: 15%;
+  background-image: radial-gradient(circle, rgba(92, 74, 58, 0.18) 1px, transparent 1px);
+  background-size: 20px 20px;
+  opacity: 0.5;
+  animation: float2 22s ease-in-out infinite;
+}
+
+/* ── Lines ── */
+.geo-line {
+  position: absolute;
+  height: 1px;
+  background: rgba(180, 132, 108, 0.12);
+}
+
+.geo-l1 {
+  width: 200px;
+  top: 60%;
+  right: 20%;
+  transform: rotate(-30deg);
+  animation: float3 17s ease-in-out infinite;
+}
+
+.geo-l2 {
+  width: 130px;
+  top: 15%;
+  left: 30%;
+  transform: rotate(20deg);
+  animation: float1 21s ease-in-out infinite reverse;
+}
+
+/* ── Keyframes ── */
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-22px); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(16px); }
+}
+@keyframes float3 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50%       { transform: translateY(-14px) rotate(8deg); }
+}
+@keyframes rotateSlow {
+  from { transform: rotate(45deg); }
+  to   { transform: rotate(405deg); }
+}
+
+@media (max-width: 768px) {
+  .geo-c1 { width: 280px; height: 280px; }
+  .geo-c2 { width: 160px; height: 160px; }
+  .geo-r1 { width: 200px; height: 200px; }
+}

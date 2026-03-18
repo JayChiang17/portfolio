@@ -10,7 +10,6 @@
 
 /* Common section styles */
 .education,
-.experience,
 .projects,
 .Certifications {
   padding: 40px 20px;
@@ -27,7 +26,6 @@
 }
 
 .education::before,
-.experience::before,
 .projects::before,
 .Certifications::before {
   content: '';
@@ -43,7 +41,6 @@
 }
 
 .education:hover,
-.experience:hover,
 .projects:hover,
 .Certifications:hover {
   transform: translateY(-10px);
@@ -54,14 +51,12 @@
 }
 
 .education:hover::before,
-.experience:hover::before,
 .projects:hover::before,
 .Certifications:hover::before {
   transform: scaleX(1);
 }
 
 .education:active,
-.experience:active,
 .projects:active,
 .Certifications:active {
   transform: translateY(-5px);
@@ -121,10 +116,6 @@
   animation: slideInFromBottom 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.experience {
-  animation: slideInFromBottom 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .projects {
   animation: slideInFromBottom 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -146,7 +137,7 @@
 
 /* Section headings */
 .education h2,
-.experience h2,
+.experience-section h2,
 .projects h2,
 .Certifications h2 {
   font-family: "Montserrat", sans-serif;
@@ -161,7 +152,7 @@
 }
 
 .education h2::after,
-.experience h2::after,
+.experience-section h2::after,
 .projects h2::after,
 .Certifications h2::after {
   content: "";
@@ -173,25 +164,237 @@
   background: #B4846C;
 }
 
-/* Experience section specific styles */
-.experience h3 {
+/* ═══════════════════════════════════════
+   EXPERIENCE — per-company card layout
+════════════════════════════════════════ */
+.experience-section {
+  padding: 40px 20px;
+  margin: 30px auto;
+  max-width: 900px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow:
+    0 8px 30px rgba(92, 74, 58, 0.12),
+    0 2px 8px rgba(92, 74, 58, 0.06);
   position: relative;
-  display: block;
-  width: 100%;
-  margin-bottom: 12px;
-  font-size: 1.3rem;
-  color: #5C4A3A;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
-.experience .location {
+.experience-section::before {
+  content: '';
   position: absolute;
-  right: 0;
-  top: 0;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #B4846C 0%, #D4A574 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.experience-section:hover::before { transform: scaleX(1); }
+
+/* Timeline container */
+.exp-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+  padding-left: 0;
+}
+
+/* Vertical timeline line */
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  top: 20px;
+  bottom: 20px;
+  width: 2px;
+  background: linear-gradient(to bottom, #B4846C, #E8DDD0);
+}
+
+/* Tilt wrapper for each card */
+.exp-tilt {
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
+/* Individual experience card */
+.experience-card {
+  background: #FAF8F3;
+  border: 1px solid #E8DDD0;
+  border-radius: 16px;
+  padding: 24px 24px 20px 44px;
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+/* Timeline dot */
+.experience-card::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 28px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #B4846C;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #B4846C;
+}
+
+.experience-card:hover {
+  border-color: #B4846C;
+  box-shadow: 0 8px 24px rgba(92, 74, 58, 0.14);
+}
+
+/* Card header */
+.exp-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  gap: 12px;
+}
+
+.exp-company-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.exp-company {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #5C4A3A;
+  margin: 0;
+}
+
+.exp-location {
+  font-size: 0.8rem;
   color: #B4846C;
-  font-size: 0.85em;
   font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+/* Current badge */
+.exp-badge-current {
+  background: #5C4A3A;
+  color: #FAF8F3;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Role row */
+.exp-role-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.exp-role {
+  font-size: 0.95rem;
+  color: #3E3830;
+  font-weight: 500;
+}
+
+.exp-dates {
+  font-size: 0.82rem;
+  color: #9E8A7A;
+  font-style: italic;
+}
+
+/* Tech tags */
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.exp-tag {
+  background: #EDE6DA;
+  color: #5C4A3A;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid #D4C8B8;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.exp-tag:hover {
+  background: #B4846C;
+  color: #fff;
+  border-color: #B4846C;
+}
+
+/* Bullets */
+.exp-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exp-bullets li {
+  position: relative;
+  padding-left: 18px;
+  margin: 10px 0;
+  font-size: 0.92rem;
+  line-height: 1.85;
+  color: #3E3830;
+}
+
+.exp-bullets li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #B4846C;
+  font-size: 1.1em;
+}
+
+/* Show more/less button */
+.exp-toggle {
+  margin-top: 14px;
+  background: none;
+  border: 1px solid #D4C8B8;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 0.8rem;
+  color: #B4846C;
+  font-weight: 600;
+  cursor: none;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  letter-spacing: 0.3px;
+}
+
+.exp-toggle:hover {
+  background: #B4846C;
+  color: #fff;
+  border-color: #B4846C;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-section { padding: 30px 16px; }
+  .exp-timeline { padding-left: 0; }
+  .exp-timeline::before { display: none; }
+  .experience-card { padding: 20px; }
+  .experience-card::before { display: none; }
+  .exp-role-row { flex-direction: column; align-items: flex-start; }
+  .exp-card-header { flex-direction: column; }
 }
 
 /* Paragraph styles */

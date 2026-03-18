@@ -1,7 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
+import Tilt from "react-parallax-tilt";
 import Popup from "../components/Popup";
 import MainNav from "./MainNav";
 import Header from "../components/Header";
+import MouseParallaxBg from "./MouseParallaxBg";
 import profilePic from "../pic/me2.png";
 import ResumePage from "../components/ResumePage";
 import ContactMe from "../components/ContactPage";
@@ -39,6 +41,7 @@ const HomePage = () => {
 
   return (
     <main>
+      <MouseParallaxBg />
       {showPopup && <Popup onClose={() => setShowPopup(false)} />}
       <Header />
       <MainNav />
@@ -48,6 +51,14 @@ const HomePage = () => {
         className={`fade-in ${isFirstSectionVisible ? "visible" : ""}`}
       >
         <h1 id="aboutMe">AboutMe</h1>
+        <Tilt
+          tiltMaxAngleX={6}
+          tiltMaxAngleY={6}
+          perspective={1200}
+          transitionSpeed={600}
+          scale={1.01}
+          className="tilt-card"
+        >
         <section className="infro">
           <div className="image-container">
             <img src={profilePic} alt="About Me" />
@@ -79,6 +90,7 @@ const HomePage = () => {
             </p>
           </div>
         </section>
+        </Tilt>
       </section>
 
       {/* 经历和成就部分 */}
@@ -86,6 +98,14 @@ const HomePage = () => {
         ref={secondSectionRef}
         className={`fade-in ${isSecondSectionVisible ? "visible" : ""}`}
       >
+        <Tilt
+          tiltMaxAngleX={5}
+          tiltMaxAngleY={5}
+          perspective={1200}
+          transitionSpeed={600}
+          scale={1.01}
+          className="tilt-card"
+        >
         <section className="content shimmer">
           Jay Chiang is a{" "}
           <strong className="gradient-text">data engineer and full-stack developer specializing in manufacturing data systems</strong>{" "}
@@ -140,6 +160,7 @@ const HomePage = () => {
             architect scalable, intelligent systems that drive measurable business impact
           </strong>.
         </section>
+        </Tilt>
       </section>
       <ResumePage />
       <br />
