@@ -1,0 +1,120 @@
+.pdf-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: pdfFadeIn 0.2s ease;
+}
+
+@keyframes pdfFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.pdf-modal {
+  background: var(--c-surface);
+  border-radius: 18px;
+  width: min(920px, 100%);
+  height: min(88vh, 820px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.45);
+  animation: pdfSlideUp 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes pdfSlideUp {
+  from { transform: translateY(24px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.pdf-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--c-border);
+  flex-shrink: 0;
+  background: var(--c-surface-warm);
+}
+
+.pdf-modal-title {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--c-text-muted);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.pdf-modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pdf-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background: var(--c-accent);
+  color: #fff;
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  cursor: none;
+}
+
+.pdf-download-btn:hover {
+  background: var(--c-accent-dark);
+  color: #fff;
+}
+
+.pdf-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--c-border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--c-text-muted);
+  cursor: none;
+  transition: all 0.2s ease;
+}
+
+.pdf-close-btn:hover {
+  background: var(--c-surface);
+  color: var(--c-accent-dark);
+  border-color: var(--c-accent);
+}
+
+.pdf-embed-wrap {
+  flex: 1;
+  overflow: hidden;
+}
+
+.pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .pdf-overlay { padding: 12px; }
+  .pdf-modal   { height: 92vh; border-radius: 14px; }
+}

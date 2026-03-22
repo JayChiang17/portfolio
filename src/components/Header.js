@@ -1,7 +1,8 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import "../style/Header.css";
 import profilePic from "../pic/me2.png";
+import PDFModal from "./PDFModal";
 
 const ThreeHero = lazy(() => import("./ThreeHero"));
 
@@ -11,8 +12,10 @@ const scrollTo = (id) => {
 };
 
 function Header() {
+  const [showPDF, setShowPDF] = useState(false);
   return (
     <section className="hero" id="top">
+      {showPDF && <PDFModal onClose={() => setShowPDF(false)} />}
       {/* ── Left: Text content ── */}
       <div className="hero-left">
         <div className="hero-eyebrow">
@@ -57,6 +60,16 @@ function Header() {
           <button className="hero-btn hero-btn--ghost" onClick={() => scrollTo("contactme")}>
             Contact Me
           </button>
+          <button
+            className="hero-btn hero-btn--ghost"
+            onClick={() => setShowPDF(true)}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="15" height="15">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            Resume
+          </button>
           <a
             href="/portfolio/Jay_Chiang_Resume.pdf"
             download
@@ -67,7 +80,7 @@ function Header() {
               <polyline points="7 10 12 15 17 10"/>
               <line x1="12" y1="15" x2="12" y2="3"/>
             </svg>
-            Resume
+            Download
           </a>
         </div>
 

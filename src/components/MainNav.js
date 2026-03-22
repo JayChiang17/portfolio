@@ -6,7 +6,8 @@ const NAV_ITEMS = [
   { id: "experience",label: "Experience", num: "02" },
   { id: "skills",    label: "Skills",     num: "03" },
   { id: "projects",  label: "Projects",   num: "04" },
-  { id: "contactme", label: "Contact",    num: "05" },
+  { id: "blog",      label: "Blog",       num: "05" },
+  { id: "contactme", label: "Contact",    num: "06" },
 ];
 
 const scrollTo = (id) => {

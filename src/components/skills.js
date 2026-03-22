@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../style/FloatingSkills.css";
+import SkillsRadar from "./SkillsRadar";
 
 const CATEGORIES = [
   {
@@ -101,6 +102,9 @@ const SkillsSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Radar chart */}
+      <SkillsRadar />
     </div>
   );
 };

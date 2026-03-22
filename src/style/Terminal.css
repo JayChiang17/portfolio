@@ -1,0 +1,118 @@
+.terminal {
+  margin-top: 48px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--c-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  font-family: "SF Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
+}
+
+/* ── Title bar ── */
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: var(--c-surface-warm);
+  border-bottom: 1px solid var(--c-border);
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.terminal-dot--red    { background: #FF5F57; }
+.terminal-dot--yellow { background: #FEBC2E; }
+.terminal-dot--green  { background: #28C840; }
+
+.terminal-title {
+  margin-left: 8px;
+  font-size: 0.75rem;
+  color: var(--c-text-muted);
+  letter-spacing: 0.3px;
+}
+
+/* ── Body ── */
+.terminal-body {
+  padding: 20px 24px 24px;
+  background: var(--c-surface);
+  min-height: 260px;
+  max-height: 360px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--c-border) transparent;
+}
+
+.terminal-body::-webkit-scrollbar       { width: 4px; }
+.terminal-body::-webkit-scrollbar-track { background: transparent; }
+.terminal-body::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 4px; }
+
+/* ── Command line ── */
+.terminal-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.6;
+}
+
+.terminal-prompt {
+  color: var(--c-accent);
+  font-size: 0.95rem;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.terminal-cmd {
+  color: var(--c-text);
+  font-size: 0.88rem;
+  letter-spacing: 0.2px;
+}
+
+/* ── Output lines ── */
+.terminal-output {
+  padding: 4px 0 8px 20px;
+  border-left: 2px solid var(--c-border);
+  margin-left: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.terminal-out-line {
+  color: var(--c-text-sec);
+  font-size: 0.83rem;
+  line-height: 1.65;
+  letter-spacing: 0.1px;
+}
+
+/* ── Blinking cursor ── */
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  background: var(--c-accent);
+  vertical-align: text-bottom;
+  border-radius: 1px;
+  animation: blink 1s step-end infinite;
+}
+
+.terminal-cursor--idle {
+  animation: blink 1.2s step-end infinite;
+  opacity: 0.6;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+  .terminal-body { max-height: 300px; padding: 16px 16px 20px; }
+  .terminal-cmd  { font-size: 0.82rem; }
+  .terminal-out-line { font-size: 0.78rem; }
+}

@@ -1,0 +1,55 @@
+.skills-radar-wrap {
+  margin-top: 48px;
+  padding: 32px 24px 24px;
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.skills-radar-wrap:hover {
+  border-color: var(--c-accent);
+}
+
+.skills-radar-title {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--c-text-muted);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.radar-tooltip {
+  background: var(--c-surface);
+  border: 1px solid var(--c-border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 20px rgba(92, 74, 58, 0.15);
+}
+
+.radar-tooltip-label {
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.radar-tooltip-score {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--c-accent);
+  line-height: 1;
+}
+
+.radar-tooltip-score span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--c-text-muted);
+  margin-left: 2px;
+}
