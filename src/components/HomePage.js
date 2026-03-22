@@ -43,16 +43,16 @@ const HomePage = ({ isDark, toggleTheme }) => {
             {/* Bio */}
             <div className="about-bio">
               <p>
-                Data engineer and full-stack developer with <strong>2+ years of production experience</strong> in manufacturing,
-                building real-time MES dashboards, analytics pipelines, and AI-powered retrieval systems
-                that drive throughput, quality, and operational efficiency.
+                Data engineer with experience building <strong>data platforms and backend data services</strong> using
+                Python, SQL, PostgreSQL, and FastAPI. Worked on schema migration, batch data ingestion,
+                validation, scheduled jobs, reporting datasets, and ML output storage for manufacturing
+                systems including MES, QC, downtime, traceability, and KPI reporting.
               </p>
               <p>
-                Currently pursuing an <strong>M.S. in Applied Data Science</strong> at the{" "}
+                Currently pursuing an <strong>M.S. in Data Science</strong> at the{" "}
                 <a href="https://www.si.umich.edu/programs/master-applied-data-science" target="_blank" rel="noopener noreferrer">
                   University of Michigan - Ann Arbor
-                </a>,
-                focusing on ML pipelines, deep learning, NLP, and causal inference.
+                </a>.
               </p>
               <p>
                 Previously earned a B.S. in Technology Information Management from{" "}
@@ -62,7 +62,7 @@ const HomePage = ({ isDark, toggleTheme }) => {
               </p>
 
               <div className="about-tags">
-                {["Python","FastAPI","React","PostgreSQL","Docker","Kubernetes","Airflow","FAISS","Pandas","SQL","NLP","Deep Learning"].map(t => (
+                {["Python","PostgreSQL","FastAPI","psycopg2","APScheduler","WebSocket","FAISS","XGBoost","Docker","Kubernetes","SQL","Pandas"].map(t => (
                   <span key={t} className="tech-badge">{t}</span>
                 ))}
               </div>
@@ -72,26 +72,26 @@ const HomePage = ({ isDark, toggleTheme }) => {
             <div className="about-highlights">
               <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6} perspective={1000} scale={1.02} className="tilt-card">
                 <div className="highlight-card">
-                  <div className="highlight-metric">30%</div>
-                  <div className="highlight-desc">Line throughput increase via real-time dashboards</div>
+                  <div className="highlight-metric">161</div>
+                  <div className="highlight-desc">FastAPI endpoints built for manufacturing data platform</div>
                 </div>
               </Tilt>
               <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6} perspective={1000} scale={1.02} className="tilt-card">
                 <div className="highlight-card">
-                  <div className="highlight-metric">98%</div>
-                  <div className="highlight-desc">Airflow pipeline success rate (up from 85%)</div>
+                  <div className="highlight-metric">31%</div>
+                  <div className="highlight-desc">Faster SOP lookup via FAISS retrieval workflow</div>
                 </div>
               </Tilt>
               <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6} perspective={1000} scale={1.02} className="tilt-card">
                 <div className="highlight-card">
                   <div className="highlight-metric">90%</div>
-                  <div className="highlight-desc">Misrouting incidents prevented at Meritronics</div>
+                  <div className="highlight-desc">Process errors reduced via API-level validation rules</div>
                 </div>
               </Tilt>
               <Tilt tiltMaxAngleX={6} tiltMaxAngleY={6} perspective={1000} scale={1.02} className="tilt-card">
                 <div className="highlight-card">
                   <div className="highlight-metric">60%</div>
-                  <div className="highlight-desc">Faster weekly reporting turnaround at Reliable Power</div>
+                  <div className="highlight-desc">Faster reporting turnaround with SQL & Python datasets</div>
                 </div>
               </Tilt>
             </div>

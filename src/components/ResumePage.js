@@ -254,9 +254,7 @@ const ResumePage = () => {
               <div className="education-info">
                 <strong>University of Michigan - Ann Arbor</strong>
                 <br />
-                M.S. Applied Data Science, Jan 2026 - Present
-                <br />
-                Focus: ML pipelines, deep learning, NLP, causal inference, scalable data processing
+                M.S. Data Science, Jan 2026 – Present
               </div>
             </div>
             <div className="education-item">
@@ -281,39 +279,38 @@ const ResumePage = () => {
               <ExperienceCard
                 company="Leadman Electronics"
                 location="Santa Clara, California"
-                role="Data Engineer"
-                dates="Jan 2024 – Present"
+                role="Data Engineer, Manufacturing Data Platform"
+                dates="Jul 2024 – Present"
                 current={true}
                 delay={0}
-                techTags={["React", "FastAPI", "WebSocket", "Python", "PostgreSQL", "Azure SQL", "Docker", "Kubernetes", "Airflow", "FAISS", "Ollama"]}
+                techTags={["Python", "PostgreSQL", "FastAPI", "psycopg2", "APScheduler", "WebSocket", "FAISS", "XGBoost", "sentence-transformers", "Docker", "Kubernetes"]}
                 bullets={[
-                  <>Built <strong>real-time production dashboards</strong> using React, WebSocket, and FastAPI, <span className="stat-highlight">increasing line throughput by 30%</span> through live WIP, throughput, cycle time, and NG visibility.</>,
-                  <>Redesigned PostgreSQL data model and migrated workloads from local PostgreSQL to Azure SQL, <span className="stat-highlight">improving API query response performance by 20%</span> and stabilizing reporting under higher concurrency.</>,
-                  <>Customized MES execution system and automated information workflows using Python, FastAPI, and SQL, <span className="stat-highlight">reducing manual man-hours by 30%</span> while supporting standardized operations across 3 factories.</>,
-                  <>Enforced routing gates and station validation at API boundaries to block invalid transitions, <span className="stat-highlight">reducing rework by 10%</span> and stabilizing execution flow during NPI ramps.</>,
-                  <>Delivered operator-facing full-stack execution tools using React, REST APIs, and PostgreSQL, <span className="stat-highlight">improving ETL completion rate by 43%</span> through guided input validation and automated data capture.</>,
-                  <>Built analytics pipelines using Python, Pandas, NumPy, and SQL, <span className="stat-highlight">improving query efficiency by 60%</span> and reducing recurring manual data preparation by 40% across daily operational reports.</>,
-                  <>Implemented production AI retrieval for SOP and data using FAISS, FTS5, HyDE, and Ollama GPT OSS 120B, <span className="stat-highlight">reducing troubleshooting lookup time by 31%</span> and improving cross-shift consistency by 20%.</>,
-                  <>Built multi-service containerized dev environment using Docker Compose, <span className="stat-highlight">reducing environment setup time by 20%</span> and reducing image size by 50% through shared base layers and dependency pruning.</>,
-                  <>Deployed containerized services to Kubernetes using Deployments, Services, and Ingress with health checks, <span className="stat-highlight">improving release reliability by 30%</span> and reducing rollback rate by 10%.</>,
-                  <>Designed Airflow DAGs orchestrating 12 daily ETL tasks with dependency management and SLA monitoring, <span className="stat-highlight">improving pipeline success rate from 85% to 98%</span>.</>,
+                  <>Migrated the platform from SQLite to PostgreSQL using psycopg2, ThreadedConnectionPool, and <strong>5 migration scripts</strong>, <span className="stat-highlight">improving data consistency across 9 operational schemas</span>.</>,
+                  <>Developed and maintained <span className="stat-highlight">161 FastAPI endpoints</span> with PostgreSQL UPSERT logic for manufacturing, QC, downtime, and monitoring data.</>,
+                  <>Created raw, hourly, and daily export workflows with FastAPI and Pandas, turning operational event data into stable reporting datasets.</>,
+                  <>Implemented APScheduler jobs, WebSocket delivery, and <strong>4 cache layers</strong> to support near-real-time KPI dashboards and reduce repeated aggregation queries.</>,
+                  <>Optimized PostgreSQL queries with indexing and connection pooling, <span className="stat-highlight">cutting API response time by 20%</span>.</>,
+                  <>Developed a retrieval workflow for SOP and production data search using embeddings and FAISS, <span className="stat-highlight">cutting troubleshooting lookup time by 31%</span>.</>,
+                  <>Deployed ML workflows for NG risk prediction and NG reason clustering using <strong>XGBoost, Isotonic Regression, and sentence-transformers</strong>.</>,
+                  <>Added <strong>8 backend test modules</strong> for migration, scheduler, and batch QC/FQC flows to reduce regression risk.</>,
+                  <>Standardized deployment workflows with Docker and Kubernetes to improve consistency across backend services.</>,
+                  <>Automated daily production-summary delivery by building a <strong>Microsoft Graph API</strong> reporting service.</>,
                 ]}
               />
 
               <ExperienceCard
-                company="Meritronics Inc"
+                company="Meritronics Inc."
                 location="Milpitas, California"
-                role="Software Engineer, Manufacturing Data Systems"
+                role="Internal Transfer"
                 dates="Sep 2025 – Dec 2025"
                 current={false}
                 delay={0.1}
-                techTags={["Python", "FastAPI", "PostgreSQL", "React", "WebSocket", "Docker", "Kubernetes", "Pandas", "SQL"]}
+                techTags={["Python", "PostgreSQL", "FastAPI", "WebSocket", "RESTful API", "SQL"]}
                 bullets={[
-                  <>Built SN-level traceability and routing enforcement system for SMT, ICT, and FCT lines using Python, FastAPI, and PostgreSQL, <span className="stat-highlight">preventing misrouting incidents by 90%</span> and improving FPY by 8%.</>,
-                  <>Aggregated SPI, AOI, ICT, and FCT test logs using Python, Pandas, and SQL, generating fail-code ranking dashboards that <span className="stat-highlight">reduced repeat repair rate by 20%</span>.</>,
-                  <>Developed real-time WIP, cycle time, and station utilization dashboards using React, WebSocket, and REST APIs, <span className="stat-highlight">reducing bottleneck identification time by 40%</span> across 5+ production lines.</>,
-                  <>Standardized test result schema across SPI, AOI, ICT, and FCT stations in PostgreSQL, <span className="stat-highlight">improving audit traceability coverage to 100%</span> and reducing manual data reconciliation by 60%.</>,
-                  <>Deployed containerized MES and analytics services using Docker and Kubernetes with readiness probes and rolling updates, <span className="stat-highlight">improving deployment stability by 30%</span> and reducing production incident recurrence by 20%.</>,
+                  <>Reworked traceability services in Python and PostgreSQL to unify serial number, station event, and process history records, <span className="stat-highlight">improving first-pass success rate by 8%</span>.</>,
+                  <>Added API- and database-level validation rules to block invalid station transitions, duplicate scans, and incomplete records, <span className="stat-highlight">reducing process errors by 90%</span>.</>,
+                  <>Consolidated multi-source production logs with SQL joins and standardized schemas, <span className="stat-highlight">reducing repeat defects by 20%</span> and triage time by 40%.</>,
+                  <>Built reporting services with RESTful APIs and WebSocket updates to deliver real-time bottleneck and throughput metrics, <span className="stat-highlight">reducing bottleneck detection time by 40%</span>.</>,
                 ]}
               />
 
@@ -321,13 +318,13 @@ const ResumePage = () => {
                 company="Reliable Power, Inc."
                 location="Santa Clara, California"
                 role="Data Analyst"
-                dates="Jan 2024 – Sep 2025"
+                dates="Jul 2024 – Sep 2025"
                 current={false}
                 delay={0.2}
                 techTags={["SQL", "Python", "Pandas", "Tableau", "Reporting"]}
                 bullets={[
-                  <>Built SQL and Python reporting datasets for inverter sales, repair, and warranty operations, <span className="stat-highlight">reducing weekly reporting turnaround time by 60%</span> and improving SKU-level visibility by 50%.</>,
-                  <>Reduced unit defect rate from <span className="stat-highlight">6.6% to 5%</span> by analyzing failure patterns and surfacing actionable drivers, improving corrective action effectiveness by 20%.</>,
+                  <>Built SQL and Python reporting datasets for sales and warranty analytics, <span className="stat-highlight">reducing reporting turnaround time by 60%</span> and improving SKU-level visibility by 50%.</>,
+                  <>Reduced defect rate from <span className="stat-highlight">6.6% to 5%</span> through failure pattern analysis and root cause analysis, improving corrective action effectiveness by 20%.</>,
                 ]}
               />
             </div>
