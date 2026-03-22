@@ -39,8 +39,8 @@ const PDFModal = ({ onClose }) => {
           <span className="pdf-modal-title">Jay Chiang — Resume</span>
           <div className="pdf-modal-actions">
             <a
-              href="/portfolio/Jay_Chiang_Resume.pdf"
-              download="Jay_Chiang_Resume.pdf"
+              href="/portfolio/Jay_Chiang_Resume_3Data_G.pdf"
+              download="Jay_Chiang_Resume_3Data_G.pdf"
               className="pdf-download-btn"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="15" height="15">
@@ -60,7 +60,7 @@ const PDFModal = ({ onClose }) => {
         </div>
         <div className="pdf-embed-wrap">
           <iframe
-            src="/portfolio/Jay_Chiang_Resume.pdf"
+            src="/portfolio/Jay_Chiang_Resume_3Data_G.pdf"
             title="Jay Chiang Resume"
             className="pdf-iframe"
           />

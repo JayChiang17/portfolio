@@ -71,7 +71,7 @@ function Header() {
             Resume
           </button>
           <a
-            href="/portfolio/Jay_Chiang_Resume.pdf"
+            href="/portfolio/Jay_Chiang_Resume_3Data_G.pdf"
             download
             className="hero-btn hero-btn--download"
           >
