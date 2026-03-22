@@ -5,7 +5,6 @@ import MainNav from "./MainNav";
 import Header from "../components/Header";
 import MouseParallaxBg from "./MouseParallaxBg";
 import ResumePage from "../components/ResumePage";
-import BlogSection from "../components/BlogSection";
 import ContactMe from "../components/ContactPage";
 import TerminalAbout from "../components/TerminalAbout";
 import "../style/SocialLinks.css";
@@ -103,9 +102,6 @@ const HomePage = ({ isDark, toggleTheme }) => {
 
         {/* Resume: Experience / Skills / Projects / Certs */}
         <ResumePage />
-
-        {/* Blog */}
-        <BlogSection />
 
         {/* Contact */}
         <ContactMe />
