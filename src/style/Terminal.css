@@ -2,11 +2,8 @@
   margin-top: 48px;
   border-radius: 14px;
   overflow: hidden;
-  border: 1px solid #1a3a1a;
-  box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(0, 255, 70, 0.08),
-    inset 0 0 40px rgba(0, 255, 70, 0.02);
+  border: 1px solid var(--c-border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   font-family: "SF Mono", "Fira Code", "Cascadia Code", "Consolas", monospace;
 }
 
@@ -16,8 +13,8 @@
   align-items: center;
   gap: 8px;
   padding: 10px 16px;
-  background: #0d1f0d;
-  border-bottom: 1px solid #1a3a1a;
+  background: var(--c-surface-warm);
+  border-bottom: 1px solid var(--c-border);
 }
 
 .terminal-dot {
@@ -33,14 +30,14 @@
 .terminal-title {
   margin-left: 8px;
   font-size: 0.75rem;
-  color: #4a8a4a;
+  color: var(--c-text-muted);
   letter-spacing: 0.3px;
 }
 
 /* ── Body ── */
 .terminal-body {
   padding: 20px 24px 24px;
-  background: #0a140a;
+  background: var(--c-surface);
   min-height: 260px;
   max-height: 360px;
   overflow-y: auto;
@@ -48,12 +45,12 @@
   flex-direction: column;
   gap: 4px;
   scrollbar-width: thin;
-  scrollbar-color: #1a3a1a transparent;
+  scrollbar-color: var(--c-border) transparent;
 }
 
 .terminal-body::-webkit-scrollbar       { width: 4px; }
 .terminal-body::-webkit-scrollbar-track { background: transparent; }
-.terminal-body::-webkit-scrollbar-thumb { background: #1a3a1a; border-radius: 4px; }
+.terminal-body::-webkit-scrollbar-thumb { background: var(--c-border); border-radius: 4px; }
 
 /* ── Command line ── */
 .terminal-line {
@@ -64,24 +61,22 @@
 }
 
 .terminal-prompt {
-  color: #00ff46;
+  color: #22c55e;
   font-size: 0.95rem;
   user-select: none;
   flex-shrink: 0;
-  text-shadow: 0 0 8px rgba(0, 255, 70, 0.6);
 }
 
 .terminal-cmd {
-  color: #00e63f;
+  color: #16a34a;
   font-size: 0.88rem;
   letter-spacing: 0.2px;
-  text-shadow: 0 0 6px rgba(0, 230, 63, 0.35);
 }
 
 /* ── Output lines ── */
 .terminal-output {
   padding: 4px 0 8px 20px;
-  border-left: 2px solid #1a3a1a;
+  border-left: 2px solid var(--c-border);
   margin-left: 4px;
   display: flex;
   flex-direction: column;
@@ -89,7 +84,7 @@
 }
 
 .terminal-out-line {
-  color: #5ecf6e;
+  color: #15803d;
   font-size: 0.83rem;
   line-height: 1.65;
   letter-spacing: 0.1px;
@@ -100,10 +95,9 @@
   display: inline-block;
   width: 8px;
   height: 1.1em;
-  background: #00ff46;
+  background: #22c55e;
   vertical-align: text-bottom;
   border-radius: 1px;
-  box-shadow: 0 0 8px rgba(0, 255, 70, 0.8);
   animation: blink 1s step-end infinite;
 }
 
