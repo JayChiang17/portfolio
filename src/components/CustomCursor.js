@@ -18,13 +18,6 @@ const CustomCursor = () => {
       }
     };
 
-    const onMouseEnterLink = () => {
-      if (ringRef.current) ringRef.current.classList.add("cursor-ring--hover");
-    };
-    const onMouseLeaveLink = () => {
-      if (ringRef.current) ringRef.current.classList.remove("cursor-ring--hover");
-    };
-
     const animate = () => {
       ringX += (mouseX - ringX) * 0.1;
       ringY += (mouseY - ringY) * 0.1;
@@ -34,23 +27,28 @@ const CustomCursor = () => {
       animFrame = requestAnimationFrame(animate);
     };
 
+    // Event delegation — single listener instead of per-element
+    const onMouseOver = (e) => {
+      if (e.target.closest("a, button, [role=button], .tilt-card")) {
+        ringRef.current?.classList.add("cursor-ring--hover");
+      }
+    };
+    const onMouseOut = (e) => {
+      if (e.target.closest("a, button, [role=button], .tilt-card")) {
+        ringRef.current?.classList.remove("cursor-ring--hover");
+      }
+    };
+
     animate();
     window.addEventListener("mousemove", onMouseMove);
-
-    const addHoverListeners = () => {
-      document.querySelectorAll("a, button, [role=button], .tilt-card").forEach((el) => {
-        el.addEventListener("mouseenter", onMouseEnterLink);
-        el.addEventListener("mouseleave", onMouseLeaveLink);
-      });
-    };
-    addHoverListeners();
-    const observer = new MutationObserver(addHoverListeners);
-    observer.observe(document.body, { childList: true, subtree: true });
+    document.addEventListener("mouseover", onMouseOver);
+    document.addEventListener("mouseout", onMouseOut);
 
     return () => {
       window.removeEventListener("mousemove", onMouseMove);
+      document.removeEventListener("mouseover", onMouseOver);
+      document.removeEventListener("mouseout", onMouseOut);
       cancelAnimationFrame(animFrame);
-      observer.disconnect();
     };
   }, []);
 

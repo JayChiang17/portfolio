@@ -18,15 +18,18 @@ const ExperienceCard = ({ company, location, role, dates, current, techTags, bul
   const shown = expanded ? bullets : bullets.slice(0, visibleCount);
 
   useEffect(() => {
-    gsap.fromTo(
-      cardRef.current,
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
-        scrollTrigger: { trigger: cardRef.current, start: "top 88%", toggleActions: "play none none none" },
-        delay: delay || 0,
-      }
-    );
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
+          scrollTrigger: { trigger: cardRef.current, start: "top 88%", toggleActions: "play none none none" },
+          delay: delay || 0,
+        }
+      );
+    });
+    return () => ctx.revert();
   }, [delay]);
 
   return (
@@ -82,14 +85,17 @@ const ExperienceCard = ({ company, location, role, dates, current, techTags, bul
 const SectionTitle = ({ children, id, eyebrow, secNum }) => {
   const ref = useRef(null);
   useEffect(() => {
-    gsap.fromTo(
-      ref.current,
-      { opacity: 0, x: -40 },
-      {
-        opacity: 1, x: 0, duration: 0.8, ease: "power3.out",
-        scrollTrigger: { trigger: ref.current, start: "top 90%", toggleActions: "play none none none" },
-      }
-    );
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ref.current,
+        { opacity: 0, x: -40 },
+        {
+          opacity: 1, x: 0, duration: 0.8, ease: "power3.out",
+          scrollTrigger: { trigger: ref.current, start: "top 90%", toggleActions: "play none none none" },
+        }
+      );
+    });
+    return () => ctx.revert();
   }, []);
   return (
     <div ref={ref} id={id}>
@@ -118,15 +124,18 @@ const ProjectCard = ({ title, subtitle, location, dates, description, tags, bull
   const cardRef = useRef(null);
 
   useEffect(() => {
-    gsap.fromTo(
-      cardRef.current,
-      { opacity: 0, y: 40 },
-      {
-        opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
-        scrollTrigger: { trigger: cardRef.current, start: "top 88%", toggleActions: "play none none none" },
-        delay: delay || 0,
-      }
-    );
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0, y: 40 },
+        {
+          opacity: 1, y: 0, duration: 0.7, ease: "power3.out",
+          scrollTrigger: { trigger: cardRef.current, start: "top 88%", toggleActions: "play none none none" },
+          delay: delay || 0,
+        }
+      );
+    });
+    return () => ctx.revert();
   }, [delay]);
 
   return (
@@ -187,15 +196,18 @@ const ProjectCard = ({ title, subtitle, location, dates, description, tags, bull
 const CertCard = ({ title, issuer, issued, url, delay }) => {
   const cardRef = useRef(null);
   useEffect(() => {
-    gsap.fromTo(
-      cardRef.current,
-      { opacity: 0, y: 30 },
-      {
-        opacity: 1, y: 0, duration: 0.6, ease: "power3.out",
-        scrollTrigger: { trigger: cardRef.current, start: "top 90%", toggleActions: "play none none none" },
-        delay: delay || 0,
-      }
-    );
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        cardRef.current,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1, y: 0, duration: 0.6, ease: "power3.out",
+          scrollTrigger: { trigger: cardRef.current, start: "top 90%", toggleActions: "play none none none" },
+          delay: delay || 0,
+        }
+      );
+    });
+    return () => ctx.revert();
   }, [delay]);
 
   return (

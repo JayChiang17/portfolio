@@ -95,7 +95,7 @@ const ThreeHero = () => {
         y: e.clientY - window.innerHeight / 2,
       };
     };
-    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mousemove", onMove, { passive: true });
     return () => window.removeEventListener("mousemove", onMove);
   }, []);
 

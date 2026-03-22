@@ -1,6 +1,6 @@
-/* Hide default cursor globally */
-*, *::before, *::after {
-  cursor: none !important;
+/* Hide default cursor — apply only to body, not every element */
+body {
+  cursor: none;
 }
 
 .cursor-dot {
@@ -46,7 +46,7 @@
   .cursor-ring {
     display: none;
   }
-  * {
-    cursor: auto !important;
+  body {
+    cursor: auto;
   }
 }

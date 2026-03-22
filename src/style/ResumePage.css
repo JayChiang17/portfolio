@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
-
+/* Montserrat is already imported in index.css */
 /* Base — full-width page sections */
 .resumepage { width: 100%; }
 .resume_content { width: 100%; }
