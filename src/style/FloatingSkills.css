@@ -140,12 +140,12 @@
 
 .marquee::before {
   left: 0;
-  background: linear-gradient(to right, rgba(232, 221, 208, 1) 0%, rgba(232, 221, 208, 0) 100%);
+  background: linear-gradient(to right, var(--c-bg) 0%, transparent 100%);
 }
 
 .marquee::after {
   right: 0;
-  background: linear-gradient(to left, rgba(232, 221, 208, 1) 0%, rgba(232, 221, 208, 0) 100%);
+  background: linear-gradient(to left, var(--c-bg) 0%, transparent 100%);
 }
 
 /* Marquee content with infinite scroll */
@@ -176,7 +176,7 @@
   align-items: center;
   justify-content: center;
   padding: 18px 28px;
-  background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F3 100%);
+  background: linear-gradient(135deg, var(--c-surface) 0%, var(--c-surface-warm) 100%);
   border: 2px solid var(--c-border);
   border-radius: 50px;
   cursor: pointer;
@@ -215,7 +215,7 @@
     0 10px 20px rgba(180, 132, 108, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
   border-color: var(--c-accent);
-  background: linear-gradient(135deg, #FFFAF5 0%, #FFF5ED 100%);
+  background: linear-gradient(135deg, var(--c-surface-warm) 0%, var(--c-surface) 100%);
 }
 
 /* Active/Click effect */

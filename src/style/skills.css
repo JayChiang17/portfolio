@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap");
+/* Montserrat is already imported in index.css */
 
 /* Skills section */
 .skills-section {
@@ -6,7 +6,7 @@
   padding: 50px 40px;
   margin: 30px auto;
   max-width: 950px;
-  background: #FFFFFF;
+  background: var(--c-surface);
   border-radius: 20px;
   box-shadow:
     0 8px 30px rgba(92, 74, 58, 0.12),
@@ -34,9 +34,9 @@
 }
 
 .skills-section h2 {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-heading);
   font-size: 1.8rem;
-  color: #5C4A3A;
+  color: var(--c-accent-dark);
   margin-bottom: 50px;
   font-weight: 600;
   text-transform: uppercase;
@@ -62,7 +62,7 @@
   align-items: center;
   justify-content: center;
   padding: 25px 20px;
-  background: linear-gradient(135deg, #FFFAF5 0%, #F5F1E8 100%);
+  background: linear-gradient(135deg, var(--c-surface-warm) 0%, var(--c-bg) 100%);
   border-radius: 12px;
   border: 1px solid rgba(228, 221, 208, 0.3);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -72,7 +72,7 @@
 }
 
 .skill-item:hover {
-  background: linear-gradient(135deg, #FFFFFF 0%, #FAF8F3 100%);
+  background: linear-gradient(135deg, var(--c-surface) 0%, var(--c-surface-warm) 100%);
   border-color: #B4846C;
   transform: translateY(-8px) scale(1.05);
   box-shadow: 0 8px 24px rgba(180, 132, 108, 0.2);
@@ -93,7 +93,7 @@
 /* Skill name */
 .skill-item p {
   font-size: 0.95rem;
-  color: #5C4A3A;
+  color: var(--c-accent-dark);
   font-weight: 500;
   margin: 0;
 }
