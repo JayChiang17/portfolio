@@ -1,22 +1,28 @@
 {
   "files": {
-    "main.css": "./static/css/main.22a7de87.css",
-    "main.js": "./static/js/main.af3a1768.js",
+    "main.css": "./static/css/main.eb9ee403.css",
+    "main.js": "./static/js/main.d8de067e.js",
     "static/css/856.a4c7bff2.chunk.css": "./static/css/856.a4c7bff2.chunk.css",
-    "static/js/856.bccb7ba6.chunk.js": "./static/js/856.bccb7ba6.chunk.js",
-    "static/js/599.9698471c.chunk.js": "./static/js/599.9698471c.chunk.js",
+    "static/js/856.73c6b167.chunk.js": "./static/js/856.73c6b167.chunk.js",
+    "static/css/966.0089a7e4.chunk.css": "./static/css/966.0089a7e4.chunk.css",
+    "static/js/966.49e65363.chunk.js": "./static/js/966.49e65363.chunk.js",
+    "static/css/640.8d07186f.chunk.css": "./static/css/640.8d07186f.chunk.css",
+    "static/js/640.3a9c8c24.chunk.js": "./static/js/640.3a9c8c24.chunk.js",
     "static/media/me2.png": "./static/media/me2.bfc56658c7993ab710fb.png",
     "static/media/The_University_of_California_UCSC.png": "./static/media/The_University_of_California_UCSC.9fc0881d51d3f6109633.png",
     "static/media/umich_logo.png": "./static/media/umich_logo.f2f882f1eed260c88757.png",
     "index.html": "./index.html",
-    "main.22a7de87.css.map": "./static/css/main.22a7de87.css.map",
-    "main.af3a1768.js.map": "./static/js/main.af3a1768.js.map",
+    "main.eb9ee403.css.map": "./static/css/main.eb9ee403.css.map",
+    "main.d8de067e.js.map": "./static/js/main.d8de067e.js.map",
     "856.a4c7bff2.chunk.css.map": "./static/css/856.a4c7bff2.chunk.css.map",
-    "856.bccb7ba6.chunk.js.map": "./static/js/856.bccb7ba6.chunk.js.map",
-    "599.9698471c.chunk.js.map": "./static/js/599.9698471c.chunk.js.map"
+    "856.73c6b167.chunk.js.map": "./static/js/856.73c6b167.chunk.js.map",
+    "966.0089a7e4.chunk.css.map": "./static/css/966.0089a7e4.chunk.css.map",
+    "966.49e65363.chunk.js.map": "./static/js/966.49e65363.chunk.js.map",
+    "640.8d07186f.chunk.css.map": "./static/css/640.8d07186f.chunk.css.map",
+    "640.3a9c8c24.chunk.js.map": "./static/js/640.3a9c8c24.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.22a7de87.css",
-    "static/js/main.af3a1768.js"
+    "static/css/main.eb9ee403.css",
+    "static/js/main.d8de067e.js"
   ]
 }
