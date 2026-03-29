@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "./static/css/main.25d4c5ce.css",
-    "main.js": "./static/js/main.79dd4244.js",
+    "main.js": "./static/js/main.1374540e.js",
     "static/css/856.a4c7bff2.chunk.css": "./static/css/856.a4c7bff2.chunk.css",
     "static/js/856.73c6b167.chunk.js": "./static/js/856.73c6b167.chunk.js",
     "static/css/966.0089a7e4.chunk.css": "./static/css/966.0089a7e4.chunk.css",
     "static/js/966.d78815b1.chunk.js": "./static/js/966.d78815b1.chunk.js",
     "static/css/640.749013e6.chunk.css": "./static/css/640.749013e6.chunk.css",
-    "static/js/640.f49447ec.chunk.js": "./static/js/640.f49447ec.chunk.js",
+    "static/js/640.af87395b.chunk.js": "./static/js/640.af87395b.chunk.js",
     "static/js/599.10bd7a72.chunk.js": "./static/js/599.10bd7a72.chunk.js",
     "static/js/721.f59a13ce.chunk.js": "./static/js/721.f59a13ce.chunk.js",
     "static/media/me2.png": "./static/media/me2.bfc56658c7993ab710fb.png",
@@ -15,18 +15,18 @@
     "static/media/umich_logo.png": "./static/media/umich_logo.f2f882f1eed260c88757.png",
     "index.html": "./index.html",
     "main.25d4c5ce.css.map": "./static/css/main.25d4c5ce.css.map",
-    "main.79dd4244.js.map": "./static/js/main.79dd4244.js.map",
+    "main.1374540e.js.map": "./static/js/main.1374540e.js.map",
     "856.a4c7bff2.chunk.css.map": "./static/css/856.a4c7bff2.chunk.css.map",
     "856.73c6b167.chunk.js.map": "./static/js/856.73c6b167.chunk.js.map",
     "966.0089a7e4.chunk.css.map": "./static/css/966.0089a7e4.chunk.css.map",
     "966.d78815b1.chunk.js.map": "./static/js/966.d78815b1.chunk.js.map",
     "640.749013e6.chunk.css.map": "./static/css/640.749013e6.chunk.css.map",
-    "640.f49447ec.chunk.js.map": "./static/js/640.f49447ec.chunk.js.map",
+    "640.af87395b.chunk.js.map": "./static/js/640.af87395b.chunk.js.map",
     "599.10bd7a72.chunk.js.map": "./static/js/599.10bd7a72.chunk.js.map",
     "721.f59a13ce.chunk.js.map": "./static/js/721.f59a13ce.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.25d4c5ce.css",
-    "static/js/main.79dd4244.js"
+    "static/js/main.1374540e.js"
   ]
 }
