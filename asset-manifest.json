@@ -1,30 +1,26 @@
 {
   "files": {
     "main.css": "./static/css/main.25d4c5ce.css",
-    "main.js": "./static/js/main.be270f31.js",
+    "main.js": "./static/js/main.903e1d1b.js",
     "static/css/856.a4c7bff2.chunk.css": "./static/css/856.a4c7bff2.chunk.css",
     "static/js/856.73c6b167.chunk.js": "./static/js/856.73c6b167.chunk.js",
-    "static/css/882.96e77c06.chunk.css": "./static/css/882.96e77c06.chunk.css",
-    "static/js/882.44d18551.chunk.js": "./static/js/882.44d18551.chunk.js",
-    "static/css/640.749013e6.chunk.css": "./static/css/640.749013e6.chunk.css",
-    "static/js/640.5c99385f.chunk.js": "./static/js/640.5c99385f.chunk.js",
-    "static/js/599.10bd7a72.chunk.js": "./static/js/599.10bd7a72.chunk.js",
+    "static/css/383.dc74d442.chunk.css": "./static/css/383.dc74d442.chunk.css",
+    "static/js/383.8be271ee.chunk.js": "./static/js/383.8be271ee.chunk.js",
+    "static/js/599.b733ef40.chunk.js": "./static/js/599.b733ef40.chunk.js",
     "static/media/me2.png": "./static/media/me2.bfc56658c7993ab710fb.png",
     "static/media/The_University_of_California_UCSC.png": "./static/media/The_University_of_California_UCSC.9fc0881d51d3f6109633.png",
     "static/media/umich_logo.png": "./static/media/umich_logo.f2f882f1eed260c88757.png",
     "index.html": "./index.html",
     "main.25d4c5ce.css.map": "./static/css/main.25d4c5ce.css.map",
-    "main.be270f31.js.map": "./static/js/main.be270f31.js.map",
+    "main.903e1d1b.js.map": "./static/js/main.903e1d1b.js.map",
     "856.a4c7bff2.chunk.css.map": "./static/css/856.a4c7bff2.chunk.css.map",
     "856.73c6b167.chunk.js.map": "./static/js/856.73c6b167.chunk.js.map",
-    "882.96e77c06.chunk.css.map": "./static/css/882.96e77c06.chunk.css.map",
-    "882.44d18551.chunk.js.map": "./static/js/882.44d18551.chunk.js.map",
-    "640.749013e6.chunk.css.map": "./static/css/640.749013e6.chunk.css.map",
-    "640.5c99385f.chunk.js.map": "./static/js/640.5c99385f.chunk.js.map",
-    "599.10bd7a72.chunk.js.map": "./static/js/599.10bd7a72.chunk.js.map"
+    "383.dc74d442.chunk.css.map": "./static/css/383.dc74d442.chunk.css.map",
+    "383.8be271ee.chunk.js.map": "./static/js/383.8be271ee.chunk.js.map",
+    "599.b733ef40.chunk.js.map": "./static/js/599.b733ef40.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.25d4c5ce.css",
-    "static/js/main.be270f31.js"
+    "static/js/main.903e1d1b.js"
   ]
 }
